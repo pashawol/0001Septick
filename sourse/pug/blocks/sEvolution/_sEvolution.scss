@@ -1,0 +1,46 @@
+// start .sEvolution
+.sEvolution {
+		--sPT: 0;
+		background-color: #fff;
+			border-bottom-right-radius: var(--ellips);
+			border-bottom-left-radius: var(--ellips);
+			position: relative;
+			overflow: hidden;
+		--sPB: 0;
+		// --sTPB: ;
+		.section-title{
+			position: relative;
+			z-index: 2;
+		}
+	h2{
+		@include rfs(34px);
+		font-weight: 700;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(700);
+		line-height: 1.4;
+	}
+	p{
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 18px;
+		max-width: rem(780)
+	}
+	&__img-wrap{
+		height: 523px;
+		margin-top: -100px;
+		img{
+			@include a-cent1(x);
+			// @extend .res-;
+			max-width: none;
+			width: auto;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sEvolution

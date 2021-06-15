@@ -1,0 +1,80 @@
+// start .aside
+.aside {
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+	&__head{
+		display: flex;
+		color: $success;
+		text-transform: uppercase;
+		font-weight: bold;
+		background-color: #fff; 
+		border-radius: 20px;
+		padding: rem(30) rem(30);
+		margin-bottom: rem(40);
+		&::after{
+			content: var(--chevron-down-success);
+			margin-left: 10px;
+		}
+		img{
+			margin-right: rem(13);
+		}
+	}
+	
+	ul{
+		list-style: none;
+		background-color: #fff; 
+		border-radius: 20px;
+		padding: rem(0) rem(30);
+		padding-top: 10px;
+
+	}
+	li{
+		&:not(:first-child) {
+			a{
+				border-top: 1px solid #F5F5F7;
+			}
+		}
+		a{
+			display: block;
+			font-weight: 500;
+			color: $body-color;
+			@include media-breakpoint-up(xxxl) {
+				padding-top: rem(20);
+					padding-bottom: rem(20);
+					font-size: rem(18);
+				}
+				padding-right: 30px;
+				padding-top: rem(18);
+					padding-bottom: rem(18);
+				font-size: 14px;
+			position: relative;
+
+		}
+
+	}
+	&__count{
+		position: absolute;
+		right: 0;
+		@include a-cent1(y);
+		color: #C6CAD6;
+		font-weight: bold;
+
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.aside
+
+.aside__more{
+	color: $success;
+	padding-top: 4px;
+	padding-bottom: 20px;
+	font-weight: 600;
+	cursor: pointer;
+}

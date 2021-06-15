@@ -8,23 +8,50 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
-	+b.menu-mobile--js.d-lg-none
-		+b.toggle-menu-mobile--js.on
+	+b.menu-mobile--js.d-xl-none.container
+		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-		
-			+mnu()
+			+b.topLine
+				+search()
+			.strong
+				+mnu()
+			+mnu2()
+			+b.compare-block(href="#")
+					+icon("eva_bar-chart-fill")
+					+e.text.ms-3 товары для Сравнений
+					+e.count 3
+			br
+			+b.addr-block()
+					+e.icon-wrap(href="mailto:info@septik.net")
+						+icon("ion_mail")
+					+e.mail(href="mailto:info@septik.net") info@septik.net  
+					+e.text ПН-ВС с 9:-00 до 22:00
+			br
+			+b.contact-block
+				+e.btn(href="#")
+					+icon("akar-icons_whatsapp-fill")
+				div.ms-3
+					+e.tel(href="tel:8(495)115-67-07") 8 (495) 115-67-07 
+					div
+						+e.call(href="#")
+							+icon('call')
+							| ЗАКАЗАТЬ ЗВОНОК
 			.text-right
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
-	+b.top-nav.block-with-lazy
+	+b.top-nav.block-with-lazy.d-none.d-xl-block
 		.container
 			.row
-				.col-auto.d-lg-none
-					+b.toggle-menu-mobile--js
-						span
-				.col.d-none.d-lg-block
-					+mnu()
+				
+				.col.d-none.d-lg-block.strong
 					
+					+mnu()
+				.col-auto.d-none.d-lg-block
+					+mnu2()
+				.col-auto
+					+e.link(href="#")
+						+icon("ion_mail")
+						.d-none.d-sm-block написать директору
 	// end top-nav

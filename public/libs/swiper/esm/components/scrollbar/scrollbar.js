@@ -2,7 +2,7 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 import { getDocument } from 'ssr-window';
 import $ from '../../utils/dom';
-import { extend, nextTick, bindModuleMethods } from '../../utils/utils';
+import { extend, nextTick, bindModuleMethods, createElementIfNotDefined } from '../../utils/utils';
 var Scrollbar = {
   setTranslate: function setTranslate() {
     var swiper = this;
@@ -266,10 +266,13 @@ var Scrollbar = {
   },
   init: function init() {
     var swiper = this;
-    if (!swiper.params.scrollbar.el) return;
     var scrollbar = swiper.scrollbar,
         $swiperEl = swiper.$el;
+    swiper.params.scrollbar = createElementIfNotDefined($swiperEl, swiper.params.scrollbar, swiper.params.createElements, {
+      el: 'swiper-scrollbar'
+    });
     var params = swiper.params.scrollbar;
+    if (!params.el) return;
     var $el = $(params.el);
 
     if (swiper.params.uniqueNavElements && typeof params.el === 'string' && $el.length > 1 && $swiperEl.find(params.el).length === 1) {

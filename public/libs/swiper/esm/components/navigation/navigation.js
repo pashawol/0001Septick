@@ -1,7 +1,7 @@
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 import $ from '../../utils/dom';
-import { extend, bindModuleMethods } from '../../utils/utils';
+import { extend, bindModuleMethods, createElementIfNotDefined } from '../../utils/utils';
 var Navigation = {
   toggleEl: function toggleEl($el, disabled) {
     $el[disabled ? 'addClass' : 'removeClass'](this.params.navigation.disabledClass);
@@ -56,6 +56,10 @@ var Navigation = {
   init: function init() {
     var swiper = this;
     var params = swiper.params.navigation;
+    swiper.params.navigation = createElementIfNotDefined(swiper.$el, swiper.params.navigation, swiper.params.createElements, {
+      nextEl: 'swiper-button-next',
+      prevEl: 'swiper-button-prev'
+    });
     if (!(params.nextEl || params.prevEl)) return;
     var $nextEl;
     var $prevEl;

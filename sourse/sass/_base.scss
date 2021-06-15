@@ -121,9 +121,22 @@ body {
 	padding-top: var(--sPT);
 	padding-bottom: var(--sPB);
 }
-
+h2{
+	font-weight: 800;
+}
 .section-title {
 	padding-bottom: var(--sTPB);
+	p{
+		@extend .text-secondary;
+		max-width: rem(1020);
+	}
+	h2{
+
+		span{
+			color: $primary;
+		}
+		margin-bottom: rem(22);
+	}
 }
 
 
@@ -486,4 +499,55 @@ iframe {
 
 ::-webkit-calendar-picker-indicator {
   background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='15' viewBox='0 0 24 24'><path fill='#{$primary}' d='M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z'/></svg>"); 
+}
+
+.btn{
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.btn-success{
+	color: #fff !important;
+}
+
+.link-more{
+	font-size: 13px;
+	color: $body-color;
+	&:hover{
+		color: $primary;
+	}
+	display: inline-flex;
+	align-items: center;
+	&::after{
+		content: var(--chevron-down);
+		margin-left: 3px;
+	}
+}
+
+.panel-white{
+	width: rem(430);
+	padding: rem(43) rem(60);
+	background-color: #fff;
+	border-radius: 28px 0px 28px 28px;
+	.tel{
+		font-size: rem(20);
+	}
+}
+
+.section .section{
+	padding: 0;
+}
+
+.col-aside{
+		@include media-breakpoint-up(xxxl){
+
+			max-width: 28%;
+		}
+		@include media-breakpoint-up(xl) {
+			// max-width: rem(426 + 30);
+			max-width: 26%;
+	}
+}
+
+.btn-primary{
+	color: #fff !important;
 }

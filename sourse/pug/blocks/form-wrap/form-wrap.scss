@@ -1,5 +1,8 @@
 .form-wrap{
  	&__input-wrap{
+		 margin-bottom: 24px;
+		 position: relative;
+		 font-weight: 500;
 			// @extend .form-group;
 			
 		}
@@ -7,14 +10,53 @@
 			// @extend .form-control;
 		//  outline: 0 !important;
 		 resize: none;
+		 &:focus  ,
+		 &.not-empty {
+				&~.form-wrap__input-title{
+
+					font-size: 12px;
+					top: rem(10);
+				}
+			
+		 }
+		 &.invalid {
+			 color: #EB5757;
+			background: #FFE4E0;
+			border-color: #FFE4E0;
+			 &~.form-wrap__input-title{
+					color: #EB5757;
+
+			 }
+		 }
  	}
- 	&__btn{
+ 	.btn{
  		cursor: pointer;
+		 margin-bottom: rem(30);
  	}
+	 &__input-title {
+		top: $input-btn-padding-y;
+		left: $input-btn-padding-x;
+		position: absolute;
+		@include mt;
+	 }
  	label{
  		width: 100%;
  		display: block;
  	}
+	 &__polite{
+		 text-align: center;
+		 text-transform: uppercase;
+		 font-size: 13px;
+		 font-weight: bold;
+		 color: #C6CAD6;
+		 a{
+			 display: inline-block;
+			 border-bottom: 1px solid;
+			 &:hover{
+				 border-color: transparent;
+			 }
+		 }
+	 }
 }
 
 

@@ -2,8 +2,47 @@ mixin topLine()
 	// start topLine
 	+b.SECTION.topLine.section#topLine&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 topLine
-				
 			.row
+				.col-xl-auto.col
+					+e.logo(href='/')
+						+pic("logo.png",'',0)
+
+						//- img(src="img/@2x/logo.png", alt="")
+				.col-auto.d-none.d-md-block
+					+b.place-block
+						+icon("mark")
+						+e.head Ваш город 
+							| 
+							a(href="#") Москва
+						+e.body м. Окская, Рязанский пр-т, д.24, стр.2
+				.col-xxxl-auto.col-xxl-12.col.order-xxxl-0.order-last.d-none.d-sm-block
+					+search()
+				.col-auto.d-none.d-sm-block
+					+b.compare-block(href="#")
+						+icon("eva_bar-chart-fill")
+						+e.text.d-none.d-xl-block.ms-3 товары для Сравнений
+						+e.count 3
+						
+
+				.col-auto.d-none.d-lg-block
+					+b.addr-block()
+						+e.icon-wrap(href="mailto:info@septik.net")
+							+icon("ion_mail")
+						+e.mail(href="mailto:info@septik.net") info@septik.net  
+						+e.text ПН-ВС с 9:-00 до 22:00
+				.col-auto.order-xxl-0.order-sm-last
+					+b.contact-block
+						+e.btn(href="#")
+							+icon("akar-icons_whatsapp-fill")
+						.d-none.d-lg-block.ms-3
+							+e.tel(href="tel:8(495)115-67-07") 8 (495) 115-67-07 
+							div
+								+e.call(href="#")
+									+icon('call')
+									| ЗАКАЗАТЬ ЗВОНОК
+				
+				.col-auto.d-xl-none
+					+b.toggle-menu-mobile--js
+						span
+				.col-12
 	// end topLine

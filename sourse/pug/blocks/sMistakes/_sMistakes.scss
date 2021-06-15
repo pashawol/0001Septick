@@ -1,0 +1,136 @@
+// start .sMistakes
+.sMistakes {
+	& + .section{
+		@include media-breakpoint-up(sm) {
+
+			--sPT: #{rem(280)};
+		}
+		--sPT: #{rem(180)};
+
+	 }
+	 h2{
+		 margin-bottom: rem(40);
+	 }
+	 .section-title{
+		 p{
+			 font-size: rem(18);
+		 }
+	 }
+		// --sPT: ;
+		// --sPB: ;
+		--sTPB: #{rem(40)};
+		position: relative;
+		z-index: 4;
+		&::before,
+		&::after{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			z-index: -1;
+		}
+		&::after{
+			background-color: $body-bg;
+			@include media-breakpoint-up(sm) {
+
+				height: 108%;
+			}
+			height: 104%;
+			border-bottom-right-radius: var(--ellips);
+			border-bottom-left-radius: var(--ellips);
+		}
+		&::before{
+				@include media-breakpoint-up(lg){
+
+					height: 113%;
+				}
+				@include media-breakpoint-up(sm) {
+					height: 110%;
+				}
+				height: 106%;
+			background-color: $success;
+			border-bottom-right-radius: var(--ellips2);
+			border-bottom-left-radius: var(--ellips2);
+		}
+	h2{
+		font-weight: 400;
+		@include rfs(48px);
+		strong{
+			font-weight: 600;
+		}
+	}
+		.form-wrap{
+			// padding: rem(62) rem(50);
+				@include media-breakpoint-up(sm) {
+
+					padding: rem(62) rem(50);
+				}
+
+				padding: rem(62) rem(20);
+			background-color: #fff;
+			border-radius: 20px;
+			position: relative;
+			&::before{
+				content: url(../img/@2x/webp/mis-before.webp);
+				position: absolute;
+				z-index: -1;
+				top: 0;
+				left: -30px;
+				// @include a-cent1()
+			}
+		}
+		.title{
+			font-weight: bold;
+			text-align: center;
+			margin-bottom: rem(44);
+			font-size: rem(20);
+		}
+		.btn{
+			margin-bottom: 30px;
+		}
+		&__video{
+			height: 100%;
+			display: block;
+			@include block(1080, 648);
+			border-radius: 40px;
+			overflow: hidden;
+		}
+		&__play{
+			@include a-cent1;
+			@extend .btn;
+			@extend .btn-success;
+			@include media-breakpoint-up(lg) {
+				width: 230px;
+				height: 230px;
+			}
+			width: 130px;
+			height: 130px;
+			border-radius: 50%;
+			padding: 0;
+			&::before{
+				content: var(--play);
+				@include a-cent1;
+			}
+		}
+		.form-wrap{
+			@include media-breakpoint-up(lg) {
+				margin-bottom: 0;
+				width: 500px;
+			}
+			margin-bottom: var(--bs-gutter-x);
+		}
+	@include media-breakpoint-up(xxxl) {
+		.row{
+			--bs-gutter-x: 60px;
+		}
+	}
+	@include media-breakpoint-up(xxl) {
+		--sPB: 190px;
+	}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sMistakes

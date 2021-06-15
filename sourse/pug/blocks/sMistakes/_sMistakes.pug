@@ -1,0 +1,22 @@
+mixin sMistakes(data)
+	// start sMistakes
+	+b.SECTION.sMistakes.section#sMistakes&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 13 #[strong фатальных ошибок] при выборе септика
+				p.mx-auto Данный файл был подготовлен нашими квалифицированными инженерами, которые провели более 200 монтажей различных очистных систем. Файл позволит сэкономить минимум 14&nbsp;тыс. руб.
+			.row
+				.col-lg-auto
+					+form-wrap
+						.title Получите файл на&nbsp;почту, чтоб не&nbsp;допустить ошибок и&nbsp;сэкономить при выборе и&nbsp;монтаже&nbsp;септика
+						+input('','text',"Имя")
+						+input('','tel',"Телефон")
+						+input('','email',"Почта").invalid
+						button.btn.btn-success.w-100(type="submit") получить файл на почту
+						+polite()
+				.col
+					+e.video(href="https://www.youtube.com/watch?v=SQNja3L-bXg" data-fancybox).bg-wrap
+						+pic("video-bg.jpg",'bg').picture-bg
+						+e.play
+
+	// end sMistakes

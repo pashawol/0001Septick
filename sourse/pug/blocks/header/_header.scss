@@ -1,6 +1,19 @@
 
 	// start .header
 	.header {
+		position: relative;
+		z-index: 4;
+		&::before{
+			content: '';
+			position: absolute;
+			z-index: -1;
+			width: var(--bg-w);
+			height: 100%;
+			left: 0;
+			top: 0;
+			background: #FFFFFF;
+			border-radius: 0px 0px 40px 0px;
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

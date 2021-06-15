@@ -1,0 +1,70 @@
+// start .Scomfort2
+.Scomfort2 {
+		--sPT: 60px;
+		// --sPB: ;
+		// --sTPB: ;
+		background-color: #fff;
+
+		position: relative;
+		z-index: 2;
+
+		&::after {
+			z-index: -1;
+			content: url(../img/svg/dots.svg);
+			position: absolute;
+			top: 100px;
+			right: 95%;
+			opacity: 0.7;
+			zoom: 1.5;
+		}
+	h2 {
+		@include rfs(36px);
+	}
+
+	p {
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 20px;
+		max-width: rem(780)
+	}
+
+	ol {
+		@extend .row;
+		counter-reset: num;
+	}
+
+	li {
+		@extend .col-xl-3;
+		@extend .col-md-6;
+		font-size: rem(18);
+		margin-bottom: 30px;
+		display: flex;
+
+		&::before {
+			content: counter(num);
+			counter-increment: num;
+			min-width: em(10);
+
+			@include media-breakpoint-up(xl) {
+				min-width: auto;
+			}
+
+			@include media-breakpoint-up(xxxl) {
+				font-size: 144px;
+			}
+
+			@include rfs(114px);
+			color: #F4F6FC;
+			line-height: .8;
+			font-weight: 800;
+			margin-right: rem(20);
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.Scomfort2

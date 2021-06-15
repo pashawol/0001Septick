@@ -2,8 +2,36 @@ mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sForm
-				
 			.row
+				.col-xl
+					+e.text-block
+						+e.title Не&nbsp;знаете #[strong какой выбрать септик]? #[strong В&nbsp;каком месте] лучше всего производить монтаж? #[strong Куда] сбрасывать #[strong очищенную воду]?
+						p Перед тем, как выбрать поставщика, получите ответы на эти  вопросы
+						.strong К Вам приедет специалист компании Мос-Септик
+						ul 
+							li С инженерным образованием
+							li Работают не первый год в компании
+							li Который прошел обучение у производителей
+							li С опытом более 100 установленных объектов
+				.col-12.order-lg-first
+					+e.man 
+						+pic("man.png")
+						+e.caption 	
+							+e.name Валентин Березин
+							.small.text-secondary инженер-сметчик
+						+e.link-to-man(href="#")
+							+icon('akar-icons_whatsapp-fill')
+							| пообщаться с менеджером в whatsapp
+				.col-lg-auto
+					+e.wrap
+						+form-wrap
+							.title Пригласите инженера на&nbsp;Ваш участок и&nbsp;только после этого принимайте решение
+							+input('','text',"Имя")
+							+input('','tel',"Телефон") 
+							button.btn.btn-success.w-100(type="submit") пригласить инженера 
+							+polite()
+						.text-center
+							+e.car-link(href="#")
+								.strong.small Нажмите на машину, чтобы вызвать
+								+pic("car-call.png",'',0).d-block
 	// end sForm

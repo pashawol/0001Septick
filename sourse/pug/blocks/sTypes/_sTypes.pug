@@ -1,0 +1,44 @@
+mixin sTypes(data)
+	// start sTypes
+	+b.SECTION.sTypes.section#sTypes&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 Виды септиков
+				p Мы&nbsp;подбираем систему с&nbsp;учетом Ваших пожеланий, особенностей грунта Московской области, уровня грунтовых вод и&nbsp;экологии. Таким образом обеспечивая срок службы системы не&nbsp;менее 50&nbsp;лет.
+			+e.inner.tabs.tabs--js
+				.tabs__caption
+					.tabs__btn.active
+						+pic(`tab-btn-1.png`,'',0)
+						.tabs__btn-text: span Аэрационные <br>  установки
+					.tabs__btn
+						+pic(`tab-btn-2.png`,'',0)
+						.tabs__btn-text: span Септики с <br>  аэрацией
+					.tabs__btn
+						+pic(`tab-btn-3.png`,'',0)
+						.tabs__btn-text: span Септики с <br>  биофильтром
+					.tabs__btn
+						+pic(`tab-btn-4.png`,'',0)
+						.tabs__btn-text: span Септик с почвенной <br>  доочисткой
+					.tabs__btn
+						+pic(`tab-btn-5.png`,'',0)
+						.tabs__btn-text: span Накопительные  <br> септики
+					
+				.tabs__wrap
+					mixin tab()
+						.tabs__content&attributes(attributes)
+							.row
+								.col-lg-auto.mb-3
+									+pic("tab.png")
+								.col
+									h5 Аэрационная установка
+									h6 от 48 000 руб.
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat Lorem ipsum 
+									p: a(href="#").link-more Подробнее
+									+e.btn(href="#") Посмотреть варианты
+										+icon('arrow-right')
+					+tab.active
+					+tab
+					+tab
+					+tab
+					+tab
+	// end sTypes

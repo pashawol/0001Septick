@@ -119,13 +119,25 @@ var Autoplay = {
   },
   onMouseEnter: function onMouseEnter() {
     var swiper = this;
-    swiper.autoplay.pause();
+
+    if (swiper.params.autoplay.disableOnInteraction) {
+      swiper.autoplay.stop();
+    } else {
+      swiper.autoplay.pause();
+    }
+
     ['transitionend', 'webkitTransitionEnd'].forEach(function (event) {
       swiper.$wrapperEl[0].removeEventListener(event, swiper.autoplay.onTransitionEnd);
     });
   },
   onMouseLeave: function onMouseLeave() {
     var swiper = this;
+
+    if (swiper.params.autoplay.disableOnInteraction) {
+      return;
+    }
+
+    swiper.autoplay.paused = false;
     swiper.autoplay.run();
   },
   attachMouseEvents: function attachMouseEvents() {

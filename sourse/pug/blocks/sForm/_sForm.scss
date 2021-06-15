@@ -1,7 +1,235 @@
 
 	// start .sForm
-	.sForm {
-		 
+		.sForm {
+			 	@include media-breakpoint-up(xl){
+					 --sPT: 240px;
+					}
+					--sPT: 0;
+			background-color: #fff;
+			z-index: 2;
+			position: relative;
+			&::after{
+					@include media-breakpoint-up(md) {
+						content: url(../img/@2x/webp/form-bg.webp);
+					}
+				z-index: -1;
+				position: absolute;
+				@include media-breakpoint-up(xl) {
+					
+					right: 0;
+				}
+				@include media-breakpoint-up(lg) {
+
+					right: -55%;
+				}
+				right: -65%;
+				top: 10%;
+			}
+			.title {
+				font-weight: bold;
+				text-align: center;
+				margin-bottom: rem(44);
+				font-size: rem(20);
+				}
+
+					.form-wrap {
+							@include media-breakpoint-up(sm){
+
+								padding: rem(62) rem(50);
+							}
+							padding: rem(62) rem(20);
+						background-color: #fff;
+						border-radius: 20px;
+						position: relative;
+						box-shadow: 0px 37px 29px rgba(69, 68, 68, 0.05);
+						margin-bottom: 58px;
+						&::after{
+							content: '';
+							width: calc(100% - 28px);
+							background: #FFFFFF;
+							box-shadow: 0px 37px 29px rgba(112, 112, 112, 0.05);
+							border-radius: 20px;
+							bottom: -14px;
+							height: 200px;
+							z-index: -1;
+							@include a-cent1(x);
+
+						}
+					
+						&::before {
+							content: url(../img/@2x/webp/form-before.webp);
+							position: absolute;
+							z-index: -1;
+							top: -60px;
+							left: -60px;
+							// @include a-cent1()
+						}
+						@include media-breakpoint-up(xxxl) {
+							// margin-bottom: 0;
+							width: 500px;
+						}
+						@include media-breakpoint-up(lg) {
+							width: 440px;
+						}
+
+						margin-bottom: var(--bs-gutter-x);
+					}
+		 .row{
+			 position: relative;
+
+		 }
+		 &__man{
+			 	@include media-breakpoint-up(sm){
+					 margin-left: 0;
+					 margin-right: 0;
+				 }
+				 margin-left: -50px;
+				 margin-right: -150px;
+			 	@include media-breakpoint-up(xl){
+
+					 @include a-cent1;
+				 }
+				 	@include media-breakpoint-up(lg){
+
+
+						 position: absolute;
+						 left: -10%;
+						 bottom: 0;
+						 margin-top: -100px;
+						}
+						position: relative;
+			 width: auto;
+			 max-width: none;
+		 }
+
+		 &__text-block {
+			 @include media-breakpoint-up(xxxl) {
+
+				 max-width: rem(640);
+				}
+					@include media-breakpoint-up(xl){
+
+						max-width: rem(540);
+						margin-bottom: 0;
+					}
+						@include media-breakpoint-up(md) {
+
+							margin-bottom: 100px;
+						}
+					max-width: rem(740);
+				padding-top: 20px;
+						 .strong {
+						 	text-transform: uppercase;
+						 	font-size: rem(18px);
+						 	margin-bottom: rem(29px);
+						 	margin-bottom: 29px;
+						 	max-width: rem(420);
+						 }
+		 }
+		 &__title{
+			 @include rfs(34px);
+			 margin-bottom: rem(40);
+		 }
+		 p{
+			 position: relative;
+			 padding-left: rem(54);
+			 max-width: rem(380);
+			 font-size: rem(20);
+			 margin-bottom: 50px;
+			 &::after{
+				 content: '!';
+				 position: absolute;
+				 left: 0;
+				 top: 0;
+				 color: #1CB4DB;
+				 font-size: 110.222px;
+				 line-height: 0.8;
+			 }
+		 }
+
+		 ul{
+			 
+		 }
+		 li{
+			 margin-bottom: 12px;
+			 margin-bottom: 15px;
+				list-style: none;
+			 &::before {
+			 	content: '+ ';
+			 	margin-right: rem(19);
+			 	color: $primary;
+			 }
+		 }
+
+		&__caption{
+			background: #FFFFFF;
+			border-radius: 74px;
+			text-align: center;
+			position: absolute;
+			top: 47%;
+			text-align: center;
+			filter: drop-shadow(0px 15px 29px rgba(0, 0, 0, 0.03));
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+				@include media-breakpoint-up(lg) {
+
+					padding: rem(40) rem(20);
+				}
+				padding: 20px;
+			margin-left: 100px;
+		}
+		&__name{
+			font-weight: bold;
+			font-size: rem(20);
+			color: $primary;
+		}
+		&__link-to-man{
+			@extend .text-success;
+			text-transform: uppercase;
+			font-size: 13px;
+			font-weight: 600;
+			max-width: rem(211);
+			display: inline-block;
+			text-align: center;
+			// margin-top: -120px;
+			position: absolute;
+			bottom: 0px;
+			line-height: (24 / 13);
+			 @include media-breakpoint-up(xxxl){
+				 margin-left: 0;
+				 
+			 }
+			 	@include media-breakpoint-up(lg){
+					 margin-left: 150px;
+				 }
+				 	@include media-breakpoint-up(sm) {
+
+				 	margin-left: 0;
+				 	}
+					 margin-left: 100px;
+
+				 	// padding: rem(62) rem(20);
+			&::before{
+				content: url(../img/svg/arrrow-top.svg);
+				display: block;
+			}
+			.icon{
+				font-size: 1rem;
+				margin-right: 5px;
+			}
+		}
+		&__car-link{
+			img{
+				@include mt;
+			}
+			&:hover{
+				img{
+					transform: translateX(-1%) rotate(1deg);
+				}
+			}
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

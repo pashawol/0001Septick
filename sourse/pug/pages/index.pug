@@ -3,10 +3,21 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/aside/_aside.pug
+include ../blocks/sQwiz/_sQwiz.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sTypes/_sTypes.pug
+include ../blocks/sMistakes/_sMistakes.pug
+include ../blocks/sComfort/_sComfort.pug
+include ../blocks/sEvolution/_sEvolution.pug
+include ../blocks/sLogos/_sLogos.pug
+include ../blocks/sServises/_sServises.pug
+include ../blocks/sFaq/_sFaq.pug
+include ../blocks/Scomfort2/_Scomfort2.pug
 
 block variables
 	- let  mainPage= null 
-	- let  bg= null
+	- let  bg= 'main.jpg'
 
 block title
 	- let  title= 'title'
@@ -15,50 +26,42 @@ block pagecontent
 
 
 	+mob-mnu()
-	+header()
-	+top-nav()
-	+soc()
-	a(href="")
-	//- img(src="img/", alt="")
-	//- img(src="img/@2x/avif/r.avif", alt="")
-	//- img(src="img/@1x/avif/r.avif", alt="")
-	+in-c("checkbox", "text")
-	//- +pic('f8af7db0d56028b5cc1c7dfc78ec06e8.jpg')
-	//- img(src="img/r.avif", alt="")
-	img(src="img/@2x/r.jpg", alt="")
-
-	img(src="img/@2x/webp/r.webp", alt="")
-	//- img(src="img/002-book.avif", alt="")
-	img(src="img/@2x/002-book.png", alt="")
-	img(src="img/@2x/webp/002-book.webp", alt="")
-
-	+b.tabs--js.opacity-50
-		+e.caption.d-flex
-			+e.btn.btn.btn-warning.active  btn1
-			+e.btn.btn.btn-warning btn 2
-			+e.btn.btn.btn-warning btn 3
-			+e.btn.btn.btn-warning btn 4
-		+e.wrap
-			+e.content.active content 1
-			+e.content content 2
-			+e.content content 3
-			+e.content content 4
-	+b.tabs--js
-		+e.caption.d-flex
-			+e.btn.btn.btn-success.active  btn  2 1
-			+e.btn.btn.btn-success btn 2  2
-			+e.btn.btn.btn-success btn 2  3
-			+e.btn.btn.btn-success btn  2 4
-		+e.wrap
-			+e.content.active content 1
-			+e.content content 2
-			+e.content content 3
-			+e.content content 4
-
-	+topLine()
+	header.header
+		+topLine()
+		+top-nav()
 	+headerBlock()
+	.section.container 
+		.section-title
+			.row
+				.col
+					h2 #[span Популярные] модели септиков
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet,
+					a.link-more(href="#") Подробнее
+				.col-xl-auto.d-none.d-xl-block
+					+b.panel-white
+						.h6.strong Нужна помощь специалиста?
+						p.text-secondary Звоните ежедневно с 9:00 до 18:30 Ответим в WhatsApp за минуту!
+						.row.gx-3.align-items-center
+							.col-auto
+								a.tel.strong(href="tel:8(812)317-1209" ) 8 (812) 317-1209 
+							.col-auto
+								a.contact-block__btn(href="#")
+									+icon("akar-icons_whatsapp-fill")
+		.row 
+			.col-aside.col-xl
+				+aside
+			.col-main.col-xl
+				+sCatalog
+	+sQwiz
+	+sTypes
+	+sMistakes
+	+sComfort
+	+Scomfort2
+	+sEvolution
 	+sForm()
-	+sContact()
+	+sLogos
+	+sServises
+	+sFaq
 	+footer()
       
 

@@ -1,0 +1,78 @@
+mixin prodItem()
+	+b.prod-item
+		+e.img-wrap
+			+pic("prod.jpg",'bg',0)
+			block
+		+e.title 
+			.strong Юнилос Астра 3
+			.small.text-secondary монтаж от 12 000 руб.* 
+		
+			+e.add
+				+icon('eva_bookmark-fill')
+		table
+			mixin tr(t1,t2,t3) 
+				tr
+					td
+						img(src=`img/svg/${t1}.svg`, alt="")
+					td= t2
+					td.text-end= t3
+			+tr("eva_people-outline",'Кол-во человек','5')
+			+tr("eva_settings-outline",'Производ-сть, м3/сут','0.8')
+			+tr("gg_color-bucket",'залповый сброс','200л')
+		+e.btn(href="#") подробнее
+
+mixin sCatalog(data)
+	// start sCatalog
+	+b.sCatalog.section#sCatalog&attributes(attributes)
+		img.before(src="img/@2x/webp/catalog-before.webp", alt="")
+		+e.head
+			.row
+				+e.head-title.col-xxl-auto.mb-2 Также ищут:
+				.col
+					.row
+						.col-auto.mb-2: +e.btn-head(href="#") Для дачи
+						.col-auto.mb-2: +e.btn-head(href="#") Для дома
+						.col-auto.mb-2: +e.btn-head(href="#") Для бани
+						.col-auto.mb-2: +e.btn-head(href="#") Для 3х человек
+						.col-auto.mb-2: +e.btn-head(href="#") Для бани
+						.col-auto.mb-2: +e.btn-head(href="#") Для 5 человек
+						.col-auto.mb-2: +e.btn-head(href="#") Еще...
+		+e.wrap
+			.row.g-0
+				+e.col.col-xl-3.col-lg-4.col-sm-6
+					+prodItem()
+						+e.label(style="--bg-color: var(--bs-warning)") Популярный
+				+e.col.col-xl-3.col-lg-4.col-sm-6
+					+prodItem()
+						+e.label(style="--bg-color: var(--bs-primary)") Хит
+				+e.col.col-xl-3.col-lg-4.col-sm-6
+					+prodItem()
+						+e.label(style="--bg-color: var(--bs-primary)") Хит
+				+e.col.col-xl-3.col-lg-4.col-sm-6
+					+prodItem()
+						+e.label(style="--bg-color: var(--bs-primary)") Хит
+				- for (var x = 0; x < 3; x++)
+					+e.col.col-xl-3.col-lg-4.col-sm-6
+						
+						+prodItem()
+				+e.col.col-xl-3.col-lg-4.col-sm-6
+					+b.prod-item(href="#")
+						+pic("stock-card.png",'bg',0)
+						span.btn.btn-primary().w-100 подробнее
+				+e.col.col-xl-3.col-lg-4.col-sm-6
+					+prodItem()
+						+e.label(style="--bg-color: var(--bs-warning)") Популярный
+				+e.col.col-xl-3.col-lg-4.col-sm-6
+					+prodItem()
+						+e.label(style="--bg-color: var(--bs-primary)") Хит
+				+e.col.col-xl-3.col-lg-4.col-sm-6
+					+prodItem()
+						+e.label(style="--bg-color: var(--bs-primary)") Хит
+				+e.col.col-xl-3.col-lg-4.col-sm-6
+					+prodItem()
+						+e.label(style="--bg-color: var(--bs-primary)") Хит
+				+e.col.col-xl-3.col-lg-4.col-sm-6
+			+e.foot.text-center.mt-5
+				a(href="#").more-link Посмотреть весь каталог
+					+icon("eva_arrow-forward-outline")
+	// end sCatalog

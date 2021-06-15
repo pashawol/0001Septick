@@ -1,0 +1,150 @@
+// start .sTypes
+.sTypes {
+		// --sPT: ;
+		--sPB: 40px;
+		
+		// --sTPB: ;
+		.section-title{
+			p{
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+		.tabs{
+			background: #FFFFFF;
+			border-radius: 40px;
+				@include media-breakpoint-up(xl){
+					padding: rem(83) rem(15);
+				}
+				padding: rem(40) rem(15);
+			&__caption{
+				justify-content: center;
+				align-items: center;
+				@include media-breakpoint-up(lg){
+					margin-bottom: rem(100);
+				}
+				margin-bottom: rem(40);
+				display: flex;
+				flex-wrap: wrap;
+				// display: none;
+			}
+			&__btn{
+				@include media-breakpoint-up(xl){
+					display: inline-flex;
+					text-align: left;
+				}
+				margin-bottom: 20px;
+				text-align: center;
+				@include media-breakpoint-up(lg){
+					// display: inline-flex;
+					text-align: center;
+					
+				}
+				// display: none;
+				display: block;
+				justify-content: center;
+				align-items: center;
+				margin-left: 13px;
+				margin-right: 13px;
+				font-weight: 500;
+				&:hover,
+				&.active{
+					color: $success;
+					span{
+						border-color: transparent;
+					}
+				}
+				span{
+					display: inline;
+					border-bottom: 1px solid  ;
+				}
+				picture{
+						@include media-breakpoint-up(xl){
+							margin-right: rem(24);
+							margin-bottom: 0;
+						}
+						margin-bottom: 20px;
+				}
+				@include media-breakpoint-up(xxxl) {
+					font-size: 16px;
+				}
+				font-size: 14px;
+			}
+			&__wrap{
+				margin-left: auto;
+				margin-right: auto;
+				max-width: rem(982);
+				
+			}
+
+			&__content{
+				margin-bottom: 1rem;
+				picture {
+					width: rem(213 + 85);
+				}
+			}
+			
+		}
+		.tabs__btn-accordion{
+			margin-bottom: 1rem;
+			font-weight: 500;
+			cursor: pointer;
+
+
+			&:hover,
+			&.active {
+				color: $success;
+
+				span {
+					border-color: transparent;
+				}
+			}
+
+			span {
+				display: inline;
+				border-bottom: 1px solid;
+			}
+			picture {
+				margin-right: rem(24);
+			}
+			@include media-breakpoint-up(lg){
+				display: none;
+			}
+			display: flex;
+			align-items: center;
+		}
+		h5{
+			font-weight: bold;
+			margin-bottom: 15px;
+		}
+		h6{
+			color: $primary;
+			font-weight: 600;
+			margin-bottom: rem(30);
+		}
+		p{
+			color: #858B9B;
+			font-size: rem(18);
+		}
+		.link-more{
+			font-size: 1rem;
+			margin-bottom: rem(37);
+		}
+		&__btn{
+			@extend .btn;
+			@extend .btn-success;
+			width: rem(314);
+			padding: rem(26);
+			.icon{
+				font-size: 1rem;
+				margin-left: rem(10);
+			}
+		}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sTypes

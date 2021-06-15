@@ -1,7 +1,7 @@
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 import $ from '../../utils/dom';
-import { extend, bindModuleMethods, classesToSelector } from '../../utils/utils';
+import { extend, bindModuleMethods, classesToSelector, createElementIfNotDefined } from '../../utils/utils';
 var Pagination = {
   update: function update() {
     // Render || Update Pagination bullets/items
@@ -212,6 +212,9 @@ var Pagination = {
   },
   init: function init() {
     var swiper = this;
+    swiper.params.pagination = createElementIfNotDefined(swiper.$el, swiper.params.pagination, swiper.params.createElements, {
+      el: 'swiper-pagination'
+    });
     var params = swiper.params.pagination;
     if (!params.el) return;
     var $el = $(params.el);

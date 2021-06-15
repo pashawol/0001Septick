@@ -1,19 +1,85 @@
 .menu{
-	display: flex;
 	list-style: none;
-	@include roww(20px);
+	margin-bottom: 1rem;
+	@include media-breakpoint-up(xl){
+		margin-bottom: 0;
+		display: flex;
+
+		text-align: center;
+		@include roww(20px);
+		white-space: nowrap;
+		margin-top: 0;
+	}
+	margin-top: 20px;
+	@include media-breakpoint-up(xxxl){
+		@include roww(30px);
+	}
 	position: relative;
 	margin-bottom: 0;
 	max-width: 100%;
-	flex-wrap: wrap;
+		text-transform: capitalize;
+	// flex-wrap: wrap;
 	li{
 		// margin-left: 0;
 		// margin-right: 0;
 		padding: 0;
+		list-style: none;
 	}
 	a{
 		display: block;
-		text-align: center;
+		@include media-breakpoint-up(xxxl){
+			padding: rem(20) rem(15);
+		}
 		padding: rem(20) rem(10);
+		color: $body-color;
+		font-size: rem(13);
+		&.active,
+		&:hover{
+			color: $primary;
+		}
+	}
+
+}
+.strong {
+	.menu{
+		justify-content: space-between;
+		text-transform: uppercase;
+	}
+}
+.sub-menu{
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	background: #FFFFFF;
+	@include media-breakpoint-up(xl) {
+	border-radius: 20px;
+	}
+	filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.06));
+	text-align: left;
+	font-weight: normal;
+}
+
+.menu-item-has-children{
+	position: relative;
+	&> a{
+		pointer-events: none;
+		position: relative;
+			@include media-breakpoint-up(xxxl) {
+
+				padding-right: rem(35);
+			}
+			padding-right: rem(15);
+		&::after{
+			content: var(--chevron-down);
+			position: absolute;
+			right: 0;
+			@include a-cent1(y);
+		}
+	}
+	&:hover{
+		.sub-menu{
+			display: block;
+		}
 	}
 }

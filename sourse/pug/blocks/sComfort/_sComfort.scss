@@ -1,0 +1,93 @@
+// start .sComfort
+.sComfort {
+	background-color: #fff;
+	position: relative;
+	z-index: 2;
+	--sPB:0;
+	&::after{
+		z-index: -1;
+		content: url(../img/svg/dots.svg);
+		position: absolute;
+		top: 300px;
+		left: 90%;
+		opacity: 0.7;
+		zoom: 1.5;
+	}
+	h2{
+		@include rfs(48px);
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(1220);
+		line-height: (67 / 48);
+	}
+		// --sPT: ;
+		// --sPB: ;
+		// --sTPB: ;
+	&__item{
+		@include media-breakpoint-up(sm){
+
+			display: flex;
+			text-align: left;
+			margin-bottom: rem(40);
+		}
+		margin-bottom: rem(35);
+		text-align: center;
+		
+		// align-items: center;
+		picture{
+			flex: 0 0 auto;
+			min-height: 200px ;
+			@include media-breakpoint-up(xxxl){
+				margin-right: rem(45);
+			}
+			@include media-breakpoint-up(sm) {
+				width: 200px;
+				margin-bottom: 0;
+				margin-right: rem(10);
+			}
+			// margin-bottom: 20px;
+			text-align: center;
+		}
+		a{
+			text-transform: uppercase;
+			font-size: 13px;
+			font-weight: bold;
+			display: inline-flex;
+			align-items: center;
+			.icon{
+				font-size: 1rem;
+				margin-left: 5px;
+			}
+		}
+	}
+	h5{
+		font-weight: bold;
+		@include rfs(22px);
+		margin-bottom: 20px;
+			@include media-breakpoint-up(sm){
+
+				max-width: rem(380);
+			}
+	line-height: 1.42;
+	}
+	p{
+		color: #858B9B;
+			@include media-breakpoint-up(sm){
+				max-width: rem(370);
+			}
+		font-size: 18px;
+	}
+	@include media-breakpoint-up(xxl) {
+		.container{
+			max-width: 1300px;
+		}
+		--sTPB: 120px;
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sComfort
