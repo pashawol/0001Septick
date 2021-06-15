@@ -1,10 +1,67 @@
 // start .sServises
 .sServises {
+
+	--sTPB: 20px;
+	background: linear-gradient(180deg, #FFFFFF 25.16%, rgba(255, 255, 255, 0) 100%),
+	#F5F5F7;
+	h2{
+		@include rfs(36px);
+	}
+	.section-title{
+		p{
+			margin-left: auto;
+			margin-right: auto;
+		
+		}
+	}
+	&__item{
+		font-weight: bold;
+		display: block;
+		@extend .text-success;
+		margin-bottom: 43px;
+	}
+	&__img-wrap{
+		@include block(500, 286);
+		background-color: $success;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: rem(24);
+		border-radius: 40px;
+		overflow: hidden;
+		margin-bottom: 25px;
+		span{
+			@include a-cent1;
+			white-space: nowrap;
+		}
+	}
+	&__title{
+		font-size: rem(22);
+		color: $body-color;
+		@include mt;
+		margin-bottom: 5px;
+		max-width: rem(370);
+	}
+	&__item:hover &__title{
+		color: $success;
+	}
+	&__more{
+			text-transform: uppercase;
+			font-size: 13px;
+		.icon{
+			margin-left: 5px;
+			font-size: 1rem;
+		}
+	}
+
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
 
-	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(xxxl) {
+		.row{
+			--bs-gutter-x: 60px;
+		}
+	}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}

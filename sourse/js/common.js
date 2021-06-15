@@ -259,7 +259,12 @@ function eventHandler() {
 	// modal window
 
 
-	
+	$('.accordion-item__head').click(function(){
+		$(this).next().slideToggle(function(){
+			$(this).parent().toggleClass("active");
+		})
+	})
+
 
 };
 if (document.readyState !== 'loading') {

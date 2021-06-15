@@ -1,9 +1,33 @@
 mixin sLogos(data)
 	// start sLogos
-	+b.SECTION.sLogos.section#sLogos&attributes(attributes)
+	+b.SECTION.sLogos.section.pb-0#sLogos&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sLogos
-				
-			.row
+				h2 Мы являемся официальным дилером #[span более 25] производителей очистных систем
+				p Мы&nbsp;являемся официальным дилером более 25&nbsp;производителей очистных систем
+		.bg-wrap.section.pt-0
+			+pic('logo-bg.png','bg').picture-bg
+			+e.inner
+				.row
+					mixin item(i,t,p)
+						+e.col.col-lg-3.col-md-4.col-6 
+							+e.item
+								+pic(`loog-${i}.png`,'',0)
+								+e.title Цена от 27 000 руб.
+								p монтаж от 19 000 руб.
+					+item(`1`)
+					+item(`2`)
+					+item(`3`)
+					+item(`4`)
+					+item(`5`)
+					+item(`6`)
+					+item(`7`)
+					+item(`8`)
+					+item(`9`)
+					+item(`10`)
+					+item(`11`)
+					+item(`12`)
+				.text-center 
+					+e.more(href="#") Посмотреть всех производителей
+						+icon('arrow-right') 
 	// end sLogos

@@ -1,9 +1,41 @@
 mixin sFaq(data)
 	// start sFaq
 	+b.SECTION.sFaq.section#sFaq&attributes(attributes)
+		+pic("fag-1.png",'',0).before.before--1
+		+pic("faq-2.png",'',0).before.before--2
+		+pic("faq-3.png",'',0).before.before--3
 		.container
-			+b.section-title.text-center
-				h2 sFaq
-				
-			.row
+			+e.row.row
+				.col-8
+					+b.section-title.text-center
+						h2 Ответы на #[span частые вопросы]
+					mixin item(t)
+						+b.accordion-item
+							+e.head= t
+								+e.toggle
+							+e.body
+								p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ducimus fugit, soluta autem inventore quod eos, eaque explicabo dicta, cupiditate tempora eveniet veritatis reprehenderit eius dignissimos distinctio alias laudantium commodi amet asperiores doloremque nihil culpa architecto molestias. Quae minus necessitatibus itaque, excepturi porro quasi atque repellat iure cupiditate in repellendus suscipit earum iste cumque eius provident autem. Inventore sapiente quas ullam esse assumenda quaerat similique odio magni, pariatur totam nam. Et, facilis dolorum maiores tempore qui sequi tempora aut eum nisi? Consequatur quod quos est laborum odio blanditiis dolores incidunt non, culpa minima cumque temporibus quidem praesentium, esse hic ducimus fuga.
+					+item('Что такое септик?')
+					+item('Сколько это стоит?')
+					+item('А зимой септик работает? Когда лучше всего начинать?')
+					+item('У меня высокие грунтовые воды, что вы можете посоветовать?')
+					+item('Могу ли я установить септик зимой?')
+					+item('Как производится монтаж септика?')
+					+item('Какую воду можно сливать в септик?')
+					+item('Какие гарантии я получу?')
+					+item('Как заказать?')
+					+item('Как много электриества потребляют станции с глубокой...')
+					+item('Могу ли я оплатить безналичным переводом?')
+				.col-4
+					+e.man
+						+pic("man-ask.jpg",'',0)
+						+e.man-caption
+							+e.name Тимур Исякаев
+							+e.text Генеральный директор
+							a(href="#")
+								+icon("ion_mail")
+								| написать директору
+					+e.block
+						+e.block-title Остались вопросы? Задайте их&nbsp;нашему ведущему инженеруи он&nbsp;ответит в&nbsp;течение 15&nbsp;минут
+						+e.btn(href="#") задать вопрос
 	// end sFaq

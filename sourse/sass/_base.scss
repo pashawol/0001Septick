@@ -127,6 +127,7 @@ h2{
 .section-title {
 	padding-bottom: var(--sTPB);
 	p{
+			font-size: 18px;
 		@extend .text-secondary;
 		max-width: rem(1020);
 	}

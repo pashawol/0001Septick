@@ -3,7 +3,24 @@ mixin sServises(data)
 	+b.SECTION.sServises.section#sServises&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sServises
-				
+				h2 Можем выполнить комплекс услуг в вашем доме
+				p Вы почувствуете комфорт на даче, как в городской квартире
 			.row
+				mixin item(i,t)
+					+e.col.col-lg-4.col-sm-6 
+						+e.item(href="#")
+							+e.DIV.img-wrap.bg-wrap
+								if i
+									+pic(`servise-${i}.jpg`,'bg',0).picture-bg
+								else
+									span Все услуги
+							+e.DIV.title= t
+							+e.DIV.more узнать подробнее
+								+icon('arrow-right')
+				+item(`1`,`Дренаж участка`)
+				+item(`2`,`Отопление загородного дома`)
+				+item(`3`,`Копка колодцев`)
+				+item(`4`,`Установка пластиковых погребов`)
+				+item(`5`,`Водоснабжение загородного дома`)
+				+item(``,`Каталог услуг`)
 	// end sServises

@@ -266,6 +266,12 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	})); // modal window
+
+	$('.accordion-item__head').click(function () {
+		$(this).next().slideToggle(function () {
+			$(this).parent().toggleClass("active");
+		});
+	});
 }
 
 ;
