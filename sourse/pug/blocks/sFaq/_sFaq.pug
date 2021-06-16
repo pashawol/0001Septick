@@ -6,7 +6,7 @@ mixin sFaq(data)
 		+pic("faq-3.png",'',0).before.before--3
 		.container
 			+e.row.row
-				.col-8
+				.col-lg-8
 					+b.section-title.text-center
 						h2 Ответы на #[span частые вопросы]
 					mixin item(t)
@@ -26,7 +26,7 @@ mixin sFaq(data)
 					+item('Как заказать?')
 					+item('Как много электриества потребляют станции с глубокой...')
 					+item('Могу ли я оплатить безналичным переводом?')
-				.col-4
+				.col-lg-4
 					+e.man
 						+pic("man-ask.jpg",'',0)
 						+e.man-caption

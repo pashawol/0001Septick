@@ -1,2 +1,75 @@
 mixin footer()
-	footer.footer
+	+b.FOOTER.footer
+		.container
+			.row
+				.col-xl-3
+					+e.logo(href='/')
+						+pic("logo.png",'',0)
+					+b.contact-block
+						+e.item
+							+icon('call')
+							div
+								+e.tel(href="tel:8(495)115-67-07").text-white 8 (495) 115-67-07 
+								div
+									+e.call(href="#") 
+										| ЗАКАЗАТЬ ЗВОНОК
+						
+						+e.item--mail
+							+icon("ion_mail")
+							+e.link(href="mailto:info@septik.net").text-white info@septik.net  
+						+e.item
+							+icon("mark")
+							| м. Окская, Рязанский пр-т, д.24, стр.2
+					+soc()
+				.col-xl
+					+e.row.row
+						+e.col.col-xxl.col-auto
+							+e.title Клиентам
+							ul 
+								li: a(href="#") Доставка и оплата
+								li: a(href="#") Монтаж
+								li: a(href="#") Гарантия
+								li: a(href="#") Статьи
+								li: a(href="#") Отзывы
+								li: a(href="#") Контакты
+						+e.col.col-xxl.col-auto
+							+e.title О компании
+							ul 
+								li: a(href="#") О компании
+								li: a(href="#") Выполненные работы
+								li: a(href="#") Услуги
+								li: a(href="#") Акции
+								li: a(href="#") Контакты
+								li: a(href="#") 
+						+e.col.col-auto
+							+e.title Каталог
+							ul 
+								li: a(href="#") ТОПАС
+								li: a(href="#") Юнилос Астра
+								li: a(href="#") Евробион
+								li: a(href="#") Терра
+								li: a(href="#") Тверь
+								li: a(href="#") EGROBOX
+						+e.col.col-auto
+							+e.title &nbsp;
+							ul 
+								li: a(href="#") БИОзон
+								li: a(href="#") Дочиста
+								li: a(href="#") Диамант
+								li: a(href="#") Евролос
+								li: a(href="#") КолоВеси
+								li: a(href="#") Термит
+				.col-12
+				.col-xl-3.align-self-center.order-xl-0.order-last.text-xl-start.text-center
+					+e.copy.py-4  МосСептик © 2012-2021 
+						br
+						a(href="#") Политика Конфиденциальности
+				.col-xl-9
+					+form-wrap 
+						.row
+							.col-lg-auto.text-lg-start.text-center
+								.title Спецпредложения, акции и скидки
+							.col-lg-auto
+								+input("Почта",'email')
+							.col
+								+b.btn.btn-success(type="button") Подписаться
