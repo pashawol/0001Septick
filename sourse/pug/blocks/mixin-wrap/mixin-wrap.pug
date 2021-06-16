@@ -26,3 +26,17 @@ mixin search()
 			+input("Поиск по товарам")
 			button 
 				+icon("eva_search-fill")
+
+mixin pageHead()
+	+b.page-head
+		.container
+			block
+
+mixin custom-alert(i, ...items)
+	+b.custom-alert.alert(role='alert')&attributes(attributes)
+		+e.content
+			+e.img-wrap
+				img(src=`img/${i}`, alt="")
+			+e.text
+				each item in items
+					span!= item

@@ -1,0 +1,43 @@
+mixin sPayment(data)
+	// start sPayment
+	+b.SECTION.sPayment.section#sPayment&attributes(attributes)
+		.container
+			.row
+				.col-lg-6
+					+e.item
+						+e.inner
+							h4 Для #[span.text-primary юридических] лиц
+							+e.imgs
+								.row.justify-content-center.roww-20
+									.col-6.col-sm-4
+										+e.img-wrap
+											img(src="img/svg/payment-1.svg" alt="")
+										+e.text Расчетный счет
+									.col-6.col-sm-4
+										+e.img-wrap
+											img(src="img/svg/payment-2.svg" alt="")
+										+e.text Оплата с&nbsp;НДС и&nbsp;без НДС
+							p Мы&nbsp;подготовим полный комплект документов для бухгалтерии. Готовы будет отправить заказным письмом или с&nbsp;помощью курьерской службы доставки
+				.col-lg-6
+					+e.item
+						+e.inner
+							h4 Для #[span.text-primary физических] лиц
+							+e.imgs
+								.row.justify-content-center.roww-20
+									.col-6.col-sm-4
+										+e.img-wrap
+											img(src="img/svg/payment-3.svg" alt="")
+										+e.text Расчетный счет
+									.col-6.col-sm-4
+										+e.img-wrap
+											img(src="img/svg/payment-4.svg" alt="")
+										+e.text Оплата с&nbsp;НДС и&nbsp;без НДС
+									.col-6.col-sm-4
+										+e.img-wrap
+											img(src="img/svg/payment-5.svg" alt="")
+										+e.text Наличными в&nbsp;офисе
+							p При оплате наличными мы&nbsp;подготавливаем полный пакет документов: предложение на&nbsp;фирменном бланке, договор, спецификации и&nbsp;приходно-кассовый ордер. Все документы заверяются бухгалтерией и&nbsp;имеют полную юридическую силу
+
+			+custom-alert(`svg/alert.svg`, `Платите по факту выполнения работы!`, `Оборудование в день доставки, монтаж по факту окончания.`, `Предоплату вносить НЕобязательно.`).alert-danger
+
+	// end sPayment
