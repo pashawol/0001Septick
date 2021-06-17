@@ -3,22 +3,23 @@ mixin sNeedHelp(data)
 	+b.SECTION.sNeedHelp.section#sNeedHelp&attributes(attributes)
 		.container
 			.row
+				.col-xl-auto.order-xl-last
+					+e.banner
+						+e.title Мы&nbsp;работаем с&nbsp;2011&nbsp;года
+						p Гарантируем высокое качество услуг, не&nbsp;срываем сроки и&nbsp;знаем как сэкономить нашим клиентам минимум 8000руб.&nbsp;с&nbsp;каждого монтажа станции
+						img(src="img/@2x/need-help.png", alt="")
 				.col
 					+form-wrap
 						+b.section-title
 							h2 Нужна помощь специалиста?
 							p Наши специалисты с&nbsp;радостью проконсультируют вас и&nbsp;подберут наилучшее предложение
 						.row
-							.col
+							.col-lg-4
 								+input('','text',"Имя")
-							.col
+							.col-lg-4
 								+input('','tel',"Телефон")
-							.col
+							.col-lg-4
 								button.btn.btn-success.w-100(type="submit") мне нужна помощь
 						+e.polite При отправке данных вы принимаете #[a(href="#") политику конфиденциальности]
-				.col-xl-auto
-					+e.banner
-						+e.title Мы&nbsp;работаем с&nbsp;2011 года
-						p Гарантируем высокое качество услуг, не&nbsp;срываем сроки и&nbsp;знаем как сэкономить нашим клиентам минимум 8000руб.&nbsp;с&nbsp;каждого монтажа станции
 
 	// end sNeedHelp
