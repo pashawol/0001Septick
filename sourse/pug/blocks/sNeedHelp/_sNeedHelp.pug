@@ -1,0 +1,24 @@
+mixin sNeedHelp(data)
+	// start sNeedHelp
+	+b.SECTION.sNeedHelp.section#sNeedHelp&attributes(attributes)
+		.container
+			.row
+				.col
+					+form-wrap
+						+b.section-title
+							h2 Нужна помощь специалиста?
+							p Наши специалисты с&nbsp;радостью проконсультируют вас и&nbsp;подберут наилучшее предложение
+						.row
+							.col
+								+input('','text',"Имя")
+							.col
+								+input('','tel',"Телефон")
+							.col
+								button.btn.btn-success.w-100(type="submit") мне нужна помощь
+						+e.polite При отправке данных вы принимаете #[a(href="#") политику конфиденциальности]
+				.col-xl-auto
+					+e.banner
+						+e.title Мы&nbsp;работаем с&nbsp;2011 года
+						p Гарантируем высокое качество услуг, не&nbsp;срываем сроки и&nbsp;знаем как сэкономить нашим клиентам минимум 8000руб.&nbsp;с&nbsp;каждого монтажа станции
+
+	// end sNeedHelp

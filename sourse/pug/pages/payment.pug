@@ -15,6 +15,7 @@ extends layout/main.pug
 //- include ../blocks/sFaq/_sFaq.pug
 //- include ../blocks/Scomfort2/_Scomfort2.pug
 include ../blocks/sPayment/_sPayment.pug
+include ../blocks/sNeedHelp/_sNeedHelp.pug
 
 block variables
 	- let  mainPage= null 
@@ -34,6 +35,10 @@ block pagecontent
 		h1 Оплата
 		p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut&nbsp;ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut&nbsp;commodo sagittis, sapien dui mattis dui
 	+sPayment()
+	.container
+		+custom-alert(`svg/alert.svg`, `Платите по факту выполнения работы!`, `Оборудование в день доставки, монтаж по факту окончания.`, `Предоплату вносить НЕобязательно.`).alert-danger
+
+	+sNeedHelp()
 	//- +headerBlock()
 	//- +sQwiz
 	//- +sTypes

@@ -1,0 +1,64 @@
+// start .sNeedHelp
+.sNeedHelp {
+	// --sPT: ;
+	// --sPB: ;
+	--sTPB: #{rem(30)};
+	.section-title {
+		h2 {
+			font-weight: 800;
+			font-size: rem(48);
+			line-height: (67 / 48);
+			margin-bottom: rem(20);
+		}
+		p {
+			font-size: 16px;
+			line-height: (24 / 16);
+		}
+	}
+
+	.form-wrap {
+		padding: rem(80) rem(73);
+		background-color: $white;
+		border-radius: 40px;
+		&__polite {
+			text-align: left;
+		}
+	}
+	&__banner {
+		position: relative;
+		width: rem(437);
+		height: 100%;
+		padding: rem(54) rem(44);
+		background: linear-gradient(313.79deg, #1cb4db 0%, #0bcdff 100.48%);
+		border-radius: 40px;
+		p {
+			font-size: rem(18);
+			line-height: (26 / 18);
+			color: $white;
+			max-width: rem(325);
+		}
+	}
+	&__title {
+		font-weight: 800;
+		font-size: rem(32);
+		line-height: (42 / 32);
+		color: $white;
+		max-width: rem(265);
+		margin-bottom: rem(25);
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sNeedHelp
