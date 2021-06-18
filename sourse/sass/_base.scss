@@ -651,3 +651,9 @@ iframe {
 		}
 	}
 }
+
+.rounded-inner {
+	border-radius: 40px;
+	background-color: $white;
+	padding: rem(100) rem(93);
+}

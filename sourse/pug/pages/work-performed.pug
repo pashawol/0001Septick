@@ -13,17 +13,17 @@ extends layout/main.pug
 //- include ../blocks/sServises/_sServises.pug
 //- include ../blocks/sFaq/_sFaq.pug
 //- include ../blocks/Scomfort2/_Scomfort2.pug
-include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sContact/_sContact.pug
 //- include ../blocks/sPayment/_sPayment.pug
 include ../blocks/sNeedHelp/_sNeedHelp.pug
-include ../blocks/sContactAside/_sContactAside.pug
+include ../blocks/sOurWorks/_sOurWorks.pug
 
 block variables
 	- let  mainPage= null 
 	- let  bg= 'main.jpg'
 
 block title
-	- let  title= 'Контакты'
+	- let  title= 'Выполненные работы'
 	title= title
 block pagecontent
 
@@ -34,9 +34,9 @@ block pagecontent
 		+top-nav()
 	+pageHead()
 		h1= title
-	+sContact()
-		+sContactAside
-	+sNeedHelp().order-xl-last
+	+sOurWorks
+	+sNeedHelp()
+	//- +sContact()
 	//- +sPayment()
 	//- +headerBlock()
 	//- +sQwiz

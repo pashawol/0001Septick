@@ -1,0 +1,63 @@
+mixin sContactAside(data)
+	// start sContactAside
+	+b.ASIDE.sContactAside
+		+e.wrap
+			.row
+				.col-md-6.col-xl-12
+					+e.item--withIcon
+						+e.title Телефон и мессенджеры
+							+icon('phone')
+						+e.content
+							+e.tel(href="tel:+74951156707") 8 (495) 115-67-07
+							+b.soc
+								+item-sos()
+									+pic(`soc-5.png`,'',0)
+								+item-sos()
+									+pic(`soc-6.png`,'',0)
+								+item-sos()
+									+pic(`soc-7.png`,'',0)
+					+e.item--withIcon
+						+e.title Адрес офиса
+							+icon('map-tag')
+						+e.content
+							span м. Окская, Рязанский пр-т, д.24, стр.2
+					+e.item--withIcon
+						+e.title Режим работы
+							+icon('clock')
+						+e.content.flex-column.align-items-start
+							span ПН-ПТ с 9:00 до 21:00
+							span СБ-ВС с 10:00 до 20:00
+					+e.item--withIcon
+						+e.title Email
+							+icon('mail')
+						+e.content
+							+e.mail(href="mailto:info@septik.net") info@septik.net
+					+e.item.mb-0
+						+e.title Мы в социальных сетях
+						+e.content
+							+b.soc
+								+item-sos()
+									+pic(`soc-1.png`,'',0)
+								+item-sos()
+									+pic(`soc-2.png`,'',0)
+								+item-sos()
+									+pic(`soc-3.png`,'',0)
+								+item-sos()
+									+pic(`soc-4.png`,'',0)
+					+e.item.d-md-none.d-xl-block
+				.col-md-6.col-xl-12
+					+e.item.mb-0
+						+e.title Наши реквизиты
+						+e.content
+							ul
+								li OOO &laquo;Мос-Септик&raquo;
+								li #[b ИНН] 7721315867
+								li #[b КПП] 772101001
+								li #[b ОГРН] 1157746513231
+							ul
+								li #[b Расчетный счет] 40702810100150004030
+								li #[b Название банка] АО&nbsp;&laquo;АЛЬФА-БАНК&raquo;
+								li #[b БИК] 044525593
+								li #[b Кор.счет] 30101810200000000593
+							span  #[b Генеральный директор] Исякаев Тимур Марсович
+	// end sContactAside
