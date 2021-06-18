@@ -3,39 +3,123 @@
 	// --sPT: ;
 	// --sPB: ;
 	--sTPB: #{rem(30)};
+	padding-top: 0;
+	padding-bottom: 0;
+	
+	
+	.row {
+		@include roww(36px);
+	}
 	.section-title {
 		h2 {
 			font-weight: 800;
-			font-size: rem(48);
-			line-height: (67 / 48);
+			@include rfs(48px);
+			line-height: 1;
 			margin-bottom: rem(20);
+			text-align: center;
+			@include media-breakpoint-up(sm) {
+				text-align: left;
+			}
 		}
 		p {
 			font-size: 16px;
 			line-height: (24 / 16);
+			text-align: center;
+			@include media-breakpoint-up(sm) {
+				text-align: left;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 	}
 
 	.form-wrap {
-		padding: rem(80) rem(73);
 		background-color: $white;
 		border-radius: 40px;
+		padding: rem(40) rem(15);
+		@include media-breakpoint-up(sm) {
+			padding: rem(50) rem(43);
+		}
+		@include media-breakpoint-up(xxl) {
+			padding: rem(60) rem(53);
+		}
+		@include media-breakpoint-up(xxxl) {
+			padding: rem(80) rem(73);
+		}
+		.row {
+			@include roww(20px);
+		}
 		&__polite {
-			text-align: left;
+			@include media-breakpoint-up(md) {
+				text-align: left;
+			}
 		}
 	}
 	&__banner {
 		position: relative;
-		width: rem(437);
-		height: 100%;
-		padding: rem(54) rem(44);
-		background: linear-gradient(313.79deg, #1cb4db 0%, #0bcdff 100.48%);
+		overflow: hidden;
 		border-radius: 40px;
+		margin-bottom: rem(20);
+		padding: rem(40) rem(15) rem(80);
+		@media (min-width: 437px) {
+			padding: rem(30) rem(15) rem(50);
+		}
+		@include media-breakpoint-up(sm) {
+			padding: rem(50) rem(43);
+		}
+		@include media-breakpoint-up(xl) {
+			width: 330px;
+			height: 100%;
+			padding: rem(44) rem(34);
+			margin-bottom: 0;
+		}
+		@include media-breakpoint-up(xxl) {
+			width: 390px;
+		}
+		@include media-breakpoint-up(xxxl) {
+			padding: rem(54) rem(44);
+			width: 437px;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			background: linear-gradient(313.79deg, #1cb4db 0%, #0bcdff 100.48%);
+			z-index: -2;
+		}
 		p {
-			font-size: rem(18);
+			font-size: rem(16);
 			line-height: (26 / 18);
 			color: $white;
-			max-width: rem(325);
+			margin-bottom: 0;
+			text-align: center;
+			@include media-breakpoint-up(sm) {
+				font-size: rem(18);
+				text-align: left;
+			}
+			@include media-breakpoint-only(xl) {
+				font-size: rem(17);
+			}
+			@include media-breakpoint-up(xl) {
+				max-width: rem(325);
+			}
+		}
+		img {
+			position: absolute;
+			max-width: 100%;
+			left: 0;
+			bottom: -20px;
+			z-index: -1;
+			@media (min-width: 437px) {
+				bottom: -80px;
+			}
+			@include media-breakpoint-up(xl) {
+				bottom: 0;
+			}
 		}
 	}
 	&__title {
@@ -43,8 +127,14 @@
 		font-size: rem(32);
 		line-height: (42 / 32);
 		color: $white;
-		max-width: rem(265);
 		margin-bottom: rem(25);
+		text-align: center;
+		@include media-breakpoint-up(sm) {
+			text-align: left;
+		}
+		@include media-breakpoint-up(xl) {
+			max-width: rem(265);
+		}
 	}
 
 	@include media-breakpoint-up(xl) {
