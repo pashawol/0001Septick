@@ -1,0 +1,65 @@
+mixin sitebar(data)
+	// start sitebar
+	+b.sitebar#sitebar&attributes(attributes)
+		ul
+			li.accardion.active
+				.accardion__head.accardion__head--js Пункт меню
+				ul.accardion__content.accardion__content--js.active
+					li: a(href="#") Подпункт
+					li: a(href="#") Подпункт
+					li: a(href="#") Подпункт
+					li: a(href="#") Подпункт
+			li.accardion
+				.accardion__head.accardion__head--js Пункт меню
+				ul.accardion__content.accardion__content--js
+					li: a(href="#") Подпункт
+					li: a(href="#") Подпункт
+					li: a(href="#") Подпункт
+					li: a(href="#") Подпункт
+			li.accardion
+				.accardion__head.accardion__head--js Пункт меню
+				ul.accardion__content.accardion__content--js
+					li: a(href="#") Подпункт
+					li: a(href="#") Подпункт
+					li: a(href="#") Подпункт
+					li: a(href="#") Подпункт
+			li.accardion
+				.accardion__head.accardion__head--js Пункт меню
+				ul.accardion__content.accardion__content--js
+					li: a(href="#") Подпункт
+					li: a(href="#") Подпункт
+					li: a(href="#") Подпункт
+					li: a(href="#") Подпункт
+			li.accardion
+				.accardion__head.accardion__head--js Пункт меню
+				ul.accardion__content.accardion__content--js
+					li: a(href="#") Подпункт
+					li: a(href="#") Подпункт
+					li: a(href="#") Подпункт
+					li: a(href="#") Подпункт
+		mixin link
+			+e.link(href="#") узнать подробнее
+				+icon('arrow-right')
+		+e.title Популярные разделы
+		+e.item
+			+e.imgWrap 
+				+pic('servise-1.jpg','','')
+			+e.itemTitle Дренаж участка
+			+link
+		+e.item
+			+e.imgWrap 
+				+pic('drainage.jpg','','')
+			+e.itemTitle Дренаж участка
+			+link
+		+form-wrap 
+			+e.title.text-center
+				h5 Нужна консультация?
+				p.text-secondary Мы&nbsp;перезвоним через 15&nbsp;минут и&nbsp;ответим на&nbsp;любые вопросы
+			+input('Имя')
+			+input('Телефон','tel')
+			+e.btn.btn.btn-success(type="submit") отправить
+			+e.polite Нажимая на кнопку, вы соглашаетесь с 
+				a(href="#") Политикой Конфиденциальности
+
+
+	// end sitebar
