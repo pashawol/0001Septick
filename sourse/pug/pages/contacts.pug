@@ -2,7 +2,6 @@ extends layout/main.pug
 
 
 //- include ../blocks/sContent/_sContent.pug
-//- include ../blocks/sContact/_sContact.pug
 //- include ../blocks/aside/_aside.pug
 //- include ../blocks/sQwiz/_sQwiz.pug
 //- include ../blocks/sCatalog/_sCatalog.pug
@@ -14,6 +13,7 @@ extends layout/main.pug
 //- include ../blocks/sServises/_sServises.pug
 //- include ../blocks/sFaq/_sFaq.pug
 //- include ../blocks/Scomfort2/_Scomfort2.pug
+include ../blocks/sContact/_sContact.pug
 include ../blocks/sPayment/_sPayment.pug
 include ../blocks/sNeedHelp/_sNeedHelp.pug
 
@@ -22,7 +22,7 @@ block variables
 	- let  bg= 'main.jpg'
 
 block title
-	- let  title= 'Оплата'
+	- let  title= 'Контакты'
 	title= title
 block pagecontent
 
@@ -32,12 +32,10 @@ block pagecontent
 		+topLine()
 		+top-nav()
 	+pageHead()
-		h1 Оплата
-		p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut&nbsp;ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut&nbsp;commodo sagittis, sapien dui mattis dui
-	+sPayment()
-	.container
-		+custom-alert(`svg/alert.svg`, `Платите по факту выполнения работы!`, `Оборудование в день доставки, монтаж по факту окончания.`, `Предоплату вносить НЕобязательно.`).alert-danger
+		h1 Контакты
+	+sContact()
 	+sNeedHelp()
+	//- +sPayment()
 	//- +headerBlock()
 	//- +sQwiz
 	//- +sTypes
