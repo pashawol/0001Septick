@@ -272,6 +272,16 @@ function eventHandler() {
 			$(this).parent().toggleClass("active");
 		});
 	});
+	$(".sCalc__btn--next").click(function () {
+		$(this).parents(".sQwiz__step").hide().removeClass('active').next().fadeIn(function () {
+			$(this).addClass('active');
+		});
+	});
+	$(".sCalc__btn--prev").click(function () {
+		$(this).parents(".sQwiz__step").hide().removeClass('active').prev().fadeIn(function () {
+			$(this).addClass('active');
+		});
+	});
 }
 
 ;
