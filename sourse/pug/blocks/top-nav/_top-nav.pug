@@ -8,10 +8,10 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
-	+b.menu-mobile--js.d-xl-none.container
+	+b.menu-mobile--js.d-xl-none
 		+b.toggle-menu-mobile--js
 			span
-		+e.inner
+		+e.inner.container
 			+b.topLine
 				+search()
 			.strong
