@@ -20,7 +20,7 @@ include ../blocks/sitebar/_sitebar.pug
 
 block variables
 	- let  mainPage= null 
-	- let  bg= 'main.jpg'
+	- let  bg= 'article.png'
 
 block title
 	- let  title= 'Cтатья'
@@ -37,9 +37,9 @@ block pagecontent
 		h1 Название статьи
 	.container
 		.row 
-			.col-aside.col-xl
+			.col-xl-auto.col-aside
 				+sitebar
-			.col-main.col-xl
+			.col-xl.col-article
 				+sArticle
 		//- +custom-alert(`svg/alert.svg`, `Платите по факту выполнения работы!`, `Оборудование в день доставки, монтаж по факту окончания.`, `Предоплату вносить НЕобязательно.`).alert-danger
 

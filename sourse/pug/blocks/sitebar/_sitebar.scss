@@ -7,11 +7,12 @@
 	ul {
 		margin-bottom: 0;
 		list-style: none;
+		@include rfs(20px);
 
 		&:not(.accardion__content) {
 			background-color: #fff;
 			border-radius: rem(20px);
-			padding: rem(46) rem(37);
+			padding: rem(46) rem(37) rem(10);
 			margin-bottom: rem(40);
 			position: relative;
 
@@ -28,7 +29,7 @@
 		li {
 			&.accardion {
 				&:not(:first-child) {
-					padding: rem(37) 0 rem(40);
+					padding: rem(30) 0 rem(30);
 					border-top: 1px solid #f5f5f7;
 				}
 				&:first-child {
@@ -36,11 +37,18 @@
 				}
 
 				ul {
-					padding: rem(40) 0 0;
+					padding: rem(23) 0 0;
 
 					li {
-						padding: rem(5) 0;
+
+						&:not(:last-child) {
+							padding: 0 0 rem(3);
+						}
 					}
+				}
+
+				&.active {
+					padding-bottom: rem(20);
 				}
 			}
 		}
@@ -145,8 +153,8 @@
 		cursor: pointer;
 		&::after {
 			content: "";
-			width: 15px;
-			height: 15px;
+			width: 30px;
+			height: 30px;
 			background: var(--chevron-down);
 			background-size: contain;
 			background-repeat: no-repeat;
@@ -161,6 +169,7 @@
 	}
 	&.active {
 		.accardion__head {
+
 			&::after {
 				transform: rotate(180deg);
 			}

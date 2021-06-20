@@ -12,7 +12,7 @@
 		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body data-bg="main.jpg">
+	<body data-bg="article.png">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-xl-none container">
 				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
@@ -251,7 +251,7 @@
 			</div>
 			<div class="container">
 				<div class="row"> 
-					<div class="col-aside col-xl">
+					<div class="col-xl-auto col-aside">
 						<!-- start sitebar-->
 						<div class="sitebar" id="sitebar">
 							<ul>
@@ -352,23 +352,20 @@
 						</div>
 						<!-- end sitebar-->
 					</div>
-					<div class="col-main col-xl">
+					<div class="col-xl col-article">
 						<!-- start sArticle-->
 						<section class="sArticle section" id="sArticle">
 							<div class="sArticle__section">
 								<div class="section-title">
 									<h2>Заголовок</h2>
-									<h4>Подзаголовок</h4>
 								</div>
+								<h4>Подзаголовок</h4>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet</p>
 								<div class="form-wrap">
 									<form> 
 										<div class="form-wrap__row row"> 
 											<div class="form-wrap__col col-lg-4"> 
 												<div class="form-wrap__iconWrap"><img src="img/svg/article-1.svg" alt="" loading="lazy"/>
-													<svg class="icon icon-article-1 ">
-														<use xlink:href="img/svg/sprite.svg#article-1"></use>
-													</svg>
 												</div>
 												<div> 
 													<div class="form-wrap__txt">Срок выполнения<strong>от 1 дня</strong>
@@ -377,9 +374,6 @@
 											</div>
 											<div class="form-wrap__col col-lg-4"> 
 												<div class="form-wrap__iconWrap"><img src="img/svg/article-2.svg" alt="" loading="lazy"/>
-													<svg class="icon icon-article-2 ">
-														<use xlink:href="img/svg/sprite.svg#article-2"></use>
-													</svg>
 												</div>
 												<div> 
 													<div class="form-wrap__txt">Цена <br><strong>от 30 000 руб.</strong>
@@ -388,25 +382,22 @@
 											</div>
 											<div class="form-wrap__col col-lg-4"> 
 												<div class="form-wrap__iconWrap"><img src="img/svg/article-3.svg" alt="" loading="lazy"/>
-													<svg class="icon icon-article-3 ">
-														<use xlink:href="img/svg/sprite.svg#article-3"></use>
-													</svg>
 												</div>
 												<div> 
 													<div class="form-wrap__txt">Гарантия на все виды работ <strong>от 1 года</strong>
 													</div>
 												</div>
 											</div>
-											<div class="form-wrap__formRow row">
-												<div class="col-md-6"> 
-													<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон"/>
-													</div>
-													<!-- +e.input-wrap-->
+										</div>
+										<div class="form-wrap__formRow row">
+											<div class="col-md-6"> 
+												<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Телефон"/>
 												</div>
-												<div class="col-md-6"> 
-													<button class="form-wrap__btn btn btn-success" type="submit">заказать услуг
-													</button>
-												</div>
+												<!-- +e.input-wrap-->
+											</div>
+											<div class="col-md-6"> 
+												<button class="form-wrap__btn btn btn-success" type="submit">заказать услуг
+												</button>
 											</div>
 										</div>
 									</form>
@@ -533,14 +524,14 @@
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut</p>
 								<div class="sArticle__slider sArticle__slider--js swiper-container">
 									<div class="swiper-wrapper">
-											<div class="swiper-slide"><a class="sArticle__imgWrap" href="img/@2x/feedback.png" data-fancybox="feedback"> 
+											<div class="swiper-slide"><a class="sArticle__slideImg" href="img/@2x/feedback.png" data-fancybox="feedback"> 
 												<!-- picture-->
 												<picture> 
 													<source type="image/webp" srcset="img/@2x/webp/feedback.webp"/><img src="img/@2x/feedback.png" alt="" loading="lazy"/>
 												</picture>
 												<!-- /picture--></a>
 											</div>
-											<div class="swiper-slide"><a class="sArticle__imgWrap" href="img/@2x/feedback.png" data-fancybox="feedback"> 
+											<div class="swiper-slide"><a class="sArticle__slideImg" href="img/@2x/feedback.png" data-fancybox="feedback"> 
 												<!-- picture-->
 												<picture> 
 													<source type="image/webp" srcset="img/@2x/webp/feedback.webp"/><img src="img/@2x/feedback.png" alt="" loading="lazy"/>
