@@ -157,11 +157,14 @@
 		font-size: 14px;
 	}
 	p{
+		@include media-breakpoint-up(lg) {
 		&::after{
-			content: url(../img/svg/arrow-look.svg);
-			position: absolute;
-			left: 100%;
-		}
+
+					content: url(../img/svg/arrow-look.svg);
+					position: absolute;
+					left: 100%;
+				}
+			}
 		span,
 		strong{
 			color: $primary;

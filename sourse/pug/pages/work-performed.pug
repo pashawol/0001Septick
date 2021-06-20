@@ -1,0 +1,52 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/aside/_aside.pug
+//- include ../blocks/sQwiz/_sQwiz.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+//- include ../blocks/sTypes/_sTypes.pug
+//- include ../blocks/sMistakes/_sMistakes.pug
+//- include ../blocks/sComfort/_sComfort.pug
+//- include ../blocks/sEvolution/_sEvolution.pug
+//- include ../blocks/sLogos/_sLogos.pug
+//- include ../blocks/sServises/_sServises.pug
+//- include ../blocks/sFaq/_sFaq.pug
+//- include ../blocks/Scomfort2/_Scomfort2.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sPayment/_sPayment.pug
+include ../blocks/sNeedHelp/_sNeedHelp.pug
+include ../blocks/sOurWorks/_sOurWorks.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'Выполненные работы'
+	title= title
+block pagecontent
+
+
+	+mob-mnu()
+	header.header
+		+topLine()
+		+top-nav()
+	+pageHead()
+		h1= title
+	+sOurWorks
+	+sNeedHelp()
+	//- +sContact()
+	//- +sPayment()
+	//- +headerBlock()
+	//- +sQwiz
+	//- +sTypes
+	//- +sMistakes
+	//- +sComfort
+	//- +Scomfort2
+	//- +sEvolution
+	//- +sForm()
+	//- +sLogos
+	//- +sServises
+	//- +sFaq
+	+footer()
