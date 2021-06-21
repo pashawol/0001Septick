@@ -1,28 +1,61 @@
+mixin works(t, s)
+	.col-lg-4
+		+b.works-item
+			.slider-wrap
+				+e.slider.works-slider--js.swiper-container
+					.swiper-wrapper
+						+e.slide.swiper-slide.bg-wrap
+							+pic(`our-works-1.png`,'bg').picture-bg
+						+e.slide.swiper-slide.bg-wrap
+							+pic(`step-1-1.jpg`,'bg').picture-bg
+						+e.slide.swiper-slide.bg-wrap
+							+pic(`step-1-2.jpg`,'bg').picture-bg
+						+e.slide.swiper-slide.bg-wrap
+							+pic(`step-1-3.jpg`,'bg').picture-bg
+					.swiper-pagination.swiper-pagination-hover
+			+e.caption
+				+e.title
+					a.strong(href="#")!= t
+				+e.small!= s
+
 mixin sOurWorks(data)
 	// start sOurWorks
 	+b.SECTION.sOurWorks.section#sOurWorks&attributes(attributes)
 		.container
 			.rounded-inner
+				.row.row-15
+					+works(`Установка автономной канализации Юнилос Астра&nbsp;5`, `Ленинская область, Кировский р-йн, СНТ Треугольник`)
+					+works(`Установка автономной канализации Юнилос Астра&nbsp;5`, `Ленинская область, Кировский р-йн, СНТ Треугольник`)
+					+works(`Установка автономной канализации Юнилос Астра&nbsp;5`, `Ленинская область, Кировский р-йн, СНТ Треугольник`)
+
 				+b.advantage
 					.row
 						.col-xl-6
 							.section-title
 								h2 В&nbsp;95&nbsp;случаях из 100 монтаж производится без спец. техники. #[br] Ваш ландшафт остается в #[span.text-primary первозданном виде]
 							.row
-								.col-lg-6.d-flex.align-items-center
+								.col-sm-6
 									+e.item
 										+e.img-wrap
 											img(src="img/svg/our-works-1.svg" alt="")
 										+e.text Все рабочие проходят обучение и аттестацию каждые 6 месяцев
-								.col-lg-6.d-flex.align-items-center
+								.col-sm-6
 									+e.item
 										+e.img-wrap
 											img(src="img/svg/our-works-2.svg" alt="")
 										+e.text Имеют гражданство Российской Федерации
-
 						.col-xl-6
 							+e.wrapper
-								+e.video.bg-wrap
+								+e.image.bg-wrap
 									+pic("our-works-bg.png",'bg').picture-bg
 								+e.check
+				.row.row-15
+					+works(`Установка автономной канализации Юнилос Астра&nbsp;5`, `Ленинская область, Кировский р-йн, СНТ Треугольник`)
+					+works(`Установка автономной канализации Юнилос Астра&nbsp;5`, `Ленинская область, Кировский р-йн, СНТ Треугольник`)
+					+works(`Установка автономной канализации Юнилос Астра&nbsp;5`, `Ленинская область, Кировский р-йн, СНТ Треугольник`)
+				.row.row-15
+					+works(`Установка автономной канализации Юнилос Астра&nbsp;5`, `Ленинская область, Кировский р-йн, СНТ Треугольник`)
+					+works(`Установка автономной канализации Юнилос Астра&nbsp;5`, `Ленинская область, Кировский р-йн, СНТ Треугольник`)
+					+works(`Установка автономной канализации Юнилос Астра&nbsp;5`, `Ленинская область, Кировский р-йн, СНТ Треугольник`)
+				
 	// end sOurWorks

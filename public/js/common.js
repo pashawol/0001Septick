@@ -307,6 +307,24 @@ function eventHandler() {
 			prevEl: '.sArticle .swiper-button-prev'
 		}
 	});
+	let worksSlider = new Swiper('.works-slider--js', {
+		lazy: {
+			loadPrevNext: true
+		},
+		watchOverflow: true,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		loop: true,
+		effect: 'fade',
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			type: 'bullets'
+		}
+	});
+	$('.swiper-pagination-hover').on('mouseover', '.swiper-pagination-bullet', function () {
+		$(this).click();
+	});
 	$('.accordion-item__head').click(function () {
 		$(this).next().slideToggle(function () {
 			$(this).parent().toggleClass("active");

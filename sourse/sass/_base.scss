@@ -667,5 +667,14 @@ iframe {
 .rounded-inner {
 	border-radius: 40px;
 	background-color: $white;
-	padding: rem(100) rem(93);
+	padding: rem(40) rem(15);
+	@include media-breakpoint-up(sm) {
+		padding: rem(50) rem(43);
+	}
+	@include media-breakpoint-up(xxl) {
+		padding: rem(60) rem(53);
+	}
+	@include media-breakpoint-up(xxxl) {
+		padding: rem(100) rem(93);
+	}
 }

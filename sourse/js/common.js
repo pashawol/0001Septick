@@ -84,7 +84,7 @@ const JSCCommon = {
 			if (!toggleEv) return;
 			toggle.forEach(el => el.classList.toggle("on"));
 			menu.classList.toggle("active");
-			[document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed")); 
+			[document.body, document.querySelector('html')].forEach(el => el.classList.toggle("fixed"));
 		}, { passive: true });
 	},
 	closeMenu() {
@@ -93,7 +93,7 @@ const JSCCommon = {
 		if (menu.classList.contains("active")) {
 			this.btnToggleMenuMobile.forEach(element => element.classList.remove("on"));
 			this.menuMobile.classList.remove("active");
-			[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed")); 
+			[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed"));
 		}
 
 	},
@@ -129,7 +129,7 @@ const JSCCommon = {
 		// mask for input
 		let InputTel = [].slice.call(document.querySelectorAll('input[type="tel"]'));
 		InputTel.forEach(element => element.setAttribute("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}"));
-		Inputmask("+9(999)999-99-99", { showMaskOnHover: false}).mask(InputTel);
+		Inputmask("+9(999)999-99-99", { showMaskOnHover: false }).mask(InputTel);
 	},
 	// /inputMask
 	ifie() {
@@ -138,7 +138,7 @@ const JSCCommon = {
 			document.body.insertAdjacentHTML("beforeend", '<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
 		}
 	},
- 
+
 	heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 		let vh = window.innerHeight * 0.01;
@@ -183,7 +183,7 @@ function eventHandler() {
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
-	JSCCommon.inputMask(); 
+	JSCCommon.inputMask();
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
 
@@ -199,24 +199,24 @@ function eventHandler() {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
 
-	function makeDDGroup(qSelecorts){
-		for (let parentSelect of qSelecorts){
+	function makeDDGroup(qSelecorts) {
+		for (let parentSelect of qSelecorts) {
 			let parent = document.querySelector(parentSelect);
-			if (parent){
+			if (parent) {
 				// childHeads, kind of funny))
 				let ChildHeads = parent.querySelectorAll('.accardion__head--js');
-				$(ChildHeads).click(function (){
+				$(ChildHeads).click(function () {
 					let clickedHead = this;
-					$(ChildHeads).each(function (){
-						if (this === clickedHead){
+					$(ChildHeads).each(function () {
+						if (this === clickedHead) {
 							$(this.parentElement).toggleClass('active');
-							$(this.parentElement).find('.accardion__content--js').slideToggle(function (){
+							$(this.parentElement).find('.accardion__content--js').slideToggle(function () {
 								$(this).toggleClass('active');
 							});
 						}
-						else{
+						else {
 							$(this.parentElement).removeClass('active');
-							$(this.parentElement).find('.accardion__content--js').slideUp(function (){
+							$(this.parentElement).find('.accardion__content--js').slideUp(function () {
 								$(this).removeClass('active');
 							});
 						}
@@ -298,9 +298,27 @@ function eventHandler() {
 		},
 	});
 
+	let worksSlider = new Swiper('.works-slider--js', {
+		lazy: {
+			loadPrevNext: true,
+		},
+		watchOverflow: true,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		loop: true,
+		effect: 'fade',
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+			type: 'bullets',
+		},
+	});
+	$('.swiper-pagination-hover').on('mouseover', '.swiper-pagination-bullet', function () {
+		$(this).click();
+	})
 
-	$('.accordion-item__head').click(function(){
-		$(this).next().slideToggle(function(){
+	$('.accordion-item__head').click(function () {
+		$(this).next().slideToggle(function () {
 			$(this).parent().toggleClass("active");
 		})
 	})
