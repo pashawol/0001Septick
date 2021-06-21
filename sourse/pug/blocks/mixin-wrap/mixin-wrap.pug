@@ -40,3 +40,9 @@ mixin custom-alert(i, ...items)
 			+e.text
 				each item in items
 					span!= item
+
+mixin advantage-item(i, t)
+	+b.advantage-item
+		+e.img-wrap
+			img(src=`img/svg/${i}` alt="")
+		+e.text!= t

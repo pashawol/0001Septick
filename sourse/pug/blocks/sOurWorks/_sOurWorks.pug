@@ -35,15 +35,10 @@ mixin sOurWorks(data)
 								h2 В&nbsp;95&nbsp;случаях из 100 монтаж производится без спец. техники. #[br] Ваш ландшафт остается в #[span.text-primary первозданном виде]
 							.row
 								.col-sm-6
-									+e.item
-										+e.img-wrap
-											img(src="img/svg/our-works-1.svg" alt="")
-										+e.text Все рабочие проходят обучение и аттестацию каждые 6 месяцев
+									+advantage-item(`our-works-1.svg`, `Все рабочие проходят обучение и аттестацию каждые 6 месяцев`)
 								.col-sm-6
-									+e.item
-										+e.img-wrap
-											img(src="img/svg/our-works-2.svg" alt="")
-										+e.text Имеют гражданство Российской Федерации
+									+advantage-item(`our-works-2.svg`, `Имеют гражданство Российской Федерации`)
+								
 						.col-xl-6
 							+e.wrapper
 								+e.image.bg-wrap
