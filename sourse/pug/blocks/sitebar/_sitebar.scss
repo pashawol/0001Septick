@@ -66,6 +66,8 @@
 		@include rfs(#{rem(28px)});
 		margin-bottom: rem(40);
 		font-weight: 700;
+
+		
 	}
 	&__item {
 		padding-bottom: rem(30);
@@ -86,6 +88,11 @@
 		@include rfs(#{rem(22)});
 		margin-bottom: rem(5);
 		font-weight: 700;
+			a {
+				&:not(:hover) {
+					color: $body-color;
+				}
+			}
 	}
 	&__link {
 		color: $success;

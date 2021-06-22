@@ -1,0 +1,32 @@
+mixin sNews(data)
+	// start sNews
+	+b.sNews.section#sNews&attributes(attributes)
+		mixin link
+			+e.link(href="#").ttu Читать
+				+icon('arrow-right') 
+		.row
+			.col-lg-4.col-sm-6
+				+e.item
+					+e.imgWrap(href="#") 
+						+pic('servise-1.jpg','','')
+					+e.itemTitle
+						a(href="#")  Дренаж участка
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat.
+					+link
+			.col-lg-4.col-sm-6
+				+e.item
+					+e.imgWrap(href="#") 
+						+pic('drainage.jpg','','')
+					+e.itemTitle
+						a(href="#")  Дренаж участка
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat.
+					+link
+			.col-lg-4.col-sm-6
+				+e.item
+					+e.imgWrap(href="#") 
+						+pic('drainage.jpg','','')
+					+e.itemTitle 
+						a(href="#") Дренаж участка
+					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat.
+					+link
+	// end sNews

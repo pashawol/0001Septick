@@ -294,9 +294,15 @@ ul {
 	width: var(--swiperArrowSize);
 	height: var(--swiperArrowSize);
 	border-radius: 50%;
-	background-color: var(--swiperBgDef);
-	border: 2px solid var(--swiperBorderColorDef);
-	color: var(--swiperColorDef);
+	// background-color: var(--swiperBgDef);
+	// border: 2px solid var(--swiperBorderColorDef);
+	// color: var(--swiperColorDef);
+	@extend .btn;
+	@extend .btn-primary;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
 	@include bgs;
 	z-index: 300;
 	outline: none !important;
@@ -304,15 +310,15 @@ ul {
 	background-image: none;
 	margin: 0;
 	@include a-cent(y);
-	box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
+	// box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
 	@include mt;
 	user-select: none;
 
-	&:hover {
-		background-color: var(--swiperBgDefHover);
-		border-color: var(--swiperBorderColorDefHover);
-		color: var(--swiperColorDefHover);
-	}
+	// &:hover {
+	// 	background-color: var(--swiperBgDefHover);
+	// 	border-color: var(--swiperBorderColorDefHover);
+	// 	color: var(--swiperColorDefHover);
+	// }
 
 	.icon {
 		font-size: rem(12);

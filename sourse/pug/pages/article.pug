@@ -17,6 +17,7 @@ include ../blocks/sArticle/_sArticle.pug
 include ../blocks/sPayment/_sPayment.pug
 include ../blocks/sNeedHelp/_sNeedHelp.pug
 include ../blocks/sitebar/_sitebar.pug
+include ../blocks/sNews/_sNews.pug
 
 block variables
 	- let  mainPage= null 
@@ -37,10 +38,11 @@ block pagecontent
 		h1 Название статьи
 	.container
 		.row 
-			.col-xl-auto.col-aside
-				+sitebar
 			.col-xl.col-article
 				+sArticle
+				+sNews
+			.col-xl-auto.col-aside.order-xl-first
+				+sitebar
 		//- +custom-alert(`svg/alert.svg`, `Платите по факту выполнения работы!`, `Оборудование в день доставки, монтаж по факту окончания.`, `Предоплату вносить НЕобязательно.`).alert-danger
 
 	+sNeedHelp()
