@@ -422,6 +422,25 @@ function eventHandler() {
 			}
 		}
 	});
+	var ourTeamSlider = new Swiper(".ourTeam__thumbs-slider--js", {
+		loop: true,
+		spaceBetween: 10,
+		slidesPerView: 4,
+		freeMode: true,
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true
+	});
+	var ourTeamSlider2 = new Swiper(".ourTeam__main-slider--js", {
+		loop: true,
+		spaceBetween: 10,
+		navigation: {
+			nextEl: ".ourTeam__slider-wrap .swiper-button-next",
+			prevEl: ".ourTeam__slider-wrap .swiper-button-prev"
+		},
+		thumbs: {
+			swiper: ourTeamSlider
+		}
+	});
 	let worksSlider = new Swiper('.works-slider--js', {
 		lazy: {
 			loadPrevNext: true
