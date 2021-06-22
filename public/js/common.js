@@ -401,6 +401,27 @@ function eventHandler() {
 			prevEl: '.sArticle .swiper-button-prev'
 		}
 	});
+	let sertificateSlider = new Swiper('.sertificates__slider-js', {
+		lazy: {
+			loadPrevNext: true
+		},
+		watchOverflow: true,
+		slidesPerView: 1,
+		spaceBetween: 20,
+		loop: true,
+		breakpoints: {
+			480: {
+				slidesPerView: 2
+			},
+			768: {
+				slidesPerView: 3
+			},
+			1200: {
+				slidesPerView: 4,
+				spaceBetween: 40
+			}
+		}
+	});
 	let worksSlider = new Swiper('.works-slider--js', {
 		lazy: {
 			loadPrevNext: true
