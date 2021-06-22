@@ -1,0 +1,31 @@
+// start .sSlider
+.sSlider {
+	background-color: $white;
+	--sPT: #{rem(25)};
+	--sPB: #{rem(25)};
+	--sTPB: #{rem(50)};
+
+	.section-title{
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__row{
+		--bs-gutter-x: #{rem(23)};
+		--bs-gutter-y: #{rem(23)};
+	}
+	&__col{
+		@include media-breakpoint-up(xxl){
+			width: calc(100% / 6);
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sSlider
+
+.white-box{
+	background-color: $white;
+	padding: rem(100) 0;
+	margin-bottom: rem(100);
+}

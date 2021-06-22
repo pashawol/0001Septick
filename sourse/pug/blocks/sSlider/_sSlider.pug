@@ -1,0 +1,13 @@
+mixin sSlider(data)
+	// start sSlider
+	+b.SECTION.sSlider.section#sSlider&attributes(attributes)
+		.container
+			+b.section-title
+				h2=data.title
+			+e.row.row
+				-for(let i = 0; i < data.amount; i++)
+					+e.col.col.col-xl-3.col-lg-4.col-sm-6
+						+prodItem()
+							+e.label(style="--bg-color: var(--bs-warning)") Популярный
+
+	// end sSlider

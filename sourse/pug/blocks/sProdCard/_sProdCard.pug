@@ -1,0 +1,107 @@
+mixin sProdCard(data)
+	// start sProdCard
+	+b.sProdCard.section#sProdCard&attributes(attributes)
+		//-sProdCard-bg
+		+e.bg.d-xxxl-block.d-none
+			img(loading="lazy" src='img/svg/sProdCard-bg.svg' alt="")
+		.container
+			+e.box
+				+e.b-row.row.align-items-xxl-center
+					+e.sliders-col.col-xxl-auto.col-lg-6
+						+e.s-row.row
+							+e.th-col.col-auto
+								+e.thumb-wrap
+									.swiper-container.sProdCard-thumb-js
+										.swiper-wrapper
+											-for (let i = 0; i < 3; i++)
+												+sProdCardThumb(1)
+							+e.sl-col.col
+								+e.slider-wrap
+									.swiper-container.sProdCard-slider-js
+										.swiper-wrapper
+											-for(let i = 0; i < 3; i++)
+												+sProdCardSlide(1)
+					+e.char-col.col-xxl.col-lg-6
+						+e.c-row.row
+							.col-12
+								+e.c-gray Подходит:
+							.col-auto
+								+sProdCardPlate('Для дачи')
+							.col-auto
+								+sProdCardPlate('Для бани')
+							.col-auto
+								+sProdCardPlate('Для 5 человек')
+						+e.c-row--specials.row
+							.col-auto
+								+e.c-gray Особенности
+							.col-auto
+								+sProdCardPlate('Недорогой септик', '#F3624E', '#FFFFFF')
+						+e.c-title Характеристики
+						+b.chars
+							+sProdCardChar('Бренд', 'Юнилос Астра')
+							+sProdCardChar('Кол-во человек', '5')
+							+sProdCardChar('Производительность', 'до 0.45м3/сут.')
+							+sProdCardChar('Объем залпового сброса', '1500л')
+							+sProdCardChar(`Потребляемая электроэнергия`, '1500Вт/сут.')
+						+e.look-all Посмотреть все характеристики
+					+e.split-col.col-auto.d-none.d-xxxl-block
+					+e.price-col.col-xxl-auto
+						+e.main-p-row.row
+							.col-lg-4.col-xxl-12
+								+e.p-gray Цена септика
+									+e.p-top-row.row
+										.col-auto
+											+e.price--current 96 600 руб.
+											+e.price--old 106 600 руб.
+										.col-auto
+											+e.discount Экономия 10 000₽
+									+e.install-row.row.align-items-center
+										.col-auto
+											+e.i-txt Монтаж
+										.col
+											+e.i-val от 12 000 руб.
+							.col-lg-4.col-xxl-12
+								+e.p-btns
+									+e.p-btn(href='#') рассчитать стоимость монтажа
+									+e.p-btn(href='#')
+										| оставить заявку на
+										br
+										| покупку в рассрочку
+								+e.compare(href="#")
+									span отложить для сравнения
+									+icon('compare')
+							.col-lg-4.col-xxl-12
+								+e.vantage
+									+sProdCardVantage(1,'Бесплатная доставка в 50км от мкад')
+									+sProdCardVantage(2,'Гарантия на монтаж 36 мес.')
+									+sProdCardVantage(3,'Гарантия на корпус 10 лет')
+
+mixin sProdCardVantage(iconNum, txt)
+	+e.v-item.row
+		.col-auto
+			+e.v-icon
+				img(loading='lazy' src=`img/svg/vantage-${iconNum}.svg` alt="")
+		.col
+			+e.v-txt=txt
+
+
+	// end sProdCard
+mixin sProdCardChar(key, val)
+	+e.row.row
+		+e.key-col.col-auto
+			+e.txt=key
+		+e.val-col.col.text-end
+			+e.txt=val
+
+mixin sProdCardPlate(txt,bgColor='#EDEDF0',color='#858B9B')
+	+e.plate(style=`background: ${bgColor}; color: ${color};`)!= txt
+
+mixin sProdCardSlide(imgNum)
+	.swiper-slide
+		+e.img-link(href=`img/@2x/sProdCard-${imgNum}.png` data-fancybox="sProdCard")
+			img(loading="lazy" src=`img/@2x/sProdCard-${imgNum}.png` alt="")
+
+mixin sProdCardThumb(imgNum)
+	.swiper-slide
+		+e.thumb-img
+			img(loading="lazy" src=`img/@2x/sProdCard-${imgNum}.png` alt="")

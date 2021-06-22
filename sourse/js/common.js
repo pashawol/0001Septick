@@ -114,14 +114,27 @@ const JSCCommon = {
 
 	// tabs  .
 	tabscostume(tab) {
-		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-			$(this)
-				.addClass('active').siblings().removeClass('active')
-				.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-				.eq($(this).index()).fadeIn().addClass('active');
+		let tabs = {
+			Btn: [].slice.call(document.querySelectorAll(`.${tab}__btn`)),
+			BtnParent: [].slice.call(document.querySelectorAll(`.${tab}__caption`)),
+			Content: [].slice.call(document.querySelectorAll(`.${tab}__content`)),
+		}
+		tabs.Btn.forEach((element, index) => {
+			element.addEventListener('click', () => {
+				if (!element.classList.contains('active')) {
+					//turn off old
+					let oldActiveEl = element.closest(`.${tab}`).querySelector(`.${tab}__btn.active`);
+					let oldActiveContent = tabs.Content[index].closest(`.${tab}`).querySelector(`.${tab}__content.active`);
 
-		});
+					oldActiveEl.classList.remove('active');
+					oldActiveContent.classList.remove('active')
 
+					//turn on new(cklicked el)
+					element.classList.add('active');
+					tabs.Content[index].classList.add('active');
+				}
+			})
+		})
 	},
 	// /tabs
 
@@ -335,6 +348,45 @@ function eventHandler() {
 			$(this).addClass('active');
 		})
 	})
+	//luckyone js
+	let prodCardThumb = new Swiper('.sProdCard-thumb-js', {
+		slidesPerView: 'auto',
+		direction: 'vertical',
+		spaceBetween: 15,
+
+		//lazy
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 6,
+		},
+
+	});
+	let prodCardSlider = new Swiper('.sProdCard-slider-js', {
+		spaceBetween: 30,
+		slidesPerView: "auto",
+		thumbs: {
+			swiper: prodCardThumb,
+		},
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 3,
+		},
+		loop: true,
+	});
+
+	//
+	let sDescrSlider = new Swiper('.sDescr-slider-js', {
+		slidesPerView: 'auto',
+		freeMode: true,
+		loopFillGroupWithBlank: true,
+		touchRatio: 0.2,
+		slideToClickedSlide: true,
+		freeModeMomentum: true,
+
+	});
+
+
+	//end luckyone js
 
 };
 if (document.readyState !== 'loading') {

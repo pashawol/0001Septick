@@ -1,0 +1,69 @@
+mixin sDescr(data)
+	// start sDescr
+	+b.SECTION.sDescr.section#sDescr&attributes(attributes)
+		.container
+			+b.section-title
+				h2
+					span.text-primary
+						| Описание
+						|
+					span и характеристики
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet,
+			+e.tabs.tabs
+				+e.caption.tabs__caption
+					.swiper-container.sDescr-slider-js
+						.swiper-wrapper
+							+sDescrTabsBtn('Характеристики','active')
+							+sDescrTabsBtn('принцип работы')
+							+sDescrTabsBtn('схема канализации')
+							+sDescrTabsBtn('инструкция по эксплуатации')
+							+sDescrTabsBtn('смета')
+							+sDescrTabsBtn('видео')
+							+sDescrTabsBtn('применение')
+							+sDescrTabsBtn('доставка')
+				+e.box.tabs__wrap
+					.tabs__content.active
+						+e.box-row.row
+							.col-lg-6
+								+e.title Характеристики
+								+b.chars
+									+sProdCardChar('Бренд', 'Юнилос Астра')
+									+sProdCardChar('Бренд', 'Юнилос Астра')
+									+sProdCardChar('Кол-во человек', '5')
+									+sProdCardChar('Кол-во человек', '5')
+									+sProdCardChar('Производительность', 'до 0.45м3/сут.')
+									+sProdCardChar('Производительность', 'до 0.45м3/сут.')
+									+sProdCardChar('Объем залпового сброса', '1500л')
+									+sProdCardChar('Объем залпового сброса', '1500л')
+									+sProdCardChar(`Потребляемая электроэнергия`, '1500Вт/сут.')
+									+sProdCardChar(`Потребляемая электроэнергия`, '1500Вт/сут.')
+							+e.r-col.col-lg-6
+								+e.title Описание
+								+e.descr
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet,
+									p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet,
+					.tabs__content 2
+					.tabs__content 3
+					.tabs__content 4
+					.tabs__content 5
+					.tabs__content 6
+					.tabs__content 7
+					.tabs__content 8
+			+e.vantage
+				+e.v-row.row.justify-content-center
+					+sDescrVantage(1, 'Официальный дилер 25-ти производителей')
+					+sDescrVantage(2, 'Доставка в день обращения')
+					+sDescrVantage(3, 'Аварийная сигнализация в подарок')
+					+sDescrVantage(4, 'Не срываем сроки поставки и монтажа')
+					+sDescrVantage(5, 'Любые способы оплаты')
+	// end sDescr
+
+mixin sDescrVantage(imgNum, txt)
+	+e.v-col.col-12.col-lg-4.col-xxxl-auto
+		+e.v-icon
+			img(loading="lazy" src=`img/svg/sDescr-${imgNum}.svg` alt="")
+		+e.v-txt=txt
+
+mixin sDescrTabsBtn(txt, activeClasses='')
+	.swiper-slide
+		+e.btn.tabs__btn(class=activeClasses)=txt
