@@ -18,6 +18,10 @@ extends layout/main.pug
 include ../blocks/sNeedHelp/_sNeedHelp.pug
 //- include ../blocks/sOurWorks/_sOurWorks.pug
 include ../blocks/sAbout/_sAbout.pug
+include ../blocks/topBanner/_topBanner.pug
+include ../blocks/ownService/_ownService.pug
+include ../blocks/ourMission/_ourMission.pug
+include ../blocks/sertificates/_sertificates.pug
 
 block variables
 	- let  mainPage= null 
@@ -36,6 +40,10 @@ block pagecontent
 	+pageHead()
 		h1= title
 	+sAbout()
+		+topBanner
+		+ownService
+		+ourMission
+		+sertificates
 	//- +sOurWorks
 	+sNeedHelp()
 	//- +sContact()

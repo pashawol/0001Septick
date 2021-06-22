@@ -1,0 +1,18 @@
+mixin sertificates(data)
+	// start sertificates
+	+b.sertificates
+		.section-title
+			h2 Сертификаты и дипломы
+		+e.slider-js.swiper-container
+			.swiper-wrapper
+				mixin slide(i, t, p)
+					+e.slide.swiper-slide 
+						+e.wrapper
+							+e.img-wrap(href=`img/@2x/sertificate-${i}.png` data-fancybox="sertificates")
+								+pic(`sertificate-${i}.png`,'bg')
+							h6!= t
+							p!= p
+				- for (var x = 0; x < 7; x++)
+					+slide(1, `Сертификат`, `Lorem ipsum dolor sit amet, consectetur adipiscing elit.  felis nec erat`)
+						
+	// end sertificates
