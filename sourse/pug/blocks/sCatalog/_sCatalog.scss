@@ -129,6 +129,32 @@
 				}
 			}
 		}
+
+		.advantage-item{
+			display: flex;
+			align-items: center;
+			font-weight: bold;
+			flex-wrap: nowrap;
+			padding-left: .75rem;
+			padding-right: .75rem;
+			// @include media-breakpoint-down(xxl) {
+			// 	display: block;
+			// 	text-align: center;
+			// 	img{
+			// 		margin-right: 0;
+			// 		margin-bottom: 1rem;
+			// 	}
+			// 	&__img-wrap{
+			// 		margin-right: 0;
+			// 		width: 100%;
+			// 	}
+			// }
+			img{
+				// margin-right: rem(20);
+			}
+		}
+
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

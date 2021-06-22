@@ -44,7 +44,7 @@ mixin custom-alert(i, ...items)
 mixin advantage-item(i, t)
 	+b.advantage-item
 		+e.img-wrap
-			img(src=`img/svg/${i}` alt="")
+			img(src=`img/svg/${i}` loading="lazy" alt="")
 		+e.text!= t
 
 
