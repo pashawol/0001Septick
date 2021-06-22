@@ -20,11 +20,81 @@ mixin prodItem()
 			+tr("eva_settings-outline",'Производ-сть, м3/сут','0.8')
 			+tr("gg_color-bucket",'залповый сброс','200л')
 		+e.btn(href="#") подробнее
+mixin prodItemHor()
+	+b.prod-item--horizontal
+		+e.img-wrap
+			+pic("prod.jpg",'bg',0)
+			block
+		+e.body
+			+e.title 
+				.strong Юнилос Астра 3
+				.small.text-secondary монтаж от 12 000 руб.* 
 
-mixin sCatalog(page)
-	// start sCatalog
-	+b.sCatalog.section.pt-0#sCatalog&attributes(attributes)
-		img.before(src="img/@2x/webp/catalog-before.webp", alt="")
+				+e.add
+					+icon('eva_bookmark-fill')
+			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui  met, consectetur mattis d...
+			.col
+				table
+					mixin tr(t1,t2,t3) 
+						tr
+							td
+								img(src=`img/svg/${t1}.svg`, alt="")
+							td= t2
+							td.text-end= t3
+					+tr("eva_people-outline",'Кол-во человек','5')
+					+tr("eva_settings-outline",'Производ-сть, м3/сут','0.8')
+					+tr("gg_color-bucket",'залповый сброс','200л')
+			.col-auto
+				+e.btn(href="#") подробнее
+mixin filter()
+	+b.fillter-block
+		+e.inner
+			+e.head
+				+icon("filter-toggle")
+				span Фильтр
+
+
+			+e.body
+				mixin accord(t)
+					+b.accordion-item&attributes(attributes)
+						+e.head= t
+							//- +e.toggle
+						+e.body
+							block
+				+accord('Наличие')
+					div: +in-c('radio','Все','radio1')
+					div: +in-c('radio','В наличии','radio1')
+					div: +in-c('radio','Под заказ','radio1')
+				+accord('Цена')
+					+range("1000000", "9999999999")
+				+accord('Кол-во человек')
+					div: +in-c('checkbox','Все','ch2')(checked)
+					div: +in-c('checkbox','Вариант','ch2')
+					div: +in-c('checkbox','Вариант','ch2')
+					div: +in-c('checkbox','Вариант','ch2')
+					div: +in-c('checkbox','Вариант','ch2')
+					div: +in-c('checkbox','Вариант','ch2')
+					div: +in-c('checkbox','Вариант','ch2')
+				+accord('Производитель') 
+					div: +in-c('checkbox','Все','ch2')(checked)
+					div: +in-c('checkbox','Вариант','ch2')
+					div: +in-c('checkbox','Вариант','ch2')
+					div: +in-c('checkbox','Вариант','ch2')
+					div: +in-c('checkbox','Вариант','ch2')
+					div: +in-c('checkbox','Вариант','ch2')
+					div: +in-c('checkbox','Вариант','ch2')
+				+accord('Производитель') 
+					div: +in-c('checkbox','Все','ch2')(checked)
+					div: +in-c('checkbox','Вариант','ch2')
+					div: +in-c('checkbox','Вариант','ch2')
+					div: +in-c('checkbox','Вариант','ch2')
+					div: +in-c('checkbox','Вариант','ch2')
+					div: +in-c('checkbox','Вариант','ch2')
+					div: +in-c('checkbox','Вариант','ch2')
+			+e.foot
+				button.btn.btn-primary.btn-sm.w-100.mb-2 Показать (765)
+				button.btn.btn-link.btn-sm.w-100 сбросить
+mixin catalogHead()
 		+e.head
 			.row
 				+e.head-title.col-xxl-auto.mb-2 Также ищут:
@@ -37,6 +107,11 @@ mixin sCatalog(page)
 						.col-auto.mb-2: +e.btn-head(href="#") Для бани
 						.col-auto.mb-2: +e.btn-head(href="#") Для 5 человек
 						.col-auto.mb-2: +e.btn-head(href="#") Еще...
+mixin sCatalog(page)
+	// start sCatalog
+	+b.sCatalog.section.pt-0#sCatalog&attributes(attributes)
+		img.before(src="img/@2x/webp/catalog-before.webp", alt="")
+		+catalogHead()
 		if page
 			.row
 				.col
@@ -107,50 +182,80 @@ mixin sCatalog(page)
 								+icon("eva_arrow-forward-outline")
 	// end sCatalog
 	if page
-		+b.fillter-block
-			+e.inner
-				+e.head
+		+filter()
+mixin sCatalogHor(page)
+	// start sCatalog
+	+b.sCatalog.section.pt-0#sCatalog&attributes(attributes)
+		img.before(src="img/@2x/webp/catalog-before.webp", alt="")
+		+catalogHead()
+		.row
+			.col
+				+e.panel
+					.row.gx-3
+						.col-auto.d-none.d-lg-block
+							+icon("filter")
+						.col-auto
+							select.form-select
+								option(value="") Сначала дешевый
+								option(value="") Сначала дорогой
+						.col 
+							select.form-select
+								option(value="") ПОКАЗЫВАТЬ ПО: 15
+								option(value="") ПОКАЗЫВАТЬ ПО: 30
+								option(value="") ПОКАЗЫВАТЬ ПО: 45
+						+e.show-var.col-auto.d-none.d-md-block 
+							+icon("icon-card")
+						+e.show-var.col-auto.d-none.d-md-block.active 
+							+icon("icon-line")
+			.col-lg-auto
+				+e.panel--toggle
 					+icon("filter-toggle")
 					span Фильтр
+				
+		+e.wrap
+			.row.g-0
+				+e.col.col-xl-9
+					+prodItemHor()
+						+e.label(style="--bg-color: var(--bs-warning)") Популярный
+				
+					+prodItemHor()
+						+e.label(style="--bg-color: var(--bs-primary)") Хит
+				
+					+prodItemHor()
+						+e.label(style="--bg-color: var(--bs-primary)") Хит
 
-
-				+e.body
-					mixin accord(t)
-						+b.accordion-item&attributes(attributes)
-							+e.head= t
-								//- +e.toggle
-							+e.body
-								block
-					+accord('Наличие')
-						div: +in-c('radio','Все','radio1')
-						div: +in-c('radio','В наличии','radio1')
-						div: +in-c('radio','Под заказ','radio1')
-					+accord('Цена')
-						+range("1000000", "9999999999")
-					+accord('Кол-во человек')
-						div: +in-c('checkbox','Все','ch2')(checked)
-						div: +in-c('checkbox','Вариант','ch2')
-						div: +in-c('checkbox','Вариант','ch2')
-						div: +in-c('checkbox','Вариант','ch2')
-						div: +in-c('checkbox','Вариант','ch2')
-						div: +in-c('checkbox','Вариант','ch2')
-						div: +in-c('checkbox','Вариант','ch2')
-					+accord('Производитель') 
-						div: +in-c('checkbox','Все','ch2')(checked)
-						div: +in-c('checkbox','Вариант','ch2')
-						div: +in-c('checkbox','Вариант','ch2')
-						div: +in-c('checkbox','Вариант','ch2')
-						div: +in-c('checkbox','Вариант','ch2')
-						div: +in-c('checkbox','Вариант','ch2')
-						div: +in-c('checkbox','Вариант','ch2')
-					+accord('Производитель') 
-						div: +in-c('checkbox','Все','ch2')(checked)
-						div: +in-c('checkbox','Вариант','ch2')
-						div: +in-c('checkbox','Вариант','ch2')
-						div: +in-c('checkbox','Вариант','ch2')
-						div: +in-c('checkbox','Вариант','ch2')
-						div: +in-c('checkbox','Вариант','ch2')
-						div: +in-c('checkbox','Вариант','ch2')
-				+e.foot
-					button.btn.btn-primary.btn-sm.w-100.mb-2 Показать (765)
-					button.btn.btn-link.btn-sm.w-100 сбросить
+				+e.col.col-xl-3
+					div
+						+b.prod-item(href="#")
+							+pic("stock-card.png",'bg',0)
+							span.btn.btn-primary().w-100 подробнее 
+				.col-12 
+					.row.py-5
+						.col-xxl-3.col-sm-6
+							+advantage-item(`advantage-4.svg`, `Монтаж   за 7,5 часов`)
+						.col-xxl-3.col-sm-6
+							+advantage-item(`sDescr-1.svg`, `Гарантия на   монтаж 36 мес.`)
+						.col-xxl-3.col-sm-6
+							+advantage-item(`sDescr-4.svg`, `50 лет срок   службы септика`)
+						.col-xxl-3.col-sm-6
+							+advantage-item(`fi-rr-settings1.svg`, `90% товаров в наличии с доставкой в день обращения`)
+				+e.col.col-xl-9
+					+prodItemHor()
+						+e.label(style="--bg-color: var(--bs-warning)") Популярный
+					+prodItemHor()
+						+e.label(style="--bg-color: var(--bs-primary)") Хит
+					+prodItemHor()
+						+e.label(style="--bg-color: var(--bs-primary)") Хит
+					+prodItemHor()
+						+e.label(style="--bg-color: var(--bs-primary)") Хит
+				+e.col.col-xl-3
+					div
+						+b.prod-item(href="#")
+							+pic("banner-2.png",'bg',0)
+							span.btn.btn-primary().w-100 подробнее 
+				.col-12 
+					button.btn.btn-light.w-100.mb-3.mt-2 показать еще 15 товаров
+				.col-12 
+					+pugin
+	// end sCatalog
+	+filter()

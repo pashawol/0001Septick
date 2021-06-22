@@ -43,37 +43,7 @@ block pagecontent
 			.col-aside.col-xl
 				+aside().pt-0
 			.col-main.col-xl
-				+sCatalog('page')
-					+e.col.col-xl-3.col-lg-4.col-sm-6
-						+b.prod-item(href="#")
-							+pic("banner-2.png",'bg',0)
-							span.btn.btn-primary().w-100 подробнее
-					- for (var x = 0; x < 3; x++)
-						+e.col.col-xl-3.col-lg-4.col-sm-6
-							+prodItem()
-					.col-12 
-						.row.py-5
-							.col-xxl-3.col-sm-6
-								+advantage-item(`advantage-4.svg`, `Монтаж   за 7,5 часов`)
-							.col-xxl-3.col-sm-6
-								+advantage-item(`sDescr-1.svg`, `Гарантия на   монтаж 36 мес.`)
-							.col-xxl-3.col-sm-6
-								+advantage-item(`sDescr-4.svg`, `50 лет срок   службы септика`)
-							.col-xxl-3.col-sm-6
-								+advantage-item(`fi-rr-settings1.svg`, `90% товаров в наличии с доставкой в день обращения`)
-							
-					- for (var x = 0; x < 7; x++)
-						+e.col.col-xl-3.col-lg-4.col-sm-6
-							
-							+prodItem()
-					+e.col.col-xl-3.col-lg-4.col-sm-6
-						+b.prod-item(href="#")
-							+pic("banner-3.png",'bg',0)
-							span.btn.btn-primary().w-100 подробнее
-					- for (var x = 0; x < 4; x++)
-						+e.col.col-xl-3.col-lg-4.col-sm-6
-							
-							+prodItem()
+				+sCatalogHor()
 					.col-12 
 						button.btn.btn-light.w-100.mb-3.mt-2 показать еще 15 товаров
 					.col-12 

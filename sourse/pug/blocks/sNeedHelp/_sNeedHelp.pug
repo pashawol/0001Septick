@@ -23,3 +23,21 @@ mixin sNeedHelp(data)
 						+e.polite При отправке данных вы принимаете #[a(href="#") политику конфиденциальности]
 
 	// end sNeedHelp
+mixin sNeedHelpCatalog(data)
+	// start sNeedHelp
+	+b.SECTION.sNeedHelp.section#sNeedHelp
+		.container 
+			+form-wrap
+				+b.section-title
+					h2 Сделать быстрый заказ
+					p Наши специалисты с радостью проконсультируют вас и подберут наилучшее предложение
+				.row
+					.col-lg-4
+						+input('','text',"Имя")
+					.col-lg-4
+						+input('','tel',"Телефон")
+					.col-lg-4
+						button.btn.btn-success.w-100(type="submit") заказать в 1 клик
+				+e.polite При отправке данных вы принимаете #[a(href="#") политику конфиденциальности]
+
+	// end sNeedHelp
