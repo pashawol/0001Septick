@@ -321,7 +321,7 @@ ul {
 	// }
 
 	.icon {
-		font-size: rem(12);
+		font-size: rem(16);
 	}
 
 	&::after {
@@ -334,6 +334,11 @@ ul {
 	&-prev {
 		left: var(--swiperArrowPosition);
 	}
+}
+
+.swiper-button-disabled {
+	opacity: 0.5;
+	pointer-events: none;
 }
 
 .swiper-pagination {

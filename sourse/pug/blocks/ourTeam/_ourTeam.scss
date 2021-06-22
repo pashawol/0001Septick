@@ -3,82 +3,147 @@
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
-	.swiper-container {
-		width: 100%;
-		height: 100%;
+	padding-top: 0;
+	--size: #{rem(150)};
+	padding-bottom: calc(#{rem(100)} * 0.3);
+	@include media-breakpoint-up(sm) {
+		padding-bottom: calc(#{rem(100)} * 0.4);
+	}
+	@include media-breakpoint-up(md) {
+		padding-bottom: calc(#{rem(100)} * 0.5);
+	}
+	@include media-breakpoint-up(lg) {
+		padding-bottom: calc(#{rem(100)} * 0.6);
+		--size: #{rem(250)};
+	}
+	@include media-breakpoint-up(xl) {
+		padding-bottom: calc(#{rem(100)} * 0.7);
+	}
+	@include media-breakpoint-up(xxl) {
+		padding-bottom: calc(#{rem(100)} * 0.8);
+	}
+	@include media-breakpoint-up(xxxl) {
+		padding-bottom: rem(100);
 	}
 
-	.swiper-slide {
-		text-align: center;
-		font-size: 18px;
-		background: #fff;
-
-		/* Center slide text vertically */
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		-webkit-box-pack: center;
-		-ms-flex-pack: center;
-		-webkit-justify-content: center;
-		justify-content: center;
-		-webkit-box-align: center;
-		-ms-flex-align: center;
-		-webkit-align-items: center;
-		align-items: center;
+	.section-title {
+		padding-bottom: calc(#{rem(50)} * 0.5);
+		@include media-breakpoint-up(md) {
+			padding-bottom: calc(#{rem(50)} * 0.65);
+		}
+		@include media-breakpoint-up(xl) {
+			padding-bottom: #{rem(50)};
+		}
+		h2 {
+			font-style: normal;
+			font-weight: 800;
+			@include rfs(48px);
+			line-height: (67 / 48);
+			margin-bottom: 0;
+		}
 	}
 
-	.swiper-slide img {
-		display: block;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
+	&__slider-wrap {
+		position: relative;
+		max-width: 1160px;
+		margin-left: auto;
+		margin-right: auto;
+		@media (min-width: 400px) {
+		}
+		margin-bottom: calc(#{rem(50)} * 0.5);
+		@include media-breakpoint-up(md) {
+			margin-bottom: calc(#{rem(50)} * 0.65);
+		}
+		@include media-breakpoint-up(xl) {
+			margin-bottom: #{rem(50)};
+		}
 	}
 
-	body {
-		background: #000;
-		color: #000;
-	}
-
-	.swiper-container {
-		width: 100%;
-		height: 300px;
+	&__main-slider {
+		max-width: 960px;
 		margin-left: auto;
 		margin-right: auto;
 	}
 
-	.swiper-slide {
-		background-size: cover;
-		background-position: center;
+	picture {
+		@include block;
+		overflow: hidden;
+		margin-bottom: rem(24);
+		border-radius: $border-radius;
+		
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__item {
+		position: relative;
+		min-height: var(--size);
+		@include media-breakpoint-up(lg) {
+			padding-left: calc(var(--size) + 53px);
+		}
+
+		picture {
+			width: var(--size);
+			margin-right: rem(20);
+			margin-bottom: 0;
+			@include media-breakpoint-up(lg) {
+				position: absolute;
+				left: 0;
+				top: 0;
+				border-radius: 31.2195px;
+			}
+		}
 	}
 
-	.mySwiper2 {
-		height: 80%;
-		width: 100%;
+	&__head {
+		display: flex;
+		align-items: center;
+		margin-bottom: rem(19);
 	}
 
-	.mySwiper {
-		height: 20%;
-		box-sizing: border-box;
-		padding: 10px 0;
+	&__title {
+		font-weight: 800;
+		@include rfs(24px);
+		// line-height: (67 / 24);
+	}
+	p {
+		@include media-breakpoint-up(lg) {
+			font-size: rem(20);
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 
-	.mySwiper .swiper-slide {
-		width: 25%;
-		height: 100%;
-		opacity: 0.4;
+	&__slide-sm {
+		@include mt;
+		max-width: calc(var(--size) * 0.8);
+		padding-left: rem(15);
+		padding-right: rem(15);
+		font-size: rem(14);
+		line-height: (18 / 14);
+		font-weight: 600;
+		text-align: center;
+		@include media-breakpoint-up(lg) {
+			padding-left: rem(25);
+			padding-right: rem(25);
+		}
+		&:hover,
+		&.swiper-slide-thumb-active {
+			opacity: 0.5;
+		}
 	}
 
-	.mySwiper .swiper-slide-thumb-active {
-		opacity: 1;
+	.swiper-button-hand {
+		@media (max-width: 500px) {
+			display: none;
+		}
 	}
 
-	.swiper-slide img {
-		display: block;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
