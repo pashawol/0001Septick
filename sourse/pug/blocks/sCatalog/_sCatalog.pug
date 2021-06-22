@@ -42,9 +42,9 @@ mixin sCatalog(page)
 				.col
 					+e.panel
 						.row.gx-3
-							.col-auto 
+							.col-auto.d-none.d-lg-block
 								+icon("filter")
-							.col-auto 
+							.col-auto
 								select.form-select
 									option(value="") Сначала дешевый
 									option(value="") Сначала дорогой
@@ -53,11 +53,11 @@ mixin sCatalog(page)
 									option(value="") ПОКАЗЫВАТЬ ПО: 15
 									option(value="") ПОКАЗЫВАТЬ ПО: 30
 									option(value="") ПОКАЗЫВАТЬ ПО: 45
-							+e.show-var.active.col-auto 
+							+e.show-var.active.col-auto.d-none.d-md-block 
 								+icon("icon-card")
-							+e.show-var.col-auto 
+							+e.show-var.col-auto.d-none.d-md-block 
 								+icon("icon-line")
-				.col-auto
+				.col-lg-auto
 					+e.panel--toggle
 						+icon("filter-toggle")
 						span Фильтр

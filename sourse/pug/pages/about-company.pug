@@ -17,6 +17,7 @@ extends layout/main.pug
 //- include ../blocks/sPayment/_sPayment.pug
 include ../blocks/sNeedHelp/_sNeedHelp.pug
 //- include ../blocks/sOurWorks/_sOurWorks.pug
+include ../blocks/sAbout/_sAbout.pug
 
 block variables
 	- let  mainPage= null 
@@ -34,6 +35,7 @@ block pagecontent
 		+top-nav()
 	+pageHead()
 		h1= title
+	+sAbout()
 	//- +sOurWorks
 	+sNeedHelp()
 	//- +sContact()
