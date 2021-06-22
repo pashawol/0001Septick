@@ -42,14 +42,16 @@ mixin sitebar(data)
 				+icon('arrow-right')
 		+e.title Популярные разделы
 		+e.item
-			+e.imgWrap 
+			+e.imgWrap(href="#") 
 				+pic('servise-1.jpg','','')
-			+e.itemTitle Дренаж участка
+			+e.itemTitle
+				a(href="#")  Дренаж участка
 			+link
 		+e.item
-			+e.imgWrap 
+			+e.imgWrap(href="#") 
 				+pic('drainage.jpg','','')
-			+e.itemTitle Дренаж участка
+			+e.itemTitle
+				a(href="#")  Дренаж участка
 			+link
 		+form-wrap 
 			+e.title.text-center
