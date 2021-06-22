@@ -21,9 +21,9 @@ mixin prodItem()
 			+tr("gg_color-bucket",'залповый сброс','200л')
 		+e.btn(href="#") подробнее
 
-mixin sCatalog(data)
+mixin sCatalog(page)
 	// start sCatalog
-	+b.sCatalog.section#sCatalog&attributes(attributes)
+	+b.sCatalog.section.pt-0#sCatalog&attributes(attributes)
 		img.before(src="img/@2x/webp/catalog-before.webp", alt="")
 		+e.head
 			.row
@@ -37,6 +37,31 @@ mixin sCatalog(data)
 						.col-auto.mb-2: +e.btn-head(href="#") Для бани
 						.col-auto.mb-2: +e.btn-head(href="#") Для 5 человек
 						.col-auto.mb-2: +e.btn-head(href="#") Еще...
+		if page
+			.row
+				.col
+					+e.panel
+						.row.gx-3
+							.col-auto.d-none.d-lg-block
+								+icon("filter")
+							.col-auto
+								select.form-select
+									option(value="") Сначала дешевый
+									option(value="") Сначала дорогой
+							.col 
+								select.form-select
+									option(value="") ПОКАЗЫВАТЬ ПО: 15
+									option(value="") ПОКАЗЫВАТЬ ПО: 30
+									option(value="") ПОКАЗЫВАТЬ ПО: 45
+							+e.show-var.active.col-auto.d-none.d-md-block 
+								+icon("icon-card")
+							+e.show-var.col-auto.d-none.d-md-block 
+								+icon("icon-line")
+				.col-lg-auto
+					+e.panel--toggle
+						+icon("filter-toggle")
+						span Фильтр
+				
 		+e.wrap
 			.row.g-0
 				+e.col.col-xl-3.col-lg-4.col-sm-6
@@ -51,6 +76,7 @@ mixin sCatalog(data)
 				+e.col.col-xl-3.col-lg-4.col-sm-6
 					+prodItem()
 						+e.label(style="--bg-color: var(--bs-primary)") Хит
+				
 				- for (var x = 0; x < 3; x++)
 					+e.col.col-xl-3.col-lg-4.col-sm-6
 						
@@ -59,20 +85,72 @@ mixin sCatalog(data)
 					+b.prod-item(href="#")
 						+pic("stock-card.png",'bg',0)
 						span.btn.btn-primary().w-100 подробнее
-				+e.col.col-xl-3.col-lg-4.col-sm-6
-					+prodItem()
-						+e.label(style="--bg-color: var(--bs-warning)") Популярный
-				+e.col.col-xl-3.col-lg-4.col-sm-6
-					+prodItem()
-						+e.label(style="--bg-color: var(--bs-primary)") Хит
-				+e.col.col-xl-3.col-lg-4.col-sm-6
-					+prodItem()
-						+e.label(style="--bg-color: var(--bs-primary)") Хит
-				+e.col.col-xl-3.col-lg-4.col-sm-6
-					+prodItem()
-						+e.label(style="--bg-color: var(--bs-primary)") Хит
-				+e.col.col-xl-3.col-lg-4.col-sm-6
-			+e.foot.text-center.mt-5
-				a(href="#").more-link Посмотреть весь каталог
-					+icon("eva_arrow-forward-outline")
+				if block 
+					block
+				else
+					+e.col.col-xl-3.col-lg-4.col-sm-6
+						+prodItem()
+							+e.label(style="--bg-color: var(--bs-warning)") Популярный
+					+e.col.col-xl-3.col-lg-4.col-sm-6
+						+prodItem()
+							+e.label(style="--bg-color: var(--bs-primary)") Хит
+					+e.col.col-xl-3.col-lg-4.col-sm-6
+						+prodItem()
+							+e.label(style="--bg-color: var(--bs-primary)") Хит
+					+e.col.col-xl-3.col-lg-4.col-sm-6
+						+prodItem()
+							+e.label(style="--bg-color: var(--bs-primary)") Хит
+					+e.col.col-xl-3.col-lg-4.col-sm-6
+					.col-12
+						+e.foot.text-center.mt-5
+							a(href="#").more-link Посмотреть весь каталог
+								+icon("eva_arrow-forward-outline")
 	// end sCatalog
+	if page
+		+b.fillter-block
+			+e.inner
+				+e.head
+					+icon("filter-toggle")
+					span Фильтр
+
+
+				+e.body
+					mixin accord(t)
+						+b.accordion-item&attributes(attributes)
+							+e.head= t
+								//- +e.toggle
+							+e.body
+								block
+					+accord('Наличие')
+						div: +in-c('radio','Все','radio1')
+						div: +in-c('radio','В наличии','radio1')
+						div: +in-c('radio','Под заказ','radio1')
+					+accord('Цена')
+						+range("1000000", "9999999999")
+					+accord('Кол-во человек')
+						div: +in-c('checkbox','Все','ch2')(checked)
+						div: +in-c('checkbox','Вариант','ch2')
+						div: +in-c('checkbox','Вариант','ch2')
+						div: +in-c('checkbox','Вариант','ch2')
+						div: +in-c('checkbox','Вариант','ch2')
+						div: +in-c('checkbox','Вариант','ch2')
+						div: +in-c('checkbox','Вариант','ch2')
+					+accord('Производитель') 
+						div: +in-c('checkbox','Все','ch2')(checked)
+						div: +in-c('checkbox','Вариант','ch2')
+						div: +in-c('checkbox','Вариант','ch2')
+						div: +in-c('checkbox','Вариант','ch2')
+						div: +in-c('checkbox','Вариант','ch2')
+						div: +in-c('checkbox','Вариант','ch2')
+						div: +in-c('checkbox','Вариант','ch2')
+					+accord('Производитель') 
+						div: +in-c('checkbox','Все','ch2')(checked)
+						div: +in-c('checkbox','Вариант','ch2')
+						div: +in-c('checkbox','Вариант','ch2')
+						div: +in-c('checkbox','Вариант','ch2')
+						div: +in-c('checkbox','Вариант','ch2')
+						div: +in-c('checkbox','Вариант','ch2')
+						div: +in-c('checkbox','Вариант','ch2')
+				+e.foot
+					button.btn.btn-primary.btn-sm.w-100.mb-2 Показать (765)
+					button.btn.btn-link.btn-sm.w-100 сбросить

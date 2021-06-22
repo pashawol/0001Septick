@@ -9,7 +9,7 @@
   "author": "Khalunin Pavel",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.14.5",
+    "@babel/core": "^7.14.6",
     "@babel/preset-env": "^7.14.5",
     "@popperjs/core": "^2.9.2",
     "@tigersway/gulp-responsive": "^1.5.0",
@@ -48,7 +48,6 @@
     "gulp-svgmin": "^2.2.0",
     "gulp-tabify": "0.0.2",
     "gulp-vinyl-flow": "^1.1.0",
-    "ion-rangeslider": "^2.3.1",
     "postcss": "^7.0.36",
     "postcss-combine-media-query": "^1.0.1",
     "postcss-nested": "^4.2.3",
@@ -58,9 +57,11 @@
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
+    "ion-rangeslider": "^2.3.1",
     "inputmask": "^5.0.6",
     "jquery": "^3.5.1",
     "loading-attribute-polyfill": "^1.5.4",
+    "select2": "^4.1.0-rc.0",
     "swiper": "^6.7.0"
   }
 }

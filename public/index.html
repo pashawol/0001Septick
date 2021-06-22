@@ -9,6 +9,7 @@
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<link href="libs/ion-rangeslider/css/ion.rangeSlider.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
@@ -350,7 +351,7 @@
 						<div class="aside section" id="aside">
 							<div class="aside__head"><img src="img/svg/doc.svg" alt=""/>Каталог
 							</div>
-							<ul>
+							<ul class="d-xl-block toggle-menu">
 								<li><a href="#"> Топас <strong>от 48 000 руб.</strong>  
 										<div class="aside__count">24
 										</div></a></li>
@@ -403,7 +404,7 @@
 					</div>
 					<div class="col-main col-xl">
 						<!-- start sCatalog-->
-						<div class="sCatalog section" id="sCatalog"><img class="before" src="img/@2x/webp/catalog-before.webp" alt=""/>
+						<div class="sCatalog section pt-0" id="sCatalog"><img class="before" src="img/@2x/webp/catalog-before.webp" alt=""/>
 							<div class="sCatalog__head">
 								<div class="row">
 									<div class="sCatalog__head-title col-xxl-auto mb-2">Также ищут:
@@ -862,11 +863,13 @@
 									</div>
 									<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6">
 									</div>
-								</div>
-								<div class="sCatalog__foot text-center mt-5"><a class="more-link" href="#">Посмотреть весь каталог
-										<svg class="icon icon-eva_arrow-forward-outline ">
-											<use xlink:href="img/svg/sprite.svg#eva_arrow-forward-outline"></use>
-										</svg></a>
+									<div class="col-12">
+										<div class="sCatalog__foot text-center mt-5"><a class="more-link" href="#">Посмотреть весь каталог
+												<svg class="icon icon-eva_arrow-forward-outline ">
+													<use xlink:href="img/svg/sprite.svg#eva_arrow-forward-outline"></use>
+												</svg></a>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -2354,7 +2357,7 @@
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<!-- /slider libs-->
 		<script src="libs/inputmask/inputmask.min.js"></script>
-		<script src="js/libs.js"></script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

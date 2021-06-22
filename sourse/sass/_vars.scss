@@ -312,7 +312,7 @@ $border-color: $gray-300 !default;
 
 // scss-docs-start border-radius-variables
 $border-radius: rem(20) !default;
-$border-radius-sm: 0.2rem !default;
+$border-radius-sm: rem(20) !default;
 $border-radius-lg: 0.3rem !default;
 $border-radius-pill: 50rem !default;
 // scss-docs-end border-radius-variables
@@ -325,7 +325,7 @@ $box-shadow-inset: inset 0 1px 2px rgba($black, 0.075) !default;
 // scss-docs-end box-shadow-variables
 
 $component-active-color: $white !default;
-$component-active-bg: $primary !default;
+$component-active-bg: $success !default;
 
 // scss-docs-start caret-variables
 $caret-width: 0.3em !default;
@@ -539,8 +539,8 @@ $input-btn-focus-blur: 0 !default;
 $input-btn-focus-box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width
 	$input-btn-focus-color !default;
 
-$input-btn-padding-y-sm: 0.25rem !default;
-$input-btn-padding-x-sm: 0.5rem !default;
+$input-btn-padding-y-sm: 1.05rem !default;
+$input-btn-padding-x-sm: 1.5rem !default;
 $input-btn-font-size-sm: $font-size-sm !default;
 
 $input-btn-padding-y-lg: 0.5rem !default;
@@ -689,10 +689,10 @@ $input-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out 
 // scss-docs-end form-input-variables
 
 // scss-docs-start form-check-variables
-$form-check-input-width: 1em !default;
+$form-check-input-width: 1.4em !default;
 $form-check-min-height: $font-size-base * $line-height-base !default;
 $form-check-padding-start: $form-check-input-width + 0.5em !default;
-$form-check-margin-bottom: 0.125rem !default;
+$form-check-margin-bottom: 0.6125rem !default;
 $form-check-label-color: null !default;
 $form-check-label-cursor: null !default;
 $form-check-transition: null !default;
@@ -1010,9 +1010,9 @@ $pagination-padding-x-sm: 0.5rem !default;
 $pagination-padding-y-lg: 0.75rem !default;
 $pagination-padding-x-lg: 1.5rem !default;
 
-$pagination-color: $link-color !default;
+$pagination-color: $secondary !default;
 $pagination-bg: $white !default;
-$pagination-border-width: $border-width !default;
+$pagination-border-width: 0 !default;
 $pagination-border-radius: $border-radius !default;
 $pagination-margin-start: -$pagination-border-width !default;
 $pagination-border-color: $gray-300 !default;
@@ -1027,7 +1027,7 @@ $pagination-hover-bg: $gray-200 !default;
 $pagination-hover-border-color: $gray-300 !default;
 
 $pagination-active-color: $component-active-color !default;
-$pagination-active-bg: $component-active-bg !default;
+$pagination-active-bg: $primary !default;
 $pagination-active-border-color: $pagination-active-bg !default;
 
 $pagination-disabled-color: $gray-600 !default;
