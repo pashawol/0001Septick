@@ -26,33 +26,33 @@ $output-bourbon-deprecation-warnings: false;
 @import "./node_modules/bootstrap/scss/root";
 @import "./node_modules/bootstrap/scss/reboot";
 @import "./node_modules/bootstrap/scss/type";
-// @import "./node_modules/bootstrap/scss/images";
+@import "./node_modules/bootstrap/scss/images";
 @import "./node_modules/bootstrap/scss/containers";
 @import "./node_modules/bootstrap/scss/grid";
-// @import "./node_modules/bootstrap/scss/tables";
+@import "./node_modules/bootstrap/scss/tables";
 @import "./node_modules/bootstrap/scss/forms";
 @import "./node_modules/bootstrap/scss/buttons";
-// @import "./node_modules/bootstrap/scss/transitions";
-// @import "./node_modules/bootstrap/scss/dropdown";
-// @import "./node_modules/bootstrap/scss/button-group";
-// @import "./node_modules/bootstrap/scss/nav";
-// @import "./node_modules/bootstrap/scss/navbar";
-// @import "./node_modules/bootstrap/scss/card";
-// @import "./node_modules/bootstrap/scss/accordion";
+@import "./node_modules/bootstrap/scss/transitions";
+@import "./node_modules/bootstrap/scss/dropdown";
+@import "./node_modules/bootstrap/scss/button-group";
+@import "./node_modules/bootstrap/scss/nav";
+@import "./node_modules/bootstrap/scss/navbar";
+@import "./node_modules/bootstrap/scss/card";
+@import "./node_modules/bootstrap/scss/accordion";
 @import "./node_modules/bootstrap/scss/breadcrumb";
-// @import "./node_modules/bootstrap/scss/pagination";
-// @import "./node_modules/bootstrap/scss/badge";
+@import "./node_modules/bootstrap/scss/pagination";
+@import "./node_modules/bootstrap/scss/badge";
 @import "./node_modules/bootstrap/scss/alert";
-// @import "./node_modules/bootstrap/scss/progress";
-// @import "./node_modules/bootstrap/scss/list-group";
-// @import "./node_modules/bootstrap/scss/close";
-// @import "./node_modules/bootstrap/scss/toasts";
-// @import "./node_modules/bootstrap/scss/modal";
-// @import "./node_modules/bootstrap/scss/tooltip";
-// @import "./node_modules/bootstrap/scss/popover";
-// @import "./node_modules/bootstrap/scss/carousel";
-// @import "./node_modules/bootstrap/scss/spinners";
-// @import "./node_modules/bootstrap/scss/offcanvas";
+@import "./node_modules/bootstrap/scss/progress";
+@import "./node_modules/bootstrap/scss/list-group";
+@import "./node_modules/bootstrap/scss/close";
+@import "./node_modules/bootstrap/scss/toasts";
+@import "./node_modules/bootstrap/scss/modal";
+@import "./node_modules/bootstrap/scss/tooltip";
+@import "./node_modules/bootstrap/scss/popover";
+@import "./node_modules/bootstrap/scss/carousel";
+@import "./node_modules/bootstrap/scss/spinners";
+@import "./node_modules/bootstrap/scss/offcanvas";
 
 // Helpers
 @import "./node_modules/bootstrap/scss/helpers";
@@ -81,26 +81,44 @@ $output-bourbon-deprecation-warnings: false;
 	transform: rotate(-90deg);
 	padding-left: 0.5rem;
 }
-// @import "./node_modules/bootstrap/scss/pagination";
+@import "./node_modules/bootstrap/scss/pagination";
 
-// .pagination-wrapper ul {
-// 	@extend .pagination;
-// }
+.pagination-wrapper {
+	justify-content: center;
+	display: flex;
+}
+.pagination-wrapper ul {
+	@extend .pagination;
+	font-weight: 600;
+	.icon{
+		font-size: 13px;
+	}
+	span{
+		pointer-events: none
+	}
+}
 
-// .pagination-wrapper li .page-numbers {
-// 	@extend .page-link;
-// }
+.pagination-wrapper li .page-numbers {
+	@extend .page-link;
+	padding: 0;
+	width: rem(56);
+	height: rem(56);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 18px;
+}
 
-// .pagination-wrapper li {
-// 	@extend .page-item;
+.pagination-wrapper li {
+	@extend .page-item;
 
-// 	.current {
-// 		z-index: 1;
-// 		// color: $pagination-active-color;
-// 		// background-color: $pagination-active-bg;
-// 		// border-color: $pagination-active-border-color;
-// 	}
-// }
+	.current {
+		z-index: 1;
+		color: $pagination-active-color;
+		background-color: $pagination-active-bg;
+		// border-color: $pagination-active-border-color;
+	}
+}
 @import "root";
 @import "base";
 @import "../pug/blocks/**/*.scss";

@@ -191,6 +191,83 @@ const JSCCommon = {
 
 	checkEmptyVal() {
 		this.value !== '' || this.tagName == "SELECT" && this.querySelector('option') != null && this.querySelector('option').value !== null && this.querySelector('option').text || this.type == "date" ? $(this).addClass('not-empty') : $(this).removeClass('not-empty');
+	},
+
+	customRange() {
+		function InputFormat() {// $('.input_from, .input_to').toFixed(2,0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '0')
+		}
+
+		InputFormat();
+
+		function currencyFormat(num) {
+			return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
+		} // currencyFormat(num)
+
+
+		$(".range-wrap").each(function () {
+			let _this = $(this);
+
+			var $range = _this.find(".slider-js");
+
+			var $inputFrom = _this.find(".input_from");
+
+			var $inputTo = _this.find(".input_to");
+
+			var instance,
+					from,
+					to,
+					min = $range.data('min'),
+					max = $range.data('max');
+			$range.ionRangeSlider({
+				skin: "round",
+				type: "double",
+				grid: false,
+				grid_snap: false,
+				hide_min_max: true,
+				hide_from_to: true,
+				onStart: updateInputs,
+				onChange: updateInputs,
+				onFinish: updateInputs
+			});
+			instance = $range.data("ionRangeSlider");
+
+			function updateInputs(data) {
+				from = data.from;
+				to = data.to;
+				$inputFrom.prop("value", currencyFormat(from));
+				$inputTo.prop("value", currencyFormat(to)); // InputFormat();
+			}
+
+			$inputFrom.on("change input ", function () {
+				var val = +$(this).prop("value").replace(/\s/g, ''); // validate
+
+				if (val < min) {
+					val = min;
+				} else if (val > to) {
+					val = to;
+				}
+
+				instance.update({
+					from: val
+				});
+				$(this).prop("value", currencyFormat(val));
+				console.log(val);
+			});
+			$inputTo.on("change input ", function () {
+				var val = +$(this).prop("value").replace(/\s/g, ''); // validate
+
+				if (val < from) {
+					val = from;
+				} else if (val > max) {
+					val = max;
+				}
+
+				instance.update({
+					to: val
+				});
+				$(this).prop("value", currencyFormat(val));
+			});
+		});
 	}
 
 };
@@ -204,6 +281,7 @@ function eventHandler() {
 	JSCCommon.inputMask();
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
+	JSCCommon.customRange();
 	$('.form-wrap__input').blur(JSCCommon.checkEmptyVal);
 	$('.form-wrap__input').each(JSCCommon.checkEmptyVal);
 	$('.form-wrap__input.select-custom--js').on('select2:select', JSCCommon.checkEmptyVal); // JSCCommon.CustomInputFile(); 
@@ -339,6 +417,13 @@ function eventHandler() {
 		$(this).parents(".sQwiz__step").hide().removeClass('active').prev().fadeIn(function () {
 			$(this).addClass('active');
 		});
+	});
+	$(".aside__head").click(function () {
+		$(".toggle-menu").slideToggle();
+	});
+	$(".sCatalog__panel--toggle, .fillter-block__head").click(function () {
+		$(".fillter-block").toggleClass('active');
+		$("body").toggleClass('fixed');
 	});
 }
 

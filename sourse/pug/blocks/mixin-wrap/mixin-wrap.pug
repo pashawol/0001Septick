@@ -46,3 +46,15 @@ mixin advantage-item(i, t)
 		+e.img-wrap
 			img(src=`img/svg/${i}` alt="")
 		+e.text!= t
+
+
+mixin range(c1, c2)
+	.range-wrap.price_slider_amount
+		.row
+			.col-6 
+				.form-group
+					+b.INPUT.input_from.form-control.form-control-sm(type="text"  )  
+			.col-6
+				.form-group
+					+b.INPUT.input_to.form-control.form-control-sm(type="text"  ) 
+		input.range-slider.slider-js(type='text'  data-min= c1  data-max= c2)
