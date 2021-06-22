@@ -169,6 +169,7 @@
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
+	max-width: 480px;
 	&__img-wrap{
 		position: relative;
 
@@ -229,6 +230,7 @@
 	}
 	&__title{
 		position: relative;
+		width: 100%;
 	}
 	&__add{
 		position: absolute;
@@ -247,6 +249,44 @@
 
 	.btn{
 		margin-top: auto;
+	}
+	&--horizontal{
+
+		min-height: 1px;
+	}
+	@include media-breakpoint-up(md) {
+
+		&--horizontal{
+			max-width: none;
+			// display: flex;
+			flex-direction: row;
+			// margin-bottom: 30px;
+			table{
+				max-width: rem(300);
+				margin-top: 0;
+			}
+		}
+		p{
+			color: #858B9B;
+			font-size: 12px;
+			padding-top: 20px;
+			width: 100%;
+		}
+		&--horizontal &__btn{
+			width: auto;
+			margin-top: 0;
+			margin-left: 20px;
+			width: rem(200);
+		}
+		&--horizontal &__img-wrap{
+			width: rem(247);
+			margin-right: 24px;
+			flex: 0 0 auto;
+		}
+		&__body{
+			display: flex;
+			flex-wrap: wrap;
+		}
 	}
 }
 
@@ -322,6 +362,8 @@
 	}
 
 	.accordion-item{
+		border-radius: 0;
+		border: none;
 		border-bottom: 1px solid #F5F5F7;
 		
 		&__head{

@@ -1,7 +1,7 @@
 // start .aside
 .aside {
 	// --sPT: ;
-	// --sPB: ;
+	--sPB: 0px;
 	// --sTPB: ;
 	ul{
 		display: none;
@@ -86,4 +86,32 @@
 	padding-bottom: 20px;
 	font-weight: 600;
 	cursor: pointer;
+}
+
+
+.man-block{
+	background: #FFFFFF;
+	border-radius: 20px;
+	padding: rem(40);
+	text-align: center;
+	p{
+		color: #858B9B;
+	}
+	&__name{
+		@include rfs(24px);
+		margin-bottom: rem(18);
+		font-weight: bold;
+	}
+	&__tel{
+		@include rfs(24px);
+		margin-bottom: rem(18);
+		font-weight: bold;
+		display: inline-block;
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-success;
+		width: rem(188);
+		padding: rem(16);
+	}
 }
