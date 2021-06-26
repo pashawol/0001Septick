@@ -32,9 +32,12 @@
 		}
 		margin-bottom: rem(35);
 		text-align: center;
-		
+		&:hover picture{
+			transform: rotate(-5deg);
+		}
 		// align-items: center;
 		picture{
+			@include mt;
 			flex: 0 0 auto;
 			min-height: 200px ;
 			@include media-breakpoint-up(xxxl){

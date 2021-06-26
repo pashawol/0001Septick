@@ -232,6 +232,9 @@
 		color: $secondary;
 	}
 	&__plate{
+		&:hover{
+			opacity: 0.8;
+		}
 		text-align: center;
 
 		@include media-breakpoint-up(xxxl){
@@ -445,17 +448,21 @@
 			border-bottom: 1px dashed $gray-510;
 		}
 	}
+	&__row{
+		// justify-content: space-between;
+	}
 	&__key-col{
-		width: 61%;
+		max-width: 61%;
 		color: $secondary;
 	}
 	&__val-col{
 		font-weight: 600;
+		align-self: flex-end;
 	}
 	&__txt{
-		display: inline-flex;
-		align-items: flex-end;
-		min-height: 100%;
+		display: inline;
+		// align-items: flex-end;
+		// min-height: 100%;
 		background: $white;
 	}
 }

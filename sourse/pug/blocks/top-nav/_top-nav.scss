@@ -16,6 +16,9 @@
 		}
 	}
 	// 
+	@include media-breakpoint-down(xxl) {
+		background-color: #fff;
+	}
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}

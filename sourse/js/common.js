@@ -270,7 +270,7 @@ function eventHandler() {
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
-	JSCCommon.inputMask();
+	// JSCCommon.inputMask();
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll();
 	JSCCommon.customRange();
@@ -453,9 +453,13 @@ function eventHandler() {
 		})
 	})
 
+	$(".sQwiz__body .radio-block ").click(function(){
+		if ($(this).find('input').is(':checked')) { 
+			$(this).parents(".sQwiz__step").find(".sCalc__btn--next.d-none").removeClass("d-none")}
+			
+	})
 
-
-	$(".sCalc__btn--next").click(function () {
+	$(".sCalc__btn--next, .sQwiz__body .radio-block").click(function () {
 		$(this).parents(".sQwiz__step").hide().removeClass('active').next().fadeIn(function () {
 			$(this).addClass('active');
 		})
@@ -515,6 +519,29 @@ function eventHandler() {
 
 		$(".fillter-block").toggleClass('active')
 		$("body").toggleClass('fixed')
+	})
+	$(".more-text--js  .link-more").click(function(e){
+		e.preventDefault();
+		$(this).parent().find("*:hidden").slideDown();
+		$(this).hide();
+	})
+	$(".sCatalog__btn-head--more-js").click(function(e){
+		e.preventDefault();
+		$(this).parents('.row').find("*:hidden").fadeIn();
+		$(this).parent().hide();
+	})
+	
+		var Sticky = new hcSticky('.man-block', {
+			stickTo: '.col-aside'
+		});
+	$(".aside__more").click(function(e){
+		e.preventDefault();
+		$(this).parent().find("*:hidden").fadeIn();
+		$(this).hide();
+		Sticky.update({});
+	})
+	$(".topLine__btn-search").click(function(){
+		$(".topLine__search-wrap").slideToggle().find('input').focus()
 	})
 
 };

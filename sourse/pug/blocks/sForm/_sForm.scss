@@ -90,8 +90,8 @@
 					 margin-left: 0;
 					 margin-right: 0;
 				 }
-				 margin-left: -50px;
-				 margin-right: -150px;
+				//  margin-left: -50px;
+				//  margin-right: -150px;
 			 	@include media-breakpoint-up(xl){
 
 					 @include a-cent1;
@@ -215,7 +215,7 @@
 
 				 	margin-left: 0;
 				 	}
-					 margin-left: 100px;
+					//  margin-left: 100px;
 
 				 	// padding: rem(62) rem(20);
 			&::before{

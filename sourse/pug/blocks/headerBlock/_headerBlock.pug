@@ -4,9 +4,11 @@ mixin headerBlock()
 		.container
 			+e.row-lg.row
 				.col-xl-6
-					h1 Автономная канализация
-						| 
-						span под ключ
+					+e.title
+						+pic("main-2.jpg").img-rad.d-xl-none
+						h1 Автономная канализация
+							| 
+							span под ключ
 					+e.text 
 						+e.text-head
 							.h5.strong.text-danger Акция действует до 6 мая
@@ -19,26 +21,29 @@ mixin headerBlock()
 					+e.row-sm.row 
 						.col-sm-auto 
 							+e.btn(href="#").btn-success Узнать подробнее <br> условия акции
-						.col-sm-auto 
+						.col-sm-auto.text-center
 							+e.btn(href="#").text-success.px-0
 								img(src="img/svg/doc.svg", alt="")
 								| каталог лучших септиков
-				.col-xl-6.text-xl-end.d-xl-block.d-none
+				.col-xl-6.text-xl-end
 					+e.img-head
-						+pic("main-1.jpg",'',0).img-rad
+						+pic("main-1.jpg",'',0).img-rad.d-none.d-xl-block
 						+pic("main-2.jpg",'',0).img-rad.d-none.d-xxl-block
-						+pic("head.png",'',0).img-head
-					+e.img-foot
+						.img-head.d-xl-block.d-none
+							img(src="img/svg/head.svg", alt="")
+							img(src="img/svg/head-text.svg", alt="").img-circle
+							//- +pic("head.png",'',0)
+					+e.img-foot.d-none.d-sm-block
 						.row
-							.col-xxl-auto.col-4
+							.col-xxl-auto.col-xl-4.col-sm-auto.col-4
 								+e.img-wrap-sm
 									+e.label Комфорт
 									+pic("main-3.jpg",'',0)
-							.col-xxl-auto.col-4
+							.col-xxl-auto.col-xl-4.col-sm-auto.col-4
 								+e.img-wrap-sm
 									+e.label Дренаж
 									+pic("main-4.jpg",'',0)
-							.col-xxl-auto.col-4
+							.col-xxl-auto.col-xl-4.col-sm-auto.col-4
 								+e.img-wrap-sm
 									+e.label Водоподготовка
 									+pic("main-5.jpg",'',0)

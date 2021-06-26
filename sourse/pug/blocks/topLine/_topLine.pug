@@ -3,21 +3,23 @@ mixin topLine()
 	+b.topLine.section#topLine&attributes(attributes)
 		.container
 			.row
-				.col-xl-auto.col
+				.col-xl-auto.col.order-md-0.order-last
 					+e.logo(href='/')
 						+pic("logo.png",'',0)
 
 						//- img(src="img/@2x/logo.png", alt="")
-				.col-auto.d-none.d-md-block
+				.col-md-auto.order-md-0.order-first
 					+b.place-block
 						+icon("mark")
-						+e.head Ваш город 
+						+e.head 
+							span.d-none.d-md-inline Ваш город  
 							| 
 							a(href="#") Москва
 						+e.body м. Окская, Рязанский пр-т, д.24, стр.2
-				.col-xxxl-auto.col-xxl-12.col.order-xxxl-0.order-last.d-none.d-sm-block
-					+search()
-				.col-auto.d-none.d-sm-block
+				.col-xxxl-auto.col-xxl-12.col-md.order-xxxl-0.order-md-last.order-14.d-none.d-sm-block
+					+e.search-wrap.d-md-block
+						+search()
+				.col-auto.order-md-0.order-last
 					+b.compare-block(href="#")
 						+icon("eva_bar-chart-fill")
 						+e.text.d-none.d-xl-block.ms-3 товары для Сравнений
@@ -30,18 +32,21 @@ mixin topLine()
 							+icon("ion_mail")
 						+e.mail(href="mailto:info@septik.net") info@septik.net  
 						+e.text ПН-ВС с 9:-00 до 22:00
-				.col-auto.order-xxl-0.order-sm-last
+				.col-md-auto.order-xxl-0.order-md-last.order-first
 					+b.contact-block
 						+e.btn(href="#")
 							+icon("akar-icons_whatsapp-fill")
-						.d-none.d-lg-block.ms-3
+						.d-flex.d-md-none.d-lg-block.ms-3.align-items-center
 							+e.tel(href="tel:8(495)115-67-07") 8 (495) 115-67-07 
-							div
+							.ms-auto
 								+e.call(href="#")
 									+icon('call')
 									| ЗАКАЗАТЬ ЗВОНОК
 				
-				.col-auto.d-xl-none
+				.col-auto.order-last.d-md-none
+					+e.btn-search 
+						+icon("eva_search-fill")
+				.col-auto.d-xl-none.order-md-0.order-last
 					+b.toggle-menu-mobile--js
 						span
 				.col-12

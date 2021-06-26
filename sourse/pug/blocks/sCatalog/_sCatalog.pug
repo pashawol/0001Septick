@@ -1,11 +1,11 @@
 mixin prodItem()
 	+b.prod-item
-		+e.img-wrap
+		+e.img-wrap(href="#")
 			+pic("prod.jpg",'bg',0)
 			block
 		+e.title 
-			.strong Юнилос Астра 3
-			.small.text-secondary монтаж от 12 000 руб.* 
+			a.strong(href='#') Юнилос Астра 3
+			+e.text-with-alert.small.text-secondary(data-text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, doloribus.	") монтаж от 12 000 руб.* 
 		
 			+e.add
 				+icon('eva_bookmark-fill')
@@ -22,13 +22,13 @@ mixin prodItem()
 		+e.btn(href="#") подробнее
 mixin prodItemHor()
 	+b.prod-item--horizontal
-		+e.img-wrap
+		+e.img-wrap(href="#")
 			+pic("prod.jpg",'bg',0)
 			block
 		+e.body
 			+e.title 
-				.strong Юнилос Астра 3
-				.small.text-secondary монтаж от 12 000 руб.* 
+				a.strong(href='#') Юнилос Астра 3
+				+e.text-with-alert.small.text-secondary(data-text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, doloribus.	") монтаж от 12 000 руб.* 
 
 				+e.add
 					+icon('eva_bookmark-fill')
@@ -97,16 +97,70 @@ mixin filter()
 mixin catalogHead()
 		+e.head
 			.row
-				+e.head-title.col-xxl-auto.mb-2 Также ищут:
+				+e.head-title.col-xxxl-auto.mb-2 Также ищут:
 				.col
 					.row
-						.col-auto.mb-2: +e.btn-head(href="#") Для дачи
-						.col-auto.mb-2: +e.btn-head(href="#") Для дома
-						.col-auto.mb-2: +e.btn-head(href="#") Для бани
-						.col-auto.mb-2: +e.btn-head(href="#") Для 3х человек
-						.col-auto.mb-2: +e.btn-head(href="#") Для бани
-						.col-auto.mb-2: +e.btn-head(href="#") Для 5 человек
-						.col-auto.mb-2: +e.btn-head(href="#") Еще...
+						.col-auto.mb-2
+							label
+								input(type="checkbox").invisible
+								+e.btn-head() 
+									| Для дачи
+						.col-auto.mb-2
+							label
+								input(type="checkbox").invisible
+								+e.btn-head() 
+									| Для дома
+						.col-auto.mb-2
+							label
+								input(type="checkbox").invisible
+								+e.btn-head() 
+									| Для бани
+						.col-auto.mb-2
+							label
+								input(type="checkbox").invisible
+								+e.btn-head() 
+									| Для 3х человек
+						.col-auto.mb-2
+							label
+								input(type="checkbox").invisible
+								+e.btn-head() 
+									| Для бани
+						.col-auto.mb-2
+							label
+								input(type="checkbox").invisible
+								+e.btn-head() 
+									| Для 5 человек
+						.col-auto.mb-2: +e.btn-head--more.--more-js() Еще...
+						.col-auto.mb-2.hidden-btn
+							label
+								input(type="checkbox").invisible
+								+e.btn-head() 
+									| Для дачи
+						.col-auto.mb-2.hidden-btn
+							label
+								input(type="checkbox").invisible
+								+e.btn-head() 
+									| Для дома
+						.col-auto.mb-2.hidden-btn
+							label
+								input(type="checkbox").invisible
+								+e.btn-head() 
+									| Для бани
+						.col-auto.mb-2.hidden-btn
+							label
+								input(type="checkbox").invisible
+								+e.btn-head() 
+									| Для 3х человек
+						.col-auto.mb-2.hidden-btn
+							label
+								input(type="checkbox").invisible
+								+e.btn-head() 
+									| Для бани
+						.col-auto.mb-2.hidden-btn
+							label
+								input(type="checkbox").invisible
+								+e.btn-head() 
+									| Для 5 человек
 mixin sCatalog(page)
 	// start sCatalog
 	+b.sCatalog.section.pt-0#sCatalog&attributes(attributes)

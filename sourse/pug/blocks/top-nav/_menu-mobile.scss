@@ -95,7 +95,9 @@ $h: em(2);
 	will-change: transform;
 
 	&__inner {
-		padding: rem(20) 0;
+		// padding: rem(20) 0;
+		padding-top: 20px;
+		padding-bottom: 20px;
 		overflow-x: hidden;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
@@ -103,6 +105,7 @@ $h: em(2);
 		@include mt(.3s);
 		transition-delay: .4s;
 		opacity: var(--opacity);
+		background-color: #fff;
 	}
 
 	&.active { 
@@ -156,4 +159,8 @@ $h: em(2);
 
 		}
 	}
+}
+
+.order-14{
+	order: 14;
 }

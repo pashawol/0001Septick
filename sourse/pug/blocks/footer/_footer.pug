@@ -3,24 +3,33 @@ mixin footer()
 		.container
 			.row
 				.col-xl-3
-					+e.logo(href='/')
-						+pic("logo.png",'',0)
-					+b.contact-block
-						+e.item
-							+icon('call')
-							div
-								+e.tel(href="tel:8(495)115-67-07").text-white 8 (495) 115-67-07 
-								div
-									+e.call(href="#") 
-										| ЗАКАЗАТЬ ЗВОНОК
-						
-						+e.item--mail
-							+icon("ion_mail")
-							+e.link(href="mailto:info@septik.net").text-white info@septik.net  
-						+e.item
-							+icon("mark")
-							| м. Окская, Рязанский пр-т, д.24, стр.2
-					+soc()
+					.row
+						.col-xl-12.col-sm-auto
+							+e.logo(href='/')
+								+pic("logo.png",'',0)
+						.col-xl-12.col
+							+b.contact-block
+								.row
+									.col-xl-12.col-auto
+										+e.item
+											+icon('call')
+											div
+												+e.tel(href="tel:8(495)115-67-07").text-white 8 (495) 115-67-07 
+												div
+													+e.call(href="#") 
+														| ЗАКАЗАТЬ ЗВОНОК
+										
+									.col-xl-12.col-auto
+										+e.item--mail
+											+icon("ion_mail")
+											+e.link(href="mailto:info@septik.net").text-white info@septik.net  
+									.col-xl-12.col-auto
+										+e.item
+											+icon("mark")
+											| м. Окская, Рязанский пр-т, д.24, стр.2
+					
+									.col-xl-12.col-auto
+										+soc()
 				.col-xl
 					+e.row.row
 						+e.col.col-xxl.col-auto

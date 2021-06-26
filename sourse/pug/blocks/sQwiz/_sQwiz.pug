@@ -19,17 +19,17 @@ mixin sQwiz(data)
 				+e.inner-padding 
 					+e.inner-sp 
 						h2 Узнайте за&nbsp;1&nbsp;минуту какой #[span септик] подойдет #[span для вашего дома] и&nbsp;#[span стоимость] его установки
-						mixin item(w, t)
+						mixin item(w, t, dis)
 							+e.step&attributes(attributes)
 								if t
 									+e.head
 										.row
 											.col-auto
-												+e.btn-control.sCalc__btn--prev.disabled
+												+e.btn-control.sCalc__btn--prev(class= dis)
 													+icon("arrow-left")
 											.col=` ${w} вопрос из 8`
 											.col-auto
-												+e.btn-control.sCalc__btn--next
+												+e.btn-control.sCalc__btn--next.d-none
 													+icon("arrow-right")
 									+e.body
 										+b.progress
@@ -58,7 +58,7 @@ mixin sQwiz(data)
 									ul 
 										li Рекомендации эксперта по вариантам автономной канализации для Вашего дома
 										li Сметную стоимость септика и его установки
-						+item(1,'Выберите тип вашего объекта').active
+						+item(1,'Выберите тип вашего объекта','disabled').active
 						+item(2,'Сколько человек будет пользоваться канализацией (с учетом гостей)?','10%')
 							.col-lg-3.col-sm-6 
 								+radio-item('','2-3 чел','count')

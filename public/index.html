@@ -107,40 +107,41 @@
 				<div class="topLine section" id="topLine">
 					<div class="container">
 						<div class="row">
-							<div class="col-xl-auto col"><a class="topLine__logo" href="/">
+							<div class="col-xl-auto col order-md-0 order-last"><a class="topLine__logo" href="/">
 								<!-- picture-->
 								<picture> 
 									<source type="image/webp" srcset="img/@2x/webp/logo.webp"/><img src="img/@2x/logo.png" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture--></a>
 							</div>
-							<div class="col-auto d-none d-md-block">
+							<div class="col-md-auto order-md-0 order-first">
 								<div class="place-block">
 									<svg class="icon icon-mark ">
 										<use xlink:href="img/svg/sprite.svg#mark"></use>
 									</svg>
-									<div class="place-block__head">
-										Ваш город  <a href="#">Москва</a>
+									<div class="place-block__head"> <span class="d-none d-md-inline">Ваш город  </span> <a href="#">Москва</a>
 									</div>
 									<div class="place-block__body">м. Окская, Рязанский пр-т, д.24, стр.2
 									</div>
 								</div>
 							</div>
-							<div class="col-xxxl-auto col-xxl-12 col order-xxxl-0 order-last d-none d-sm-block">
-								<div class="search-block">
-									<form>
-										<div class="search-block__input-wrap form-group"><input class="search-block__input form-control" name="text" type="text" placeholder="Поиск по товарам"/>
-										</div>
-										<!-- +e.input-wrap-->
-										<button> 
-											<svg class="icon icon-eva_search-fill ">
-												<use xlink:href="img/svg/sprite.svg#eva_search-fill"></use>
-											</svg>
-										</button>
-									</form>
+							<div class="col-xxxl-auto col-xxl-12 col-md order-xxxl-0 order-md-last order-14 d-none d-sm-block">
+								<div class="topLine__search-wrap d-md-block">
+									<div class="search-block">
+										<form>
+											<div class="search-block__input-wrap form-group"><input class="search-block__input form-control" name="text" type="text" placeholder="Поиск по товарам"/>
+											</div>
+											<!-- +e.input-wrap-->
+											<button> 
+												<svg class="icon icon-eva_search-fill ">
+													<use xlink:href="img/svg/sprite.svg#eva_search-fill"></use>
+												</svg>
+											</button>
+										</form>
+									</div>
 								</div>
 							</div>
-							<div class="col-auto d-none d-sm-block"><a class="compare-block" href="#">
+							<div class="col-auto order-md-0 order-last"><a class="compare-block" href="#">
 								<svg class="icon icon-eva_bar-chart-fill ">
 									<use xlink:href="img/svg/sprite.svg#eva_bar-chart-fill"></use>
 								</svg><span class="compare-block__text d-none d-xl-block ms-3">товары для Сравнений</span><span class="compare-block__count">3</span></a>
@@ -154,13 +155,13 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-auto order-xxl-0 order-sm-last">
+							<div class="col-md-auto order-xxl-0 order-md-last order-first">
 								<div class="contact-block"><a class="contact-block__btn" href="#">
 									<svg class="icon icon-akar-icons_whatsapp-fill ">
 										<use xlink:href="img/svg/sprite.svg#akar-icons_whatsapp-fill"></use>
 									</svg></a>
-									<div class="d-none d-lg-block ms-3"><a class="contact-block__tel" href="tel:8(495)115-67-07">8 (495) 115-67-07 </a>
-										<div><a class="contact-block__call" href="#">
+									<div class="d-flex d-md-none d-lg-block ms-3 align-items-center"><a class="contact-block__tel" href="tel:8(495)115-67-07">8 (495) 115-67-07 </a>
+										<div class="ms-auto"><a class="contact-block__call" href="#">
 											<svg class="icon icon-call ">
 												<use xlink:href="img/svg/sprite.svg#call"></use>
 											</svg>ЗАКАЗАТЬ ЗВОНОК</a>
@@ -168,7 +169,14 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-auto d-xl-none">
+							<div class="col-auto order-last d-md-none">
+								<div class="topLine__btn-search"> 
+									<svg class="icon icon-eva_search-fill ">
+										<use xlink:href="img/svg/sprite.svg#eva_search-fill"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="col-auto d-xl-none order-md-0 order-last">
 								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 								</div>
 							</div>
@@ -242,8 +250,18 @@
 				<div class="container">
 					<div class="headerBlock__row-lg row">
 						<div class="col-xl-6">
-							<h1>
-								Автономная канализация <span>под ключ</span></h1>
+							<div class="headerBlock__title">
+								<!-- picture-->
+								<picture class="img-rad d-xl-none"> 
+									<source type="image/webp" srcset="img/@2x/webp/main-2.webp" media="(min-width:576px)"/>
+									<source type="image/webp" srcset="img/@1x/webp/main-2.webp"/>
+									<source type="image/jpg" srcset="img/@2x/main-2.jpg" media="(min-width:576px)"/>
+									<source type="image/jpg" srcset="img/@1x/main-2.jpg"/><img src="img/@2x/main-2.jpg" alt="" loading="lazy"/>
+								</picture>
+								<!-- /picture-->
+								<h1>
+									Автономная канализация <span>под ключ</span></h1>
+							</div>
 							<div class="headerBlock__text"> 
 								<div class="headerBlock__text-head">
 									<div class="h5 strong text-danger">Акция действует до 6 мая</div>
@@ -259,14 +277,14 @@
 							<div class="headerBlock__row-sm row"> 
 								<div class="col-sm-auto"> <a class="headerBlock__btn btn-success" href="#">Узнать подробнее <br> условия акции</a>
 								</div>
-								<div class="col-sm-auto"> <a class="headerBlock__btn text-success px-0" href="#"><img src="img/svg/doc.svg" alt=""/>каталог лучших септиков</a>
+								<div class="col-sm-auto text-center"><a class="headerBlock__btn text-success px-0" href="#"><img src="img/svg/doc.svg" alt=""/>каталог лучших септиков</a>
 								</div>
 							</div>
 						</div>
-						<div class="col-xl-6 text-xl-end d-xl-block d-none">
+						<div class="col-xl-6 text-xl-end">
 							<div class="headerBlock__img-head">
 								<!-- picture-->
-								<picture class="img-rad"> 
+								<picture class="img-rad d-none d-xl-block"> 
 									<source type="image/webp" srcset="img/@2x/webp/main-1.webp"/><img src="img/@2x/main-1.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture-->
@@ -275,15 +293,11 @@
 									<source type="image/webp" srcset="img/@2x/webp/main-2.webp"/><img src="img/@2x/main-2.jpg" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture-->
-								<!-- picture-->
-								<picture class="img-head"> 
-									<source type="image/webp" srcset="img/@2x/webp/head.webp"/><img src="img/@2x/head.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture-->
+								<div class="img-head d-xl-block d-none"><img src="img/svg/head.svg" alt=""/><img class="img-circle" src="img/svg/head-text.svg" alt=""/></div>
 							</div>
-							<div class="headerBlock__img-foot">
+							<div class="headerBlock__img-foot d-none d-sm-block">
 								<div class="row">
-									<div class="col-xxl-auto col-4">
+									<div class="col-xxl-auto col-xl-4 col-sm-auto col-4">
 										<div class="headerBlock__img-wrap-sm">
 											<div class="headerBlock__label">Комфорт
 											</div>
@@ -294,7 +308,7 @@
 											<!-- /picture-->
 										</div>
 									</div>
-									<div class="col-xxl-auto col-4">
+									<div class="col-xxl-auto col-xl-4 col-sm-auto col-4">
 										<div class="headerBlock__img-wrap-sm">
 											<div class="headerBlock__label">Дренаж
 											</div>
@@ -305,7 +319,7 @@
 											<!-- /picture-->
 										</div>
 									</div>
-									<div class="col-xxl-auto col-4">
+									<div class="col-xxl-auto col-xl-4 col-sm-auto col-4">
 										<div class="headerBlock__img-wrap-sm">
 											<div class="headerBlock__label">Водоподготовка
 											</div>
@@ -328,9 +342,12 @@
 					<div class="row">
 						<div class="col">
 							<h2><span>Популярные</span> модели септиков</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet,</p><a class="link-more" href="#">Подробнее</a>
+							<div class="more-text more-text--js mb-3">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet,</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet,</p><a class="link-more" href="#">Подробнее</a>
+							</div>
 						</div>
-						<div class="col-xl-auto d-none d-xl-block">
+						<div class="col-xl-auto">
 							<div class="panel-white">
 								<div class="h6 strong">Нужна помощь специалиста?</div>
 								<p class="text-secondary">Звоните ежедневно с 9:00 до 18:30 Ответим в WhatsApp за минуту!</p>
@@ -352,49 +369,61 @@
 							<div class="aside__head"><img src="img/svg/doc.svg" alt=""/>Каталог
 							</div>
 							<ul class="d-xl-block toggle-menu">
-								<li><a href="#"> Топас <strong>от 48 000 руб.</strong>  
+								<li><a href="#"><span>  Топас <strong>от 48 000 руб.</strong>  </span>
 										<div class="aside__count">24
 										</div></a></li>
-								<li><a href="#"> Астра <strong>от 48 000 руб.</strong>  
+								<li><a href="#"><span>  Астра <strong>от 48 000 руб.</strong>  </span>
 										<div class="aside__count">24
 										</div></a></li>
-								<li><a href="#"> Евролос <strong>от 24 000руб.</strong>  
+								<li><a href="#"><span>  Евролос <strong>от 24 000руб.</strong>  </span>
 										<div class="aside__count">24
 										</div></a></li>
-								<li><a href="#"> Термит <strong>от 36 000 руб.</strong>  
+								<li><a href="#"><span>  Термит <strong>от 36 000 руб.</strong>  </span>
 										<div class="aside__count">24
 										</div></a></li>
-								<li><a href="#"> Тверь <strong>от 46 000 руб.</strong>  
+								<li><a href="#"><span>  Тверь <strong>от 46 000 руб.</strong>  </span>
 										<div class="aside__count">24
 										</div></a></li>
-								<li><a href="#"> Эргобокс <strong>от 46 000 руб.</strong>  
+								<li><a href="#"><span>  Эргобокс <strong>от 46 000 руб.</strong>  </span>
 										<div class="aside__count">24
 										</div></a></li>
-								<li><a href="#"> Чисток <strong>от 46 000 руб.</strong>  
+								<li><a href="#"><span>  Чисток <strong>от 46 000 руб.</strong>  </span>
 										<div class="aside__count">24
 										</div></a></li>
-								<li><a href="#"> Тополь <strong>от 46 000 руб.</strong>  
+								<li><a href="#"><span>  Тополь <strong>от 46 000 руб.</strong>  </span>
 										<div class="aside__count">24
 										</div></a></li>
-								<li><a href="#"> Накопитель <strong>от 46 000 руб.</strong>  
+								<li><a href="#"><span>  Накопитель <strong>от 46 000 руб.</strong>  </span>
 										<div class="aside__count">24
 										</div></a></li>
-								<li><a href="#"> Эко-Гранд <strong>от 46 000 руб.</strong>  
+								<li><a href="#"><span>  Эко-Гранд <strong>от 46 000 руб.</strong>  </span>
 										<div class="aside__count">24
 										</div></a></li>
-								<li><a href="#"> Коловеси <strong>от 46 000 руб.</strong>  
+								<li><a href="#"><span>  Коловеси <strong>от 46 000 руб.</strong>  </span>
 										<div class="aside__count">24
 										</div></a></li>
-								<li><a href="#"> Альта Био <strong>от 46 000 руб.</strong>  
+								<li><a href="#"><span>  Альта Био <strong>от 46 000 руб.</strong>  </span>
 										<div class="aside__count">24
 										</div></a></li>
-								<li><a href="#"> Аквалос <strong>от 46 000 руб.</strong>  
+								<li><a href="#"><span>  Аквалос <strong>от 46 000 руб.</strong>  </span>
 										<div class="aside__count">24
 										</div></a></li>
-								<li><a href="#"> Биодека <strong>от 46 000 руб.</strong>  
+								<li><a href="#"><span>  Биодека <strong>от 46 000 руб.</strong>  </span>
 										<div class="aside__count">24
 										</div></a></li>
-								<li><a href="#"> Многобукво... <strong>от 46 000 руб.</strong>  
+								<li><a href="#"><span>  Многобукво... <strong>от 46 000 руб.</strong>  </span>
+										<div class="aside__count">24
+										</div></a></li>
+								<li><a href="#"><span>  Многобукво... <strong>от 46 000 руб.</strong>  </span>
+										<div class="aside__count">24
+										</div></a></li>
+								<li><a href="#"><span>  Многобукво... <strong>от 46 000 руб.</strong>  </span>
+										<div class="aside__count">24
+										</div></a></li>
+								<li><a href="#"><span>  Многобукво... <strong>от 46 000 руб.</strong>  </span>
+										<div class="aside__count">24
+										</div></a></li>
+								<li><a href="#"><span>  Многобукво... <strong>от 46 000 руб.</strong>  </span>
 										<div class="aside__count">24
 										</div></a></li>
 								<li class="aside__more">Показать еще 12 шт.</li>
@@ -407,23 +436,109 @@
 						<div class="sCatalog section pt-0" id="sCatalog"><img class="before" src="img/@2x/webp/catalog-before.webp" alt=""/>
 							<div class="sCatalog__head">
 								<div class="row">
-									<div class="sCatalog__head-title col-xxl-auto mb-2">Также ищут:
+									<div class="sCatalog__head-title col-xxxl-auto mb-2">Также ищут:
 									</div>
 									<div class="col">
 										<div class="row">
-											<div class="col-auto mb-2"><a class="sCatalog__btn-head" href="#">Для дачи</a>
+											<div class="col-auto mb-2">
+												<label>
+													<input class="invisible" type="checkbox"/>
+													<div class="sCatalog__btn-head">
+														 Для дачи
+													</div>
+												</label>
 											</div>
-											<div class="col-auto mb-2"><a class="sCatalog__btn-head" href="#">Для дома</a>
+											<div class="col-auto mb-2">
+												<label>
+													<input class="invisible" type="checkbox"/>
+													<div class="sCatalog__btn-head">
+														 Для дома
+													</div>
+												</label>
 											</div>
-											<div class="col-auto mb-2"><a class="sCatalog__btn-head" href="#">Для бани</a>
+											<div class="col-auto mb-2">
+												<label>
+													<input class="invisible" type="checkbox"/>
+													<div class="sCatalog__btn-head">
+														 Для бани
+													</div>
+												</label>
 											</div>
-											<div class="col-auto mb-2"><a class="sCatalog__btn-head" href="#">Для 3х человек</a>
+											<div class="col-auto mb-2">
+												<label>
+													<input class="invisible" type="checkbox"/>
+													<div class="sCatalog__btn-head">
+														 Для 3х человек
+													</div>
+												</label>
 											</div>
-											<div class="col-auto mb-2"><a class="sCatalog__btn-head" href="#">Для бани</a>
+											<div class="col-auto mb-2">
+												<label>
+													<input class="invisible" type="checkbox"/>
+													<div class="sCatalog__btn-head">
+														 Для бани
+													</div>
+												</label>
 											</div>
-											<div class="col-auto mb-2"><a class="sCatalog__btn-head" href="#">Для 5 человек</a>
+											<div class="col-auto mb-2">
+												<label>
+													<input class="invisible" type="checkbox"/>
+													<div class="sCatalog__btn-head">
+														 Для 5 человек
+													</div>
+												</label>
 											</div>
-											<div class="col-auto mb-2"><a class="sCatalog__btn-head" href="#">Еще...</a>
+											<div class="col-auto mb-2">
+												<div class="sCatalog__btn-head sCatalog__btn-head--more sCatalog__btn-head--more-js">Еще...
+												</div>
+											</div>
+											<div class="col-auto mb-2 hidden-btn">
+												<label>
+													<input class="invisible" type="checkbox"/>
+													<div class="sCatalog__btn-head">
+														 Для дачи
+													</div>
+												</label>
+											</div>
+											<div class="col-auto mb-2 hidden-btn">
+												<label>
+													<input class="invisible" type="checkbox"/>
+													<div class="sCatalog__btn-head">
+														 Для дома
+													</div>
+												</label>
+											</div>
+											<div class="col-auto mb-2 hidden-btn">
+												<label>
+													<input class="invisible" type="checkbox"/>
+													<div class="sCatalog__btn-head">
+														 Для бани
+													</div>
+												</label>
+											</div>
+											<div class="col-auto mb-2 hidden-btn">
+												<label>
+													<input class="invisible" type="checkbox"/>
+													<div class="sCatalog__btn-head">
+														 Для 3х человек
+													</div>
+												</label>
+											</div>
+											<div class="col-auto mb-2 hidden-btn">
+												<label>
+													<input class="invisible" type="checkbox"/>
+													<div class="sCatalog__btn-head">
+														 Для бани
+													</div>
+												</label>
+											</div>
+											<div class="col-auto mb-2 hidden-btn">
+												<label>
+													<input class="invisible" type="checkbox"/>
+													<div class="sCatalog__btn-head">
+														 Для 5 человек
+													</div>
+												</label>
 											</div>
 										</div>
 									</div>
@@ -432,19 +547,15 @@
 							<div class="sCatalog__wrap">
 								<div class="row g-0">
 									<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6">
-										<div class="prod-item">
-											<div class="prod-item__img-wrap">
-												<!-- picture-->
-												<picture> 
-													<source type="image/webp" srcset="img/@2x/webp/prod.webp"/><img class="object-fit-js" src="img/@2x/prod.jpg" alt="" loading="lazy"/>
-												</picture>
-												<!-- /picture-->
-												<div class="prod-item__label" style="--bg-color: var(--bs-warning)">Популярный
+										<div class="prod-item"><a class="prod-item__img-wrap" href="#">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/prod.webp"/><img class="object-fit-js" src="img/@2x/prod.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture--><span class="prod-item__label" style="--bg-color: var(--bs-warning)">Популярный</span></a>
+											<div class="prod-item__title"> <a class="strong" href="#">Юнилос Астра 3</a>
+												<div class="prod-item__text-with-alert small text-secondary" data-text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, doloribus.	">монтаж от 12 000 руб.* 
 												</div>
-											</div>
-											<div class="prod-item__title"> 
-												<div class="strong">Юнилос Астра 3</div>
-												<div class="small text-secondary">монтаж от 12 000 руб.* </div>
 												<div class="prod-item__add">
 													<svg class="icon icon-eva_bookmark-fill ">
 														<use xlink:href="img/svg/sprite.svg#eva_bookmark-fill"></use>
@@ -471,19 +582,15 @@
 										</div>
 									</div>
 									<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6">
-										<div class="prod-item">
-											<div class="prod-item__img-wrap">
-												<!-- picture-->
-												<picture> 
-													<source type="image/webp" srcset="img/@2x/webp/prod.webp"/><img class="object-fit-js" src="img/@2x/prod.jpg" alt="" loading="lazy"/>
-												</picture>
-												<!-- /picture-->
-												<div class="prod-item__label" style="--bg-color: var(--bs-primary)">Хит
+										<div class="prod-item"><a class="prod-item__img-wrap" href="#">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/prod.webp"/><img class="object-fit-js" src="img/@2x/prod.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture--><span class="prod-item__label" style="--bg-color: var(--bs-primary)">Хит</span></a>
+											<div class="prod-item__title"> <a class="strong" href="#">Юнилос Астра 3</a>
+												<div class="prod-item__text-with-alert small text-secondary" data-text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, doloribus.	">монтаж от 12 000 руб.* 
 												</div>
-											</div>
-											<div class="prod-item__title"> 
-												<div class="strong">Юнилос Астра 3</div>
-												<div class="small text-secondary">монтаж от 12 000 руб.* </div>
 												<div class="prod-item__add">
 													<svg class="icon icon-eva_bookmark-fill ">
 														<use xlink:href="img/svg/sprite.svg#eva_bookmark-fill"></use>
@@ -510,19 +617,15 @@
 										</div>
 									</div>
 									<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6">
-										<div class="prod-item">
-											<div class="prod-item__img-wrap">
-												<!-- picture-->
-												<picture> 
-													<source type="image/webp" srcset="img/@2x/webp/prod.webp"/><img class="object-fit-js" src="img/@2x/prod.jpg" alt="" loading="lazy"/>
-												</picture>
-												<!-- /picture-->
-												<div class="prod-item__label" style="--bg-color: var(--bs-primary)">Хит
+										<div class="prod-item"><a class="prod-item__img-wrap" href="#">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/prod.webp"/><img class="object-fit-js" src="img/@2x/prod.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture--><span class="prod-item__label" style="--bg-color: var(--bs-primary)">Хит</span></a>
+											<div class="prod-item__title"> <a class="strong" href="#">Юнилос Астра 3</a>
+												<div class="prod-item__text-with-alert small text-secondary" data-text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, doloribus.	">монтаж от 12 000 руб.* 
 												</div>
-											</div>
-											<div class="prod-item__title"> 
-												<div class="strong">Юнилос Астра 3</div>
-												<div class="small text-secondary">монтаж от 12 000 руб.* </div>
 												<div class="prod-item__add">
 													<svg class="icon icon-eva_bookmark-fill ">
 														<use xlink:href="img/svg/sprite.svg#eva_bookmark-fill"></use>
@@ -549,19 +652,15 @@
 										</div>
 									</div>
 									<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6">
-										<div class="prod-item">
-											<div class="prod-item__img-wrap">
-												<!-- picture-->
-												<picture> 
-													<source type="image/webp" srcset="img/@2x/webp/prod.webp"/><img class="object-fit-js" src="img/@2x/prod.jpg" alt="" loading="lazy"/>
-												</picture>
-												<!-- /picture-->
-												<div class="prod-item__label" style="--bg-color: var(--bs-primary)">Хит
+										<div class="prod-item"><a class="prod-item__img-wrap" href="#">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/prod.webp"/><img class="object-fit-js" src="img/@2x/prod.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture--><span class="prod-item__label" style="--bg-color: var(--bs-primary)">Хит</span></a>
+											<div class="prod-item__title"> <a class="strong" href="#">Юнилос Астра 3</a>
+												<div class="prod-item__text-with-alert small text-secondary" data-text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, doloribus.	">монтаж от 12 000 руб.* 
 												</div>
-											</div>
-											<div class="prod-item__title"> 
-												<div class="strong">Юнилос Астра 3</div>
-												<div class="small text-secondary">монтаж от 12 000 руб.* </div>
 												<div class="prod-item__add">
 													<svg class="icon icon-eva_bookmark-fill ">
 														<use xlink:href="img/svg/sprite.svg#eva_bookmark-fill"></use>
@@ -588,17 +687,15 @@
 										</div>
 									</div>
 									<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6">
-										<div class="prod-item">
-											<div class="prod-item__img-wrap">
-												<!-- picture-->
-												<picture> 
-													<source type="image/webp" srcset="img/@2x/webp/prod.webp"/><img class="object-fit-js" src="img/@2x/prod.jpg" alt="" loading="lazy"/>
-												</picture>
-												<!-- /picture-->
-											</div>
-											<div class="prod-item__title"> 
-												<div class="strong">Юнилос Астра 3</div>
-												<div class="small text-secondary">монтаж от 12 000 руб.* </div>
+										<div class="prod-item"><a class="prod-item__img-wrap" href="#">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/prod.webp"/><img class="object-fit-js" src="img/@2x/prod.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture--></a>
+											<div class="prod-item__title"> <a class="strong" href="#">Юнилос Астра 3</a>
+												<div class="prod-item__text-with-alert small text-secondary" data-text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, doloribus.	">монтаж от 12 000 руб.* 
+												</div>
 												<div class="prod-item__add">
 													<svg class="icon icon-eva_bookmark-fill ">
 														<use xlink:href="img/svg/sprite.svg#eva_bookmark-fill"></use>
@@ -625,17 +722,15 @@
 										</div>
 									</div>
 									<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6">
-										<div class="prod-item">
-											<div class="prod-item__img-wrap">
-												<!-- picture-->
-												<picture> 
-													<source type="image/webp" srcset="img/@2x/webp/prod.webp"/><img class="object-fit-js" src="img/@2x/prod.jpg" alt="" loading="lazy"/>
-												</picture>
-												<!-- /picture-->
-											</div>
-											<div class="prod-item__title"> 
-												<div class="strong">Юнилос Астра 3</div>
-												<div class="small text-secondary">монтаж от 12 000 руб.* </div>
+										<div class="prod-item"><a class="prod-item__img-wrap" href="#">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/prod.webp"/><img class="object-fit-js" src="img/@2x/prod.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture--></a>
+											<div class="prod-item__title"> <a class="strong" href="#">Юнилос Астра 3</a>
+												<div class="prod-item__text-with-alert small text-secondary" data-text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, doloribus.	">монтаж от 12 000 руб.* 
+												</div>
 												<div class="prod-item__add">
 													<svg class="icon icon-eva_bookmark-fill ">
 														<use xlink:href="img/svg/sprite.svg#eva_bookmark-fill"></use>
@@ -662,17 +757,15 @@
 										</div>
 									</div>
 									<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6">
-										<div class="prod-item">
-											<div class="prod-item__img-wrap">
-												<!-- picture-->
-												<picture> 
-													<source type="image/webp" srcset="img/@2x/webp/prod.webp"/><img class="object-fit-js" src="img/@2x/prod.jpg" alt="" loading="lazy"/>
-												</picture>
-												<!-- /picture-->
-											</div>
-											<div class="prod-item__title"> 
-												<div class="strong">Юнилос Астра 3</div>
-												<div class="small text-secondary">монтаж от 12 000 руб.* </div>
+										<div class="prod-item"><a class="prod-item__img-wrap" href="#">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/prod.webp"/><img class="object-fit-js" src="img/@2x/prod.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture--></a>
+											<div class="prod-item__title"> <a class="strong" href="#">Юнилос Астра 3</a>
+												<div class="prod-item__text-with-alert small text-secondary" data-text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, doloribus.	">монтаж от 12 000 руб.* 
+												</div>
 												<div class="prod-item__add">
 													<svg class="icon icon-eva_bookmark-fill ">
 														<use xlink:href="img/svg/sprite.svg#eva_bookmark-fill"></use>
@@ -706,19 +799,15 @@
 										<!-- /picture--><span class="btn btn-primary w-100">подробнее</span></a>
 									</div>
 									<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6">
-										<div class="prod-item">
-											<div class="prod-item__img-wrap">
-												<!-- picture-->
-												<picture> 
-													<source type="image/webp" srcset="img/@2x/webp/prod.webp"/><img class="object-fit-js" src="img/@2x/prod.jpg" alt="" loading="lazy"/>
-												</picture>
-												<!-- /picture-->
-												<div class="prod-item__label" style="--bg-color: var(--bs-warning)">Популярный
+										<div class="prod-item"><a class="prod-item__img-wrap" href="#">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/prod.webp"/><img class="object-fit-js" src="img/@2x/prod.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture--><span class="prod-item__label" style="--bg-color: var(--bs-warning)">Популярный</span></a>
+											<div class="prod-item__title"> <a class="strong" href="#">Юнилос Астра 3</a>
+												<div class="prod-item__text-with-alert small text-secondary" data-text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, doloribus.	">монтаж от 12 000 руб.* 
 												</div>
-											</div>
-											<div class="prod-item__title"> 
-												<div class="strong">Юнилос Астра 3</div>
-												<div class="small text-secondary">монтаж от 12 000 руб.* </div>
 												<div class="prod-item__add">
 													<svg class="icon icon-eva_bookmark-fill ">
 														<use xlink:href="img/svg/sprite.svg#eva_bookmark-fill"></use>
@@ -745,19 +834,15 @@
 										</div>
 									</div>
 									<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6">
-										<div class="prod-item">
-											<div class="prod-item__img-wrap">
-												<!-- picture-->
-												<picture> 
-													<source type="image/webp" srcset="img/@2x/webp/prod.webp"/><img class="object-fit-js" src="img/@2x/prod.jpg" alt="" loading="lazy"/>
-												</picture>
-												<!-- /picture-->
-												<div class="prod-item__label" style="--bg-color: var(--bs-primary)">Хит
+										<div class="prod-item"><a class="prod-item__img-wrap" href="#">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/prod.webp"/><img class="object-fit-js" src="img/@2x/prod.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture--><span class="prod-item__label" style="--bg-color: var(--bs-primary)">Хит</span></a>
+											<div class="prod-item__title"> <a class="strong" href="#">Юнилос Астра 3</a>
+												<div class="prod-item__text-with-alert small text-secondary" data-text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, doloribus.	">монтаж от 12 000 руб.* 
 												</div>
-											</div>
-											<div class="prod-item__title"> 
-												<div class="strong">Юнилос Астра 3</div>
-												<div class="small text-secondary">монтаж от 12 000 руб.* </div>
 												<div class="prod-item__add">
 													<svg class="icon icon-eva_bookmark-fill ">
 														<use xlink:href="img/svg/sprite.svg#eva_bookmark-fill"></use>
@@ -784,19 +869,15 @@
 										</div>
 									</div>
 									<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6">
-										<div class="prod-item">
-											<div class="prod-item__img-wrap">
-												<!-- picture-->
-												<picture> 
-													<source type="image/webp" srcset="img/@2x/webp/prod.webp"/><img class="object-fit-js" src="img/@2x/prod.jpg" alt="" loading="lazy"/>
-												</picture>
-												<!-- /picture-->
-												<div class="prod-item__label" style="--bg-color: var(--bs-primary)">Хит
+										<div class="prod-item"><a class="prod-item__img-wrap" href="#">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/prod.webp"/><img class="object-fit-js" src="img/@2x/prod.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture--><span class="prod-item__label" style="--bg-color: var(--bs-primary)">Хит</span></a>
+											<div class="prod-item__title"> <a class="strong" href="#">Юнилос Астра 3</a>
+												<div class="prod-item__text-with-alert small text-secondary" data-text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, doloribus.	">монтаж от 12 000 руб.* 
 												</div>
-											</div>
-											<div class="prod-item__title"> 
-												<div class="strong">Юнилос Астра 3</div>
-												<div class="small text-secondary">монтаж от 12 000 руб.* </div>
 												<div class="prod-item__add">
 													<svg class="icon icon-eva_bookmark-fill ">
 														<use xlink:href="img/svg/sprite.svg#eva_bookmark-fill"></use>
@@ -823,19 +904,15 @@
 										</div>
 									</div>
 									<div class="sCatalog__col col-xl-3 col-lg-4 col-sm-6">
-										<div class="prod-item">
-											<div class="prod-item__img-wrap">
-												<!-- picture-->
-												<picture> 
-													<source type="image/webp" srcset="img/@2x/webp/prod.webp"/><img class="object-fit-js" src="img/@2x/prod.jpg" alt="" loading="lazy"/>
-												</picture>
-												<!-- /picture-->
-												<div class="prod-item__label" style="--bg-color: var(--bs-primary)">Хит
+										<div class="prod-item"><a class="prod-item__img-wrap" href="#">
+											<!-- picture-->
+											<picture> 
+												<source type="image/webp" srcset="img/@2x/webp/prod.webp"/><img class="object-fit-js" src="img/@2x/prod.jpg" alt="" loading="lazy"/>
+											</picture>
+											<!-- /picture--><span class="prod-item__label" style="--bg-color: var(--bs-primary)">Хит</span></a>
+											<div class="prod-item__title"> <a class="strong" href="#">Юнилос Астра 3</a>
+												<div class="prod-item__text-with-alert small text-secondary" data-text="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa, doloribus.	">монтаж от 12 000 руб.* 
 												</div>
-											</div>
-											<div class="prod-item__title"> 
-												<div class="strong">Юнилос Астра 3</div>
-												<div class="small text-secondary">монтаж от 12 000 руб.* </div>
 												<div class="prod-item__add">
 													<svg class="icon icon-eva_bookmark-fill ">
 														<use xlink:href="img/svg/sprite.svg#eva_bookmark-fill"></use>
@@ -904,7 +981,7 @@
 											</div>
 											<div class="col"> 1 вопрос из 8</div>
 											<div class="col-auto">
-												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--next">
+												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--next d-none">
 													<svg class="icon icon-arrow-right ">
 														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
 													</svg>
@@ -962,7 +1039,7 @@
 									<div class="sQwiz__head">
 										<div class="row">
 											<div class="col-auto">
-												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--prev disabled">
+												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--prev 10%">
 													<svg class="icon icon-arrow-left ">
 														<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
 													</svg>
@@ -970,7 +1047,7 @@
 											</div>
 											<div class="col"> 2 вопрос из 8</div>
 											<div class="col-auto">
-												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--next">
+												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--next d-none">
 													<svg class="icon icon-arrow-right ">
 														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
 													</svg>
@@ -1013,7 +1090,7 @@
 									<div class="sQwiz__head">
 										<div class="row">
 											<div class="col-auto">
-												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--prev disabled">
+												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--prev 10%">
 													<svg class="icon icon-arrow-left ">
 														<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
 													</svg>
@@ -1021,7 +1098,7 @@
 											</div>
 											<div class="col"> 3 вопрос из 8</div>
 											<div class="col-auto">
-												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--next">
+												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--next d-none">
 													<svg class="icon icon-arrow-right ">
 														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
 													</svg>
@@ -1074,7 +1151,7 @@
 									<div class="sQwiz__head">
 										<div class="row">
 											<div class="col-auto">
-												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--prev disabled">
+												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--prev 10%">
 													<svg class="icon icon-arrow-left ">
 														<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
 													</svg>
@@ -1082,7 +1159,7 @@
 											</div>
 											<div class="col"> 4 вопрос из 8</div>
 											<div class="col-auto">
-												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--next">
+												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--next d-none">
 													<svg class="icon icon-arrow-right ">
 														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
 													</svg>
@@ -1130,7 +1207,7 @@
 									<div class="sQwiz__head">
 										<div class="row">
 											<div class="col-auto">
-												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--prev disabled">
+												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--prev 10%">
 													<svg class="icon icon-arrow-left ">
 														<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
 													</svg>
@@ -1138,7 +1215,7 @@
 											</div>
 											<div class="col"> 5 вопрос из 8</div>
 											<div class="col-auto">
-												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--next">
+												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--next d-none">
 													<svg class="icon icon-arrow-right ">
 														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
 													</svg>
@@ -1196,7 +1273,7 @@
 									<div class="sQwiz__head">
 										<div class="row">
 											<div class="col-auto">
-												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--prev disabled">
+												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--prev 10%">
 													<svg class="icon icon-arrow-left ">
 														<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
 													</svg>
@@ -1204,7 +1281,7 @@
 											</div>
 											<div class="col"> 6 вопрос из 8</div>
 											<div class="col-auto">
-												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--next">
+												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--next d-none">
 													<svg class="icon icon-arrow-right ">
 														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
 													</svg>
@@ -1262,7 +1339,7 @@
 									<div class="sQwiz__head">
 										<div class="row">
 											<div class="col-auto">
-												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--prev disabled">
+												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--prev 10%">
 													<svg class="icon icon-arrow-left ">
 														<use xlink:href="img/svg/sprite.svg#arrow-left"></use>
 													</svg>
@@ -1270,7 +1347,7 @@
 											</div>
 											<div class="col"> 7 вопрос из 8</div>
 											<div class="col-auto">
-												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--next">
+												<div class="sQwiz__btn-control sCalc__btn sCalc__btn--next d-none">
 													<svg class="icon icon-arrow-right ">
 														<use xlink:href="img/svg/sprite.svg#arrow-right"></use>
 													</svg>
@@ -1771,144 +1848,144 @@
 						<div class="sLogos__inner">
 							<div class="row">
 									<div class="sLogos__col col-lg-3 col-md-4 col-6"> 
-										<div class="sLogos__item">
-											<!-- picture-->
-											<picture> 
-												<source type="image/webp" srcset="img/@2x/webp/loog-1.webp"/><img src="img/@2x/loog-1.png" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
+										<div class="sLogos__item"><a href="#"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/loog-1.webp"/><img src="img/@2x/loog-1.png" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture--></a>
 											<div class="sLogos__title">Цена от 27 000 руб.
 											</div>
 											<p>монтаж от 19 000 руб.</p>
 										</div>
 									</div>
 									<div class="sLogos__col col-lg-3 col-md-4 col-6"> 
-										<div class="sLogos__item">
-											<!-- picture-->
-											<picture> 
-												<source type="image/webp" srcset="img/@2x/webp/loog-2.webp"/><img src="img/@2x/loog-2.png" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
+										<div class="sLogos__item"><a href="#"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/loog-2.webp"/><img src="img/@2x/loog-2.png" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture--></a>
 											<div class="sLogos__title">Цена от 27 000 руб.
 											</div>
 											<p>монтаж от 19 000 руб.</p>
 										</div>
 									</div>
 									<div class="sLogos__col col-lg-3 col-md-4 col-6"> 
-										<div class="sLogos__item">
-											<!-- picture-->
-											<picture> 
-												<source type="image/webp" srcset="img/@2x/webp/loog-3.webp"/><img src="img/@2x/loog-3.png" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
+										<div class="sLogos__item"><a href="#"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/loog-3.webp"/><img src="img/@2x/loog-3.png" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture--></a>
 											<div class="sLogos__title">Цена от 27 000 руб.
 											</div>
 											<p>монтаж от 19 000 руб.</p>
 										</div>
 									</div>
 									<div class="sLogos__col col-lg-3 col-md-4 col-6"> 
-										<div class="sLogos__item">
-											<!-- picture-->
-											<picture> 
-												<source type="image/webp" srcset="img/@2x/webp/loog-4.webp"/><img src="img/@2x/loog-4.png" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
+										<div class="sLogos__item"><a href="#"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/loog-4.webp"/><img src="img/@2x/loog-4.png" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture--></a>
 											<div class="sLogos__title">Цена от 27 000 руб.
 											</div>
 											<p>монтаж от 19 000 руб.</p>
 										</div>
 									</div>
 									<div class="sLogos__col col-lg-3 col-md-4 col-6"> 
-										<div class="sLogos__item">
-											<!-- picture-->
-											<picture> 
-												<source type="image/webp" srcset="img/@2x/webp/loog-5.webp"/><img src="img/@2x/loog-5.png" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
+										<div class="sLogos__item"><a href="#"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/loog-5.webp"/><img src="img/@2x/loog-5.png" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture--></a>
 											<div class="sLogos__title">Цена от 27 000 руб.
 											</div>
 											<p>монтаж от 19 000 руб.</p>
 										</div>
 									</div>
 									<div class="sLogos__col col-lg-3 col-md-4 col-6"> 
-										<div class="sLogos__item">
-											<!-- picture-->
-											<picture> 
-												<source type="image/webp" srcset="img/@2x/webp/loog-6.webp"/><img src="img/@2x/loog-6.png" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
+										<div class="sLogos__item"><a href="#"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/loog-6.webp"/><img src="img/@2x/loog-6.png" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture--></a>
 											<div class="sLogos__title">Цена от 27 000 руб.
 											</div>
 											<p>монтаж от 19 000 руб.</p>
 										</div>
 									</div>
 									<div class="sLogos__col col-lg-3 col-md-4 col-6"> 
-										<div class="sLogos__item">
-											<!-- picture-->
-											<picture> 
-												<source type="image/webp" srcset="img/@2x/webp/loog-7.webp"/><img src="img/@2x/loog-7.png" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
+										<div class="sLogos__item"><a href="#"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/loog-7.webp"/><img src="img/@2x/loog-7.png" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture--></a>
 											<div class="sLogos__title">Цена от 27 000 руб.
 											</div>
 											<p>монтаж от 19 000 руб.</p>
 										</div>
 									</div>
 									<div class="sLogos__col col-lg-3 col-md-4 col-6"> 
-										<div class="sLogos__item">
-											<!-- picture-->
-											<picture> 
-												<source type="image/webp" srcset="img/@2x/webp/loog-8.webp"/><img src="img/@2x/loog-8.png" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
+										<div class="sLogos__item"><a href="#"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/loog-8.webp"/><img src="img/@2x/loog-8.png" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture--></a>
 											<div class="sLogos__title">Цена от 27 000 руб.
 											</div>
 											<p>монтаж от 19 000 руб.</p>
 										</div>
 									</div>
 									<div class="sLogos__col col-lg-3 col-md-4 col-6"> 
-										<div class="sLogos__item">
-											<!-- picture-->
-											<picture> 
-												<source type="image/webp" srcset="img/@2x/webp/loog-9.webp"/><img src="img/@2x/loog-9.png" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
+										<div class="sLogos__item"><a href="#"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/loog-9.webp"/><img src="img/@2x/loog-9.png" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture--></a>
 											<div class="sLogos__title">Цена от 27 000 руб.
 											</div>
 											<p>монтаж от 19 000 руб.</p>
 										</div>
 									</div>
 									<div class="sLogos__col col-lg-3 col-md-4 col-6"> 
-										<div class="sLogos__item">
-											<!-- picture-->
-											<picture> 
-												<source type="image/webp" srcset="img/@2x/webp/loog-10.webp"/><img src="img/@2x/loog-10.png" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
+										<div class="sLogos__item"><a href="#"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/loog-10.webp"/><img src="img/@2x/loog-10.png" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture--></a>
 											<div class="sLogos__title">Цена от 27 000 руб.
 											</div>
 											<p>монтаж от 19 000 руб.</p>
 										</div>
 									</div>
 									<div class="sLogos__col col-lg-3 col-md-4 col-6"> 
-										<div class="sLogos__item">
-											<!-- picture-->
-											<picture> 
-												<source type="image/webp" srcset="img/@2x/webp/loog-11.webp"/><img src="img/@2x/loog-11.png" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
+										<div class="sLogos__item"><a href="#"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/loog-11.webp"/><img src="img/@2x/loog-11.png" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture--></a>
 											<div class="sLogos__title">Цена от 27 000 руб.
 											</div>
 											<p>монтаж от 19 000 руб.</p>
 										</div>
 									</div>
 									<div class="sLogos__col col-lg-3 col-md-4 col-6"> 
-										<div class="sLogos__item">
-											<!-- picture-->
-											<picture> 
-												<source type="image/webp" srcset="img/@2x/webp/loog-12.webp"/><img src="img/@2x/loog-12.png" alt="" loading="lazy"/>
-											</picture>
-											<!-- /picture-->
+										<div class="sLogos__item"><a href="#"> 
+												<!-- picture-->
+												<picture> 
+													<source type="image/webp" srcset="img/@2x/webp/loog-12.webp"/><img src="img/@2x/loog-12.png" alt="" loading="lazy"/>
+												</picture>
+												<!-- /picture--></a>
 											<div class="sLogos__title">Цена от 27 000 руб.
 											</div>
 											<p>монтаж от 19 000 руб.</p>
@@ -2180,70 +2257,86 @@
 			<footer class="footer">
 				<div class="container">
 					<div class="row">
-						<div class="col-xl-3"><a class="footer__logo" href="/">
-							<!-- picture-->
-							<picture> 
-								<source type="image/webp" srcset="img/@2x/webp/logo.webp"/><img src="img/@2x/logo.png" alt="" loading="lazy"/>
-							</picture>
-							<!-- /picture--></a>
-							<div class="contact-block">
-								<div class="contact-block__item">
-									<svg class="icon icon-call ">
-										<use xlink:href="img/svg/sprite.svg#call"></use>
-									</svg>
-									<div><a class="contact-block__tel text-white" href="tel:8(495)115-67-07">8 (495) 115-67-07 </a>
-										<div><a class="contact-block__call" href="#">
-											 ЗАКАЗАТЬ ЗВОНОК</a>
+						<div class="col-xl-3">
+							<div class="row">
+								<div class="col-xl-12 col-sm-auto"><a class="footer__logo" href="/">
+									<!-- picture-->
+									<picture> 
+										<source type="image/webp" srcset="img/@2x/webp/logo.webp"/><img src="img/@2x/logo.png" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture--></a>
+								</div>
+								<div class="col-xl-12 col">
+									<div class="contact-block">
+										<div class="row">
+											<div class="col-xl-12 col-auto">
+												<div class="contact-block__item">
+													<svg class="icon icon-call ">
+														<use xlink:href="img/svg/sprite.svg#call"></use>
+													</svg>
+													<div><a class="contact-block__tel text-white" href="tel:8(495)115-67-07">8 (495) 115-67-07 </a>
+														<div><a class="contact-block__call" href="#">
+															 ЗАКАЗАТЬ ЗВОНОК</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-xl-12 col-auto">
+												<div class="contact-block__item contact-block__item--mail">
+													<svg class="icon icon-ion_mail ">
+														<use xlink:href="img/svg/sprite.svg#ion_mail"></use>
+													</svg><a class="contact-block__link text-white" href="mailto:info@septik.net">info@septik.net  </a>
+												</div>
+											</div>
+											<div class="col-xl-12 col-auto">
+												<div class="contact-block__item">
+													<svg class="icon icon-mark ">
+														<use xlink:href="img/svg/sprite.svg#mark"></use>
+													</svg>м. Окская, Рязанский пр-т, д.24, стр.2
+												</div>
+											</div>
+											<div class="col-xl-12 col-auto">
+												<div class="soc"><a class="soc__item" href="#" target="_blank">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/soc-1.webp"/><img src="img/@2x/soc-1.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/soc-2.webp"/><img src="img/@2x/soc-2.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/soc-3.webp"/><img src="img/@2x/soc-3.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/soc-4.webp"/><img src="img/@2x/soc-4.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/soc-5.webp"/><img src="img/@2x/soc-5.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/soc-6.webp"/><img src="img/@2x/soc-6.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/soc-7.webp"/><img src="img/@2x/soc-7.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
-								<div class="contact-block__item contact-block__item--mail">
-									<svg class="icon icon-ion_mail ">
-										<use xlink:href="img/svg/sprite.svg#ion_mail"></use>
-									</svg><a class="contact-block__link text-white" href="mailto:info@septik.net">info@septik.net  </a>
-								</div>
-								<div class="contact-block__item">
-									<svg class="icon icon-mark ">
-										<use xlink:href="img/svg/sprite.svg#mark"></use>
-									</svg>м. Окская, Рязанский пр-т, д.24, стр.2
-								</div>
-							</div>
-							<div class="soc"><a class="soc__item" href="#" target="_blank">
-								<!-- picture-->
-								<picture> 
-									<source type="image/webp" srcset="img/@2x/webp/soc-1.webp"/><img src="img/@2x/soc-1.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
-								<!-- picture-->
-								<picture> 
-									<source type="image/webp" srcset="img/@2x/webp/soc-2.webp"/><img src="img/@2x/soc-2.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
-								<!-- picture-->
-								<picture> 
-									<source type="image/webp" srcset="img/@2x/webp/soc-3.webp"/><img src="img/@2x/soc-3.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
-								<!-- picture-->
-								<picture> 
-									<source type="image/webp" srcset="img/@2x/webp/soc-4.webp"/><img src="img/@2x/soc-4.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
-								<!-- picture-->
-								<picture> 
-									<source type="image/webp" srcset="img/@2x/webp/soc-5.webp"/><img src="img/@2x/soc-5.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
-								<!-- picture-->
-								<picture> 
-									<source type="image/webp" srcset="img/@2x/webp/soc-6.webp"/><img src="img/@2x/soc-6.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
-								<!-- picture-->
-								<picture> 
-									<source type="image/webp" srcset="img/@2x/webp/soc-7.webp"/><img src="img/@2x/soc-7.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture--></a>
 							</div>
 						</div>
 						<div class="col-xl">
@@ -2356,6 +2449,7 @@
 		<!-- slider libs-->
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<!-- /slider libs-->
+		<script src="libs/hc-sticky/hc-sticky.js"></script>
 		<script src="libs/inputmask/inputmask.min.js"></script>
 		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<script src="js/common.js"></script>

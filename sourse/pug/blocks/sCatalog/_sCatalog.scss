@@ -25,6 +25,11 @@
 			font-size: 18px;
 			padding-top: 12px;
 		}
+		input:checked + &__btn-head{
+			color: #000;
+			background-color: #f9fafb;
+			// border-color: #f9fafb;
+		}
 		&__btn-head{
 			@extend .btn;
 			@extend .btn-light;
@@ -82,6 +87,8 @@
 				height: auto;
 				width: auto;
 				padding-right: 20px;
+				text-transform: uppercase;
+				cursor: pointer;
 				background-position: right center;
 				background-image: var(--chevron-down);
 			}
@@ -154,6 +161,7 @@
 			}
 		}
 
+			
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -170,6 +178,38 @@
 	flex-direction: column;
 	min-height: 100%;
 	max-width: 480px;
+	&__text-with-alert{
+		position: relative;
+		cursor: pointer;
+		&::after{
+			content: '';
+			top: 100%;
+			position: absolute;
+			left: 20%;
+			@include triangle(20px, #fff, up);
+			opacity: 0;
+			@include mt;
+		}
+		&::before{
+			
+			content: attr(data-text);
+			opacity: 0;
+			@include mt;
+			position: absolute;
+			padding: rem(10);
+			top: 100%;
+			margin-top: 10px;
+			background-color: #fff;
+			border-radius: $border-radius;
+			filter: drop-shadow(0 0 20px rgba(0, 0, 0, .06));
+		}
+		&:hover{
+			&::before,
+			&::after{
+				opacity: 1;
+			}
+		}
+	}
 	&__img-wrap{
 		position: relative;
 
@@ -191,6 +231,12 @@
 		overflow: hidden;
 		margin-bottom: 15px;
 	}
+	img{
+		@include mt;
+	}
+	&:hover picture img{
+		transform: scale(1.066);
+	}
 	&__img-wrap{
 		
 		picture{
@@ -200,18 +246,20 @@
 				left: 0;
 				top: 0;
 				width: 100%;
-				height: 100%;
+				height: 100%; 
 			}
+
 		}
 	}
 	table{
-		width: 100%;
+		width: calc(100% - 5px);
 		font-size: 11px;
 		margin-bottom: 23px;
 		margin-top: 15px;
 		color: #858b9b;
 		text-transform: uppercase;
 		font-weight: 600;
+		margin-right: 5px;
 		img{
 			margin-right: 15px;
 		}
@@ -231,6 +279,11 @@
 	&__title{
 		position: relative;
 		width: 100%;
+		a{
+			&:not(:hover){
+				color: $body-color;
+			}
+		}
 	}
 	&__add{
 		position: absolute;
@@ -410,4 +463,8 @@
 .irs--round .irs-handle {
  
 	border: 6px solid $success; 
+}
+
+.hidden-btn{
+	display: none;
 }

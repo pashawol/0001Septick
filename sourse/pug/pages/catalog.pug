@@ -32,11 +32,12 @@ block pagecontent
 		+topLine()
 		+top-nav()
 	+pageHead()
+		+breadcrumb('каталог',  'Септики')
 		h1= title
-		p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut&nbsp;ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut&nbsp;commodo sagittis, sapien dui mattis dui
-		p
-			a(href="#").link-more  Подробнее
-
+		+b.more-text--js
+			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet,
+			p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet,
+			a.link-more(href="#") Подробнее
 
 	.section.container.pt-0
 		.row 
@@ -86,7 +87,7 @@ block pagecontent
 					.col-12 
 						+pugin
 				+sNeedHelpCatalog()
-				.section 
+				.section.sContent 
 					h2 Септики
 					p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat. Lorem ipsum dolor sit amet,
 	//- +headerBlock()

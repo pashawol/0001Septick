@@ -107,40 +107,41 @@
 				<div class="topLine section" id="topLine">
 					<div class="container">
 						<div class="row">
-							<div class="col-xl-auto col"><a class="topLine__logo" href="/">
+							<div class="col-xl-auto col order-md-0 order-last"><a class="topLine__logo" href="/">
 								<!-- picture-->
 								<picture> 
 									<source type="image/webp" srcset="img/@2x/webp/logo.webp"/><img src="img/@2x/logo.png" alt="" loading="lazy"/>
 								</picture>
 								<!-- /picture--></a>
 							</div>
-							<div class="col-auto d-none d-md-block">
+							<div class="col-md-auto order-md-0 order-first">
 								<div class="place-block">
 									<svg class="icon icon-mark ">
 										<use xlink:href="img/svg/sprite.svg#mark"></use>
 									</svg>
-									<div class="place-block__head">
-										Ваш город  <a href="#">Москва</a>
+									<div class="place-block__head"> <span class="d-none d-md-inline">Ваш город  </span> <a href="#">Москва</a>
 									</div>
 									<div class="place-block__body">м. Окская, Рязанский пр-т, д.24, стр.2
 									</div>
 								</div>
 							</div>
-							<div class="col-xxxl-auto col-xxl-12 col order-xxxl-0 order-last d-none d-sm-block">
-								<div class="search-block">
-									<form>
-										<div class="search-block__input-wrap form-group"><input class="search-block__input form-control" name="text" type="text" placeholder="Поиск по товарам"/>
-										</div>
-										<!-- +e.input-wrap-->
-										<button> 
-											<svg class="icon icon-eva_search-fill ">
-												<use xlink:href="img/svg/sprite.svg#eva_search-fill"></use>
-											</svg>
-										</button>
-									</form>
+							<div class="col-xxxl-auto col-xxl-12 col-md order-xxxl-0 order-md-last order-14 d-none d-sm-block">
+								<div class="topLine__search-wrap d-md-block">
+									<div class="search-block">
+										<form>
+											<div class="search-block__input-wrap form-group"><input class="search-block__input form-control" name="text" type="text" placeholder="Поиск по товарам"/>
+											</div>
+											<!-- +e.input-wrap-->
+											<button> 
+												<svg class="icon icon-eva_search-fill ">
+													<use xlink:href="img/svg/sprite.svg#eva_search-fill"></use>
+												</svg>
+											</button>
+										</form>
+									</div>
 								</div>
 							</div>
-							<div class="col-auto d-none d-sm-block"><a class="compare-block" href="#">
+							<div class="col-auto order-md-0 order-last"><a class="compare-block" href="#">
 								<svg class="icon icon-eva_bar-chart-fill ">
 									<use xlink:href="img/svg/sprite.svg#eva_bar-chart-fill"></use>
 								</svg><span class="compare-block__text d-none d-xl-block ms-3">товары для Сравнений</span><span class="compare-block__count">3</span></a>
@@ -154,13 +155,13 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-auto order-xxl-0 order-sm-last">
+							<div class="col-md-auto order-xxl-0 order-md-last order-first">
 								<div class="contact-block"><a class="contact-block__btn" href="#">
 									<svg class="icon icon-akar-icons_whatsapp-fill ">
 										<use xlink:href="img/svg/sprite.svg#akar-icons_whatsapp-fill"></use>
 									</svg></a>
-									<div class="d-none d-lg-block ms-3"><a class="contact-block__tel" href="tel:8(495)115-67-07">8 (495) 115-67-07 </a>
-										<div><a class="contact-block__call" href="#">
+									<div class="d-flex d-md-none d-lg-block ms-3 align-items-center"><a class="contact-block__tel" href="tel:8(495)115-67-07">8 (495) 115-67-07 </a>
+										<div class="ms-auto"><a class="contact-block__call" href="#">
 											<svg class="icon icon-call ">
 												<use xlink:href="img/svg/sprite.svg#call"></use>
 											</svg>ЗАКАЗАТЬ ЗВОНОК</a>
@@ -168,7 +169,14 @@
 									</div>
 								</div>
 							</div>
-							<div class="col-auto d-xl-none">
+							<div class="col-auto order-last d-md-none">
+								<div class="topLine__btn-search"> 
+									<svg class="icon icon-eva_search-fill ">
+										<use xlink:href="img/svg/sprite.svg#eva_search-fill"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="col-auto d-xl-none order-md-0 order-last">
 								<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 								</div>
 							</div>
@@ -654,70 +662,86 @@
 			<footer class="footer">
 				<div class="container">
 					<div class="row">
-						<div class="col-xl-3"><a class="footer__logo" href="/">
-							<!-- picture-->
-							<picture> 
-								<source type="image/webp" srcset="img/@2x/webp/logo.webp"/><img src="img/@2x/logo.png" alt="" loading="lazy"/>
-							</picture>
-							<!-- /picture--></a>
-							<div class="contact-block">
-								<div class="contact-block__item">
-									<svg class="icon icon-call ">
-										<use xlink:href="img/svg/sprite.svg#call"></use>
-									</svg>
-									<div><a class="contact-block__tel text-white" href="tel:8(495)115-67-07">8 (495) 115-67-07 </a>
-										<div><a class="contact-block__call" href="#">
-											 ЗАКАЗАТЬ ЗВОНОК</a>
+						<div class="col-xl-3">
+							<div class="row">
+								<div class="col-xl-12 col-sm-auto"><a class="footer__logo" href="/">
+									<!-- picture-->
+									<picture> 
+										<source type="image/webp" srcset="img/@2x/webp/logo.webp"/><img src="img/@2x/logo.png" alt="" loading="lazy"/>
+									</picture>
+									<!-- /picture--></a>
+								</div>
+								<div class="col-xl-12 col">
+									<div class="contact-block">
+										<div class="row">
+											<div class="col-xl-12 col-auto">
+												<div class="contact-block__item">
+													<svg class="icon icon-call ">
+														<use xlink:href="img/svg/sprite.svg#call"></use>
+													</svg>
+													<div><a class="contact-block__tel text-white" href="tel:8(495)115-67-07">8 (495) 115-67-07 </a>
+														<div><a class="contact-block__call" href="#">
+															 ЗАКАЗАТЬ ЗВОНОК</a>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-xl-12 col-auto">
+												<div class="contact-block__item contact-block__item--mail">
+													<svg class="icon icon-ion_mail ">
+														<use xlink:href="img/svg/sprite.svg#ion_mail"></use>
+													</svg><a class="contact-block__link text-white" href="mailto:info@septik.net">info@septik.net  </a>
+												</div>
+											</div>
+											<div class="col-xl-12 col-auto">
+												<div class="contact-block__item">
+													<svg class="icon icon-mark ">
+														<use xlink:href="img/svg/sprite.svg#mark"></use>
+													</svg>м. Окская, Рязанский пр-т, д.24, стр.2
+												</div>
+											</div>
+											<div class="col-xl-12 col-auto">
+												<div class="soc"><a class="soc__item" href="#" target="_blank">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/soc-1.webp"/><img src="img/@2x/soc-1.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/soc-2.webp"/><img src="img/@2x/soc-2.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/soc-3.webp"/><img src="img/@2x/soc-3.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/soc-4.webp"/><img src="img/@2x/soc-4.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/soc-5.webp"/><img src="img/@2x/soc-5.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/soc-6.webp"/><img src="img/@2x/soc-6.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
+													<!-- picture-->
+													<picture> 
+														<source type="image/webp" srcset="img/@2x/webp/soc-7.webp"/><img src="img/@2x/soc-7.png" alt="" loading="lazy"/>
+													</picture>
+													<!-- /picture--></a>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
-								<div class="contact-block__item contact-block__item--mail">
-									<svg class="icon icon-ion_mail ">
-										<use xlink:href="img/svg/sprite.svg#ion_mail"></use>
-									</svg><a class="contact-block__link text-white" href="mailto:info@septik.net">info@septik.net  </a>
-								</div>
-								<div class="contact-block__item">
-									<svg class="icon icon-mark ">
-										<use xlink:href="img/svg/sprite.svg#mark"></use>
-									</svg>м. Окская, Рязанский пр-т, д.24, стр.2
-								</div>
-							</div>
-							<div class="soc"><a class="soc__item" href="#" target="_blank">
-								<!-- picture-->
-								<picture> 
-									<source type="image/webp" srcset="img/@2x/webp/soc-1.webp"/><img src="img/@2x/soc-1.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
-								<!-- picture-->
-								<picture> 
-									<source type="image/webp" srcset="img/@2x/webp/soc-2.webp"/><img src="img/@2x/soc-2.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
-								<!-- picture-->
-								<picture> 
-									<source type="image/webp" srcset="img/@2x/webp/soc-3.webp"/><img src="img/@2x/soc-3.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
-								<!-- picture-->
-								<picture> 
-									<source type="image/webp" srcset="img/@2x/webp/soc-4.webp"/><img src="img/@2x/soc-4.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
-								<!-- picture-->
-								<picture> 
-									<source type="image/webp" srcset="img/@2x/webp/soc-5.webp"/><img src="img/@2x/soc-5.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
-								<!-- picture-->
-								<picture> 
-									<source type="image/webp" srcset="img/@2x/webp/soc-6.webp"/><img src="img/@2x/soc-6.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture--></a><a class="soc__item" href="#" target="_blank">
-								<!-- picture-->
-								<picture> 
-									<source type="image/webp" srcset="img/@2x/webp/soc-7.webp"/><img src="img/@2x/soc-7.png" alt="" loading="lazy"/>
-								</picture>
-								<!-- /picture--></a>
 							</div>
 						</div>
 						<div class="col-xl">
@@ -830,6 +854,7 @@
 		<!-- slider libs-->
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<!-- /slider libs-->
+		<script src="libs/hc-sticky/hc-sticky.js"></script>
 		<script src="libs/inputmask/inputmask.min.js"></script>
 		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<script src="js/common.js"></script>

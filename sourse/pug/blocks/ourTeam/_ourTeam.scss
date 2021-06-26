@@ -120,6 +120,7 @@
 	}
 
 	&__slide-sm {
+		cursor: pointer;
 		@include mt;
 		max-width: calc(var(--size) * 0.8);
 		padding-left: rem(15);
@@ -128,10 +129,11 @@
 		line-height: (18 / 14);
 		font-weight: 600;
 		text-align: center;
-		@include media-breakpoint-up(lg) {
-			padding-left: rem(25);
-			padding-right: rem(25);
-		}
+		margin-bottom: rem(30);
+		// @include media-breakpoint-up(lg) {
+		// 	padding-left: rem(25);
+		// 	padding-right: rem(25);
+		// }
 		&:hover,
 		&.swiper-slide-thumb-active {
 			opacity: 0.5;
@@ -141,6 +143,17 @@
 	.swiper-button-hand {
 		@media (max-width: 500px) {
 			display: none;
+		}
+	}
+
+	&__thumbs-slider{
+		.swiper-wrapper{
+			flex-wrap: wrap;
+			transform: translate3d(0px, 0px, 0px) !important;
+			width: calc(100% + 30px);
+			margin-left: -15px;
+			margin-right: -15px;
+			justify-content: center;
 		}
 	}
 

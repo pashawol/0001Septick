@@ -29,6 +29,9 @@
 	}
 	.contact-block{
 		display: block;
+		&::before{
+			display: none;
+		}
 		&__item{
 			font-weight: 18px;
 			font-weight: bold;

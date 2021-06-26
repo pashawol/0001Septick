@@ -5,6 +5,27 @@
 	--sPT: #{rem(35)};
 	--sPB: #{rem(50)};
 	margin-bottom: rem(20);
+	&__title{
+
+		@extend .h1;
+	}
+	@include media-breakpoint-down(xl) {
+		&__title{
+			max-width: 7.5em;
+			position: relative;
+			margin-bottom: 0;
+		}
+		.img-rad{
+			position: absolute;
+			top: -.4em;
+			width: 200px;
+			left: 100%;
+		}
+	}
+	@include media-breakpoint-up(lg) {
+		background-color: transparent;
+	}
+	background-color: #fff;
 	.container{
 		position: relative;
 		&::after{
@@ -30,6 +51,8 @@
 
 	h1 {
 		// margin-bottom: 1px;
+		position: relative;
+		z-index: 4;
 		line-height: 1;
 		font-weight: 800;
 			@include media-breakpoint-up(xxl) {
@@ -134,7 +157,9 @@
 
 	&__img-foot{
 		.row{
+				@include media-breakpoint-up(xl) {
 			justify-content: flex-end;
+				}
 			--bs-gutter-x: 24px;
 		}
 		img{
@@ -157,6 +182,7 @@
 		font-size: 14px;
 	}
 	p{
+	
 		@include media-breakpoint-up(lg) {
 		&::after{
 
@@ -207,5 +233,33 @@
 	@include media-breakpoint-down(xs) {}
 
 }
+.img-head{
+	position: absolute;
+	left: 0;
+	top: 40px;
+	left: 0;
+	transform: translateX(-50%);
+	.img-circle{
+		position: absolute;
+		left: -5px;
+		top: -5px;
 
+		transform: rotate(-50deg);
+		animation-name: rotation;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+}
 // end.headerBlock
+
+
+@keyframes rotation {
+	0% { 
+		transform: rotate(360deg);
+	}
+
+	100% { 
+		transform: rotate(0deg);
+	}
+}

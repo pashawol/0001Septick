@@ -38,7 +38,8 @@ mixin sProdCard(data)
 								+sProdCardPlate('Недорогой септик', '#F3624E', '#FFFFFF')
 						+e.c-title Характеристики
 						+b.chars
-							+sProdCardChar('Бренд', 'Юнилос Астра')
+							+sProdCardChar('Бренд')
+								a.text-body(href="#") Юнилос Астра 
 							+sProdCardChar('Кол-во человек', '5')
 							+sProdCardChar('Производительность', 'до 0.45м3/сут.')
 							+sProdCardChar('Объем залпового сброса', '1500л')
@@ -91,10 +92,13 @@ mixin sProdCardChar(key, val)
 		+e.key-col.col-auto
 			+e.txt=key
 		+e.val-col.col.text-end
-			+e.txt=val
+			if block
+				block
+			else
+				+e.txt=val
 
 mixin sProdCardPlate(txt,bgColor='#EDEDF0',color='#858B9B')
-	+e.plate(style=`background: ${bgColor}; color: ${color};`)!= txt
+	+e.plate(href="#" style=`background: ${bgColor}; color: ${color};`)!= txt
 
 mixin sProdCardSlide(imgNum)
 	.swiper-slide

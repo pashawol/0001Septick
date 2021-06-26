@@ -13,7 +13,8 @@ mixin sLogos(data)
 						mixin item(i,t,p)
 							+e.col.col-lg-3.col-md-4.col-6 
 								+e.item
-									+pic(`loog-${i}.png`,'',0)
+									a(href="#") 
+										+pic(`loog-${i}.png`,'',0)
 									+e.title Цена от 27 000 руб.
 									p монтаж от 19 000 руб.
 						+item(`1`)
