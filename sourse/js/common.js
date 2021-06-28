@@ -543,7 +543,24 @@ function eventHandler() {
 	$(".topLine__btn-search").click(function(){
 		$(".topLine__search-wrap").slideToggle().find('input').focus()
 	})
+	$(".sForm__car-link").click(function(e){
+		e.preventDefault();
+		let th = $(this);
+		$(this).addClass('active');
+		setTimeout(() => {
 
+			$.fancybox.open({
+				src: th.attr("href"),
+				type: 'inline',
+			}); 
+		}, 1000);
+
+		setTimeout(() => { 
+			$(this).removeClass('active');
+			
+		}, 6000);
+		
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

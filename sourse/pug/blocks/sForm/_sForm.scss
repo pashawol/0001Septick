@@ -228,6 +228,13 @@
 			}
 		}
 		&__car-link{
+			// position: relative;
+			position: absolute;
+			right: 10%;
+			&.active{
+				animation: 3s ease-in  goLeft;
+					// transform: translateX(1000px);
+			}
 			img{
 				@include mt;
 			}
@@ -235,6 +242,23 @@
 				img{
 					transform: translateX(-1%) rotate(1deg);
 				}
+			}
+		}
+
+
+		@keyframes goLeft {
+			0 {
+				transform: translateX(0);
+			}
+			50%{
+
+				transform: translateX(-1000px);
+			}
+			
+			100% {
+				transform: translateX(0);
+				// margin-left: 0%;
+				// width: 100%;
 			}
 		}
 	@include media-breakpoint-up(xl) {}

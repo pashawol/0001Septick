@@ -1,5 +1,7 @@
 // start .sEvolution
 .sEvolution {
+	position: relative;
+	
 		--sPT: 0;
 		background-color: #fff;
 			border-bottom-right-radius: var(--ellips);
@@ -28,13 +30,68 @@
 	}
 	&__img-wrap{
 		height: 523px;
-		margin-top: -100px;
-		img{
+		margin-top: -200px;
+		// display: flex;
+		// justify-content: space-around;
+		text-align: center;
+		z-index: 4;
+		position: relative;
+		
+		picture{
 			@include a-cent1(x);
 			// @extend .res-;
 			max-width: none;
 			width: auto;
+			display: block;
+			img{
+				// @include a-cent1(x);
+				// @extend .res-;
+				max-width: none;
+				width: auto;
+
+			}
+			&::after {
+				z-index: 5;
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 40%;
+				background-image: linear-gradient(-180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+			}
 		}
+	}
+	&__inner{
+		display: flex;
+		// justify-content: center;
+		justify-content: space-between;
+		margin-left: auto;margin-right: auto;
+		max-width: rem(900);
+		position: relative;
+		left: rem(-40);
+
+	}
+	&__item{
+		position: relative;
+		z-index: 6;
+		text-align: center;
+		&:nth-child(3){
+			left: rem(-30);
+		}
+		&:nth-child(4){
+			left: rem(-30);
+		}
+
+	}
+	&__item-title {
+		color: #858B9B;
+		font-size: rem(14);
+		margin-bottom: rem(20);
+	}
+	&__item-text {
+		font-weight: 600;
+		font-size: rem(20);
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
