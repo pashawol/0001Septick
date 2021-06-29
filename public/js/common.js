@@ -564,12 +564,11 @@ function eventHandler() {
 			mouseX = e.pageX;
 			mouseY = e.pageY;
 			if (mouseY >= 0 && mouseY <= window.innerHeight && mouseX >= 0 && mouseX <= window.innerWidth) return; //do something for mouse out
-
-			$.fancybox.close();
-			$.fancybox.open({
-				src: '#modal-stop',
-				type: 'inline'
-			});
+			// $.fancybox.close();
+			// $.fancybox.open({
+			// 	src: '#modal-stop',
+			// 	type: 'inline',
+			// });
 		}, false); // window.addEventListener("mouseover",
 		// 	function (e) {
 		// 		if (mouseIsIn)
@@ -583,6 +582,11 @@ function eventHandler() {
 	}
 
 	wireEvent();
+	$(".compare-alert__btn-close").click(function () {
+		$(this).parent().fadeOut(function () {
+			$(this).removeClass('active');
+		});
+	});
 }
 
 ;

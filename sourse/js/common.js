@@ -577,11 +577,11 @@ function eventHandler() {
 					&& (mouseX >= 0 && mouseX <= window.innerWidth))
 					return;
 				//do something for mouse out
-				$.fancybox.close();
-				$.fancybox.open({
-					src: '#modal-stop',
-					type: 'inline',
-				});
+				// $.fancybox.close();
+				// $.fancybox.open({
+				// 	src: '#modal-stop',
+				// 	type: 'inline',
+				// });
 			},
 			false);
 		// window.addEventListener("mouseover",
@@ -597,6 +597,12 @@ function eventHandler() {
 	}
 
 	wireEvent();
+
+	$(".compare-alert__btn-close").click(function(){
+		$(this).parent().fadeOut(function(){
+			$(this).removeClass('active')
+		});
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

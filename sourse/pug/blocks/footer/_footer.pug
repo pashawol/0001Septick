@@ -82,3 +82,12 @@ mixin footer()
 								+input("Почта",'email')
 							.col
 								+b.btn.btn-success(type="button") Подписаться
+	
+
+	+b.compare-alert.active
+		+icon("eva_bar-chart-fill")
+		+e.text Товар добавлен в Сравнения
+			br
+			a(href="#").tdu  Перейти
+		+e.btn-close()
+			+icon("close")

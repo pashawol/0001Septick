@@ -797,3 +797,55 @@ iframe {
 .mx-none{
 	max-width: none !important;
 }
+
+
+.compare-alert{
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	background: #FFFFFF;
+	box-shadow: 0px 25px 34px rgba(20, 20, 20, 0.1);
+	border-radius: 20px;
+	width: 100%;
+	@include media-breakpoint-up(sm){
+
+		max-width: rem(420);
+	}
+	max-width: rem(280);
+	display: flex;
+	padding: rem(20);
+	overflow: hidden;
+	z-index: 1200;
+	font-weight: 600;
+	&:not(.active) {
+		display: flex;
+	}
+	&::before{
+		content: '';
+		position: absolute;
+		// right: 0;
+		left: 0;
+		bottom: 0;
+		width: 70%;
+		height: 4px;
+		background-color: $primary;
+	}
+	.icon{
+	}
+	.icon-eva_bar-chart-fill{
+		color: $primary;
+		font-size: 1.4rem;
+		margin-right: 10px;	
+	}
+	&__btn-close{
+		position: absolute;
+		right: 15px;
+		top: 15px;
+		cursor: pointer;
+		.icon{
+			stroke: currentColor;
+			color: $secondary;
+			font-size: 1.4rem;
+		}
+	}
+}
