@@ -1,23 +1,22 @@
 // start .headerBlock
-.headerBlock { 
+.headerBlock {
 	position: relative;
 	z-index: 2;
 	--sPT: #{rem(35)};
 	--sPB: #{rem(50)};
 	margin-bottom: rem(20);
-	&__title{
-
+	&__title {
 		@extend .h1;
 	}
 	@include media-breakpoint-down(xl) {
-		&__title{
+		&__title {
 			max-width: 7.5em;
 			position: relative;
 			margin-bottom: 0;
 		}
-		.img-rad{
+		.img-rad {
 			position: absolute;
-			top: -.4em;
+			top: -0.4em;
 			width: 200px;
 			left: 100%;
 		}
@@ -26,9 +25,9 @@
 		background-color: transparent;
 	}
 	background-color: #fff;
-	.container{
+	.container {
 		position: relative;
-		&::after{
+		&::after {
 			content: url(../img/svg/dots.svg);
 			position: absolute;
 			right: calc(100% + 30px);
@@ -36,14 +35,14 @@
 		}
 	}
 	&::before {
-		content: '';
+		content: "";
 		position: absolute;
 		z-index: -1;
 		width: var(--bg-w);
 		height: 120%;
 		left: 0;
 		top: -20%;
-		background: #FFFFFF;
+		background: #ffffff;
 		border-radius: 0px 0px 40px 0px;
 	}
 	// background-image: url(../img);
@@ -55,191 +54,216 @@
 		z-index: 4;
 		line-height: 1;
 		font-weight: 800;
-			@include media-breakpoint-up(xxl) {
-
-				font-size: rem(82);
-			}
+		@include media-breakpoint-up(xxl) {
+			font-size: rem(82);
+		}
 		max-width: em(120);
 		margin-bottom: rem(40);
-		span{
+		span {
 			color: $primary;
 		}
 	}
- 
 
-	ul{
-			@include media-breakpoint-up(sm){
-
-				columns: 2;
-			}
+	ul {
+		@include media-breakpoint-up(sm) {
+			columns: 2;
+		}
 		list-style: none;
 		font-weight: bold;
 		margin-bottom: 30px;
 	}
-	li{
+	li {
 		margin-bottom: 15px;
-		&::before{
-			content: '+ ';
+		&::before {
+			content: "+ ";
 			margin-right: rem(19);
 			color: $primary;
 		}
 	}
 
-	&__text{
+	&__text {
 		max-width: rem(520);
 	}
-	&__text-head{
+	&__text-head {
 		position: relative;
 		padding-left: rem(45);
 		margin-bottom: 55px;
-		&::before{
-			content: '!';
+		&::before {
+			content: "!";
 			position: absolute;
 			left: 0;
 			top: 0;
 			font-size: 112px;
 			font-weight: 500;
 			color: $primary;
-			line-height: .8;
+			line-height: 0.8;
 		}
 	}
 
-	&__btn{
+	&__btn {
 		@extend .btn;
 		padding: rem(16);
-		&.btn-success{
-
-			@include media-breakpoint-up(xxl){
-				
+		position: relative;
+		overflow: hidden;
+		&::after {
+			content: "";
+			width: 24.52px;
+			height: 85.02px;
+			background: #fff;
+			opacity: 0.2;
+			animation-delay: 0.05s;
+			position: absolute;
+			left: -40px;
+			top: -8px;
+			animation-timing-function: ease-in-out;
+			transition: all 0.1s;
+			animation-name: slideme;
+			animation-duration: 4s;
+			animation-iteration-count: infinite;
+			transform: rotate(15.95deg);
+		}
+		&.btn-success {
+			@include media-breakpoint-up(xxl) {
 				min-width: rem(272);
 			}
 			@include media-breakpoint-up(sm) {
-
 				min-width: rem(212);
 			}
 			min-width: 100%;
 		}
-		.icon{
+		.icon {
 			fill: none;
 			stroke: currentColor;
 		}
-		img{
+		img {
 			margin-right: 15px;
 		}
 	}
 
-	&__row-sm{
+	&__row-sm {
 		align-items: center;
 	}
 
-	&__img-head{
+	&__img-head {
 		position: relative;
 		position: relative;
 		display: inline-block;
 		margin-bottom: 20px;
-		picture:nth-child(2){
+		picture:nth-child(2) {
 			position: absolute;
 			bottom: 0;
 			left: 0;
 			transform: translate(-50%, 50%);
 		}
-		picture:nth-child(3){
+		picture:nth-child(3) {
 			position: absolute;
 			left: -100px;
 			top: 60px;
 		}
-		img{
+		img {
 		}
 	}
-	.img-rad img{
+	.img-rad img {
 		border-radius: 20px;
 	}
 
-	&__img-foot{
-		.row{
-				@include media-breakpoint-up(xl) {
-			justify-content: flex-end;
-				}
+	&__img-foot {
+		.row {
+			@include media-breakpoint-up(xl) {
+				justify-content: flex-end;
+			}
 			--bs-gutter-x: 24px;
 		}
-		img{
+		img {
 			border-radius: 0px 0px 20px 20px;
 		}
 	}
 
-	&__img-wrap-sm{
+	&__img-wrap-sm {
 		position: relative;
 	}
-	&__label{
+	&__label {
 		border-radius: 46.4969px;
 		position: absolute;
 		left: 12px;
 		top: 12px;
 		background-color: #fff;
 		text-align: center;
-		color: #858B9B;
+		color: #858b9b;
 		padding: rem(5) rem(10);
 		font-size: 14px;
 	}
-	p{
-	
+	p {
 		@include media-breakpoint-up(lg) {
-		&::after{
-
-					content: url(../img/svg/arrow-look.svg);
-					position: absolute;
-					left: 100%;
-				}
+			&::after {
+				content: url(../img/svg/arrow-look.svg);
+				position: absolute;
+				left: 100%;
 			}
+		}
 		span,
-		strong{
+		strong {
 			color: $primary;
 		}
 	}
-	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(xl) {
+	}
 
-	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(lg) {
+	}
 
-	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(md) {
+	}
 
-	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(sm) {
+	}
 
-	@include media-breakpoint-up(xs) {}
-
-	//
-	@include media-breakpoint-between(md, xl) {}
-
-
-	//
-	@include media-breakpoint-only(xs) {}
-
-	@include media-breakpoint-only(sm) {}
-
-	@include media-breakpoint-only(md) {}
-
-	@include media-breakpoint-only(lg) {}
-
-	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-up(xs) {
+	}
 
 	//
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-between(md, xl) {
+	}
 
-	@include media-breakpoint-down(lg) {}
+	//
+	@include media-breakpoint-only(xs) {
+	}
 
-	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-only(sm) {
+	}
 
-	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-only(md) {
+	}
 
-	@include media-breakpoint-down(xs) {}
+	@include media-breakpoint-only(lg) {
+	}
 
+	@include media-breakpoint-only(xl) {
+	}
+
+	//
+	@include media-breakpoint-down(xl) {
+	}
+
+	@include media-breakpoint-down(lg) {
+	}
+
+	@include media-breakpoint-down(md) {
+	}
+
+	@include media-breakpoint-down(sm) {
+	}
+
+	@include media-breakpoint-down(xs) {
+	}
 }
-.img-head{
+.img-head {
 	position: absolute;
 	left: 0;
 	top: 40px;
 	left: 0;
 	transform: translateX(-50%);
-	.img-circle{
+	.img-circle {
 		position: absolute;
 		left: -5px;
 		top: -5px;
@@ -253,13 +277,24 @@
 }
 // end.headerBlock
 
-
 @keyframes rotation {
-	0% { 
+	0% {
 		transform: rotate(360deg);
 	}
 
-	100% { 
+	100% {
 		transform: rotate(0deg);
+	}
+}
+
+@keyframes slideme {
+	0% {
+		left: -30px;
+	}
+	30% {
+		left: 180%;
+	}
+	100% {
+		left: 200%;
 	}
 }
