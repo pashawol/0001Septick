@@ -577,6 +577,7 @@ function eventHandler() {
 					&& (mouseX >= 0 && mouseX <= window.innerWidth))
 					return;
 				//do something for mouse out
+				$.fancybox.close();
 				$.fancybox.open({
 					src: '#modal-stop',
 					type: 'inline',
