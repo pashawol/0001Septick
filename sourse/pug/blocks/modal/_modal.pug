@@ -1,13 +1,80 @@
 
+mixin mf(b='жду звонка')
+	form
+		block
+		.h5.strong Как с вами связаться?
+		+e.row.row
+			+b.LABEL.var-radio.col-auto
+				input(type='radio' name="var-cont" value='Звонок')
+				+e.dot--call(style="--bg:#1CB4DB;")
+					+icon("call")
+				+e.title Звонок
+			+b.LABEL.var-radio.col-auto
+				input(type='radio' name="var-cont" value='WhatsApp')
+				+e.dot--whatsapp(style="--bg:#4AAE20;")
+					+icon("whatsapp")
+				+e.title WhatsApp
+			+b.LABEL.var-radio.col-auto
+				input(type='radio' name="var-cont" value='Telegram')
+				+e.dot--telegram(style="--bg:#0088CC;")
+					+icon("telegram")
+				+e.title Telegram
+
+		+input('','',"Телефон")(required)  
+		+e.BUTTON.btn.btn(type="submit"  )= b
+		+polite()
+
+mixin mf2(b='жду звонка')
+	form.mx-none
+		block
+		.toggle-elems.active
+			.fw-600.mb-3 Оставьте Ваш номер телефона
+			.row 
+				.col-md-6
+					+input('','',"Телефон")(required)  
+				.col-md-6
+					+e.BUTTON.btn.btn(type="submit"  )= b
+		.toggle-elems
+			+e.success-text.h5.text-success.ttu.strong В течении 10 минут мы пришлем Вам ссылку на скачивание файла!
+		+polite()
+	
 mixin modal() 
 	//  start modals
 
 	+b.modal-win(id="modal-call" class=" " style="display: none" )
-		+form-wrap
-			
-			+input("Ваше Имя")(required)  
-			+e.BUTTON.btn.btn(type="submit"  ) 
-			+polite()
-	// #modal-call
+		+pic("modal-call.png",'',0).img-for-bg.d-none.d-md-block
+		+b.form-wrap
+			+e.title Укажите ваш #[span номер телефона]
+			+e.head-text И менеджер перезвонит вам через 10 минут
+			+mf()
+	// #modal-call 
+	+b.modal-win(id="modal-r" class=" " style="display: none" )
+		+pic("modal-call2.png",'',0).img-for-bg.d-none.d-md-block
+		+b.form-wrap
+			+e.title Рассчитать стоимость <br> септика и монтажа
+			br
+			br
+			+mf('рассчитать стоимость')
+	// #modal-r
+
+	+b.modal-win(id="modal-installments" class=" " style="display: none" )
+		+pic("modal-call3.png",'',0).img-for-bg.d-none.d-md-block
+		+b.form-wrap
+			+mf('купить в рассрочку')
+				+e.title.text-center Купить септик в <br> рассрочку
+				br
+				br
+	// #modal-installments
+	+b.modal-win(id="modal-stop" class=" " style="display: none" )
+		+pic("modal-call4.png",'',0).img-for-bg.d-none.d-md-block
+		+b.form-wrap
+			+e.title #[span.text-primary Стойте!] Не уходите с пустыми руками
+			br
+			.h6.strong Ищите надежный септик и проверенную компанию?
+			.h6.fw-400 Хотите узнать, как не допустить ошибки при установке канализации, проверить компетентность монтажной организации и сохранить гарантию производителя?
+			br
+			.h5.strong.text-start Скачайте файл "13 фатальных ошибок при выборе и монтаже автономной канализации" для загородного дома.
+			+mf2('купить в рассрочку')
+	// #modal-stop
 	
 	// end modals

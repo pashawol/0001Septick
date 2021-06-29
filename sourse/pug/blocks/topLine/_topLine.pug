@@ -39,7 +39,8 @@ mixin topLine()
 						.d-flex.d-md-none.d-lg-block.ms-3.align-items-center
 							+e.tel(href="tel:8(495)115-67-07") 8 (495) 115-67-07 
 							.ms-auto
-								+e.call(href="#")
+								//- +e.call(href="#modal-call").link-modal-js
+								+e.call(href="#modal-stop").link-modal-js
 									+icon('call')
 									| ЗАКАЗАТЬ ЗВОНОК
 				

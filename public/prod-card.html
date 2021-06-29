@@ -91,7 +91,7 @@
 							<use xlink:href="img/svg/sprite.svg#akar-icons_whatsapp-fill"></use>
 						</svg></a>
 						<div class="ms-3"><a class="contact-block__tel" href="tel:8(495)115-67-07">8 (495) 115-67-07 </a>
-							<div><a class="contact-block__call" href="#">
+							<div><a class="contact-block__call link-modal-js" href="#modal-call">
 								<svg class="icon icon-call ">
 									<use xlink:href="img/svg/sprite.svg#call"></use>
 								</svg>ЗАКАЗАТЬ ЗВОНОК</a>
@@ -161,7 +161,7 @@
 										<use xlink:href="img/svg/sprite.svg#akar-icons_whatsapp-fill"></use>
 									</svg></a>
 									<div class="d-flex d-md-none d-lg-block ms-3 align-items-center"><a class="contact-block__tel" href="tel:8(495)115-67-07">8 (495) 115-67-07 </a>
-										<div class="ms-auto"><a class="contact-block__call" href="#">
+										<div class="ms-auto"><a class="contact-block__call link-modal-js" href="#modal-stop">
 											<svg class="icon icon-call ">
 												<use xlink:href="img/svg/sprite.svg#call"></use>
 											</svg>ЗАКАЗАТЬ ЗВОНОК</a>
@@ -1043,8 +1043,7 @@
 														<use xlink:href="img/svg/sprite.svg#call"></use>
 													</svg>
 													<div><a class="contact-block__tel text-white" href="tel:8(495)115-67-07">8 (495) 115-67-07 </a>
-														<div><a class="contact-block__call" href="#">
-															 ЗАКАЗАТЬ ЗВОНОК</a>
+														<div><a class="contact-block__call link-modal-js" href="#modal-call">ЗАКАЗАТЬ ЗВОНОК</a>
 														</div>
 													</div>
 												</div>
@@ -1190,19 +1189,178 @@
 		</div>
 		<!--  start modals-->
 		<div class="modal-win" id="modal-call" style="display: none">
+			<!-- picture-->
+			<picture class="img-for-bg d-none d-md-block"> 
+				<source type="image/webp" srcset="img/@2x/webp/modal-call.webp"/><img src="img/@2x/modal-call.png" alt="" loading="lazy"/>
+			</picture>
+			<!-- /picture-->
 			<div class="form-wrap">
+				<div class="form-wrap__title">Укажите ваш <span>номер телефона</span>
+				</div>
+				<div class="form-wrap__head-text">И менеджер перезвонит вам через 10 минут
+				</div>
 				<form>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше Имя" required="required"/> 
+					<div class="h5 strong">Как с вами связаться?</div>
+					<div class="form-wrap__row row">
+						<label class="var-radio col-auto">
+							<input type="radio" name="var-cont" value="Звонок"/><span class="var-radio__dot var-radio__dot--call" style="--bg:#1CB4DB;">
+							<svg class="icon icon-call ">
+								<use xlink:href="img/svg/sprite.svg#call"></use>
+							</svg></span><span class="var-radio__title">Звонок</span>
+						</label>
+						<label class="var-radio col-auto">
+							<input type="radio" name="var-cont" value="WhatsApp"/><span class="var-radio__dot var-radio__dot--whatsapp" style="--bg:#4AAE20;">
+							<svg class="icon icon-whatsapp ">
+								<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+							</svg></span><span class="var-radio__title">WhatsApp</span>
+						</label>
+						<label class="var-radio col-auto">
+							<input type="radio" name="var-cont" value="Telegram"/><span class="var-radio__dot var-radio__dot--telegram" style="--bg:#0088CC;">
+							<svg class="icon icon-telegram ">
+								<use xlink:href="img/svg/sprite.svg#telegram"></use>
+							</svg></span><span class="var-radio__title">Telegram</span>
+						</label>
+					</div>
+					<div class="form-wrap__input-wrap form-group">
+						<label><input class="form-wrap__input form-control" name="" type="text" placeholder="" required="required"/><span class="form-wrap__input-title">Телефон</span> 
+						</label> 
 					</div>
 					<!-- +e.input-wrap-->
-					<button class="form-wrap__btn btn" type="submit"> 
+					<button class="form-wrap__btn btn" type="submit">жду звонка
 					</button>
 					<div class="form-wrap__polite">При отправке данных вы принимаете <a href="#">политику конфиденциальности</a> 
 					</div>
 				</form>
 			</div>
 		</div>
-		<!-- #modal-call-->
+		<!-- #modal-call -->
+		<div class="modal-win" id="modal-r" style="display: none">
+			<!-- picture-->
+			<picture class="img-for-bg d-none d-md-block"> 
+				<source type="image/webp" srcset="img/@2x/webp/modal-call2.webp"/><img src="img/@2x/modal-call2.png" alt="" loading="lazy"/>
+			</picture>
+			<!-- /picture-->
+			<div class="form-wrap">
+				<div class="form-wrap__title">Рассчитать стоимость <br> септика и монтажа
+				</div><br/><br/>
+				<form>
+					<div class="h5 strong">Как с вами связаться?</div>
+					<div class="form-wrap__row row">
+						<label class="var-radio col-auto">
+							<input type="radio" name="var-cont" value="Звонок"/><span class="var-radio__dot var-radio__dot--call" style="--bg:#1CB4DB;">
+							<svg class="icon icon-call ">
+								<use xlink:href="img/svg/sprite.svg#call"></use>
+							</svg></span><span class="var-radio__title">Звонок</span>
+						</label>
+						<label class="var-radio col-auto">
+							<input type="radio" name="var-cont" value="WhatsApp"/><span class="var-radio__dot var-radio__dot--whatsapp" style="--bg:#4AAE20;">
+							<svg class="icon icon-whatsapp ">
+								<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+							</svg></span><span class="var-radio__title">WhatsApp</span>
+						</label>
+						<label class="var-radio col-auto">
+							<input type="radio" name="var-cont" value="Telegram"/><span class="var-radio__dot var-radio__dot--telegram" style="--bg:#0088CC;">
+							<svg class="icon icon-telegram ">
+								<use xlink:href="img/svg/sprite.svg#telegram"></use>
+							</svg></span><span class="var-radio__title">Telegram</span>
+						</label>
+					</div>
+					<div class="form-wrap__input-wrap form-group">
+						<label><input class="form-wrap__input form-control" name="" type="text" placeholder="" required="required"/><span class="form-wrap__input-title">Телефон</span> 
+						</label> 
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit">рассчитать стоимость
+					</button>
+					<div class="form-wrap__polite">При отправке данных вы принимаете <a href="#">политику конфиденциальности</a> 
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-r-->
+		<div class="modal-win" id="modal-installments" style="display: none">
+			<!-- picture-->
+			<picture class="img-for-bg d-none d-md-block"> 
+				<source type="image/webp" srcset="img/@2x/webp/modal-call3.webp"/><img src="img/@2x/modal-call3.png" alt="" loading="lazy"/>
+			</picture>
+			<!-- /picture-->
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__title text-center">Купить септик в <br> рассрочку
+					</div><br/><br/>
+					<div class="h5 strong">Как с вами связаться?</div>
+					<div class="form-wrap__row row">
+						<label class="var-radio col-auto">
+							<input type="radio" name="var-cont" value="Звонок"/><span class="var-radio__dot var-radio__dot--call" style="--bg:#1CB4DB;">
+							<svg class="icon icon-call ">
+								<use xlink:href="img/svg/sprite.svg#call"></use>
+							</svg></span><span class="var-radio__title">Звонок</span>
+						</label>
+						<label class="var-radio col-auto">
+							<input type="radio" name="var-cont" value="WhatsApp"/><span class="var-radio__dot var-radio__dot--whatsapp" style="--bg:#4AAE20;">
+							<svg class="icon icon-whatsapp ">
+								<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+							</svg></span><span class="var-radio__title">WhatsApp</span>
+						</label>
+						<label class="var-radio col-auto">
+							<input type="radio" name="var-cont" value="Telegram"/><span class="var-radio__dot var-radio__dot--telegram" style="--bg:#0088CC;">
+							<svg class="icon icon-telegram ">
+								<use xlink:href="img/svg/sprite.svg#telegram"></use>
+							</svg></span><span class="var-radio__title">Telegram</span>
+						</label>
+					</div>
+					<div class="form-wrap__input-wrap form-group">
+						<label><input class="form-wrap__input form-control" name="" type="text" placeholder="" required="required"/><span class="form-wrap__input-title">Телефон</span> 
+						</label> 
+					</div>
+					<!-- +e.input-wrap-->
+					<button class="form-wrap__btn btn" type="submit">купить в рассрочку
+					</button>
+					<div class="form-wrap__polite">При отправке данных вы принимаете <a href="#">политику конфиденциальности</a> 
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-installments-->
+		<div class="modal-win" id="modal-stop" style="display: none">
+			<!-- picture-->
+			<picture class="img-for-bg d-none d-md-block"> 
+				<source type="image/webp" srcset="img/@2x/webp/modal-call4.webp"/><img src="img/@2x/modal-call4.png" alt="" loading="lazy"/>
+			</picture>
+			<!-- /picture-->
+			<div class="form-wrap">
+				<div class="form-wrap__title"><span class="text-primary">Стойте!</span> Не уходите с пустыми руками
+				</div><br/>
+				<div class="h6 strong">Ищите надежный септик и проверенную компанию?</div>
+				<div class="h6 fw-400">Хотите узнать, как не допустить ошибки при установке канализации, проверить компетентность монтажной организации и сохранить гарантию производителя?</div><br/>
+				<div class="h5 strong text-start">Скачайте файл "13 фатальных ошибок при выборе и монтаже автономной канализации" для загородного дома.</div>
+				<form class="mx-none">
+					<div class="toggle-elems active">
+						<div class="fw-600 mb-3">Оставьте Ваш номер телефона</div>
+						<div class="row"> 
+							<div class="col-md-6">
+								<div class="form-wrap__input-wrap form-group">
+									<label><input class="form-wrap__input form-control" name="" type="text" placeholder="" required="required"/><span class="form-wrap__input-title">Телефон</span> 
+									</label> 
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-md-6">
+								<button class="form-wrap__btn btn" type="submit">купить в рассрочку
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="toggle-elems">
+						<div class="form-wrap__success-text h5 text-success ttu strong">В течении 10 минут мы пришлем Вам ссылку на скачивание файла!
+						</div>
+					</div>
+					<div class="form-wrap__polite">При отправке данных вы принимаете <a href="#">политику конфиденциальности</a> 
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-stop-->
 		<!-- end modals-->
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>

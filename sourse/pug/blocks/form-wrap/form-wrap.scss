@@ -5,6 +5,10 @@
 		 font-weight: 500;
 			// @extend .form-group;
 			
+			label{
+				// width: 100%;
+				display: block;
+			}
 		}
 		&__input{
 			// @extend .form-control;
@@ -39,10 +43,6 @@
 		position: absolute;
 		@include mt;
 	 }
- 	label{
- 		width: 100%;
- 		display: block;
- 	}
 	 &__polite{
 		 text-align: center;
 		 text-transform: uppercase;

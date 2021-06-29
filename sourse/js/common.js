@@ -561,6 +561,41 @@ function eventHandler() {
 		}, 6000);
 		
 	})
+
+
+
+	var mouseX = 0;
+	var mouseY = 0;
+	var counter = 0;
+	var mouseIsIn = true;
+	function wireEvent() {
+		window.addEventListener("mouseout",
+			function (e) {
+				mouseX = e.pageX;
+				mouseY = e.pageY;
+				if ((mouseY >= 0 && mouseY <= window.innerHeight)
+					&& (mouseX >= 0 && mouseX <= window.innerWidth))
+					return;
+				//do something for mouse out
+				$.fancybox.open({
+					src: '#modal-stop',
+					type: 'inline',
+				});
+			},
+			false);
+		// window.addEventListener("mouseover",
+		// 	function (e) {
+		// 		if (mouseIsIn)
+		// 			return;
+		// 		//do something for mouse over
+		// 		counter++;
+		// 		mouseIsIn = true;
+		// 		document.getElementById('in_out').innerHTML = 'in' + counter;
+		// 	},
+		// 	false);
+	}
+
+	wireEvent();
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
