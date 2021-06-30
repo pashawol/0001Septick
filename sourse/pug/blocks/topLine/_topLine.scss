@@ -26,6 +26,11 @@
 				font-size: 2em;
 			}
 		}
+		&--page{
+			&::before{
+				display: none;
+			}
+		}
 		
 		 .search-block{
 			 @include media-breakpoint-up(xxxl) {

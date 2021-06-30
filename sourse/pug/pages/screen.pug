@@ -1,0 +1,37 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/aside/_aside.pug
+include ../blocks/sQwiz/_sQwiz.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sTypes/_sTypes.pug
+include ../blocks/sMistakes/_sMistakes.pug
+include ../blocks/sComfort/_sComfort.pug
+include ../blocks/sEvolution/_sEvolution.pug
+include ../blocks/sLogos/_sLogos.pug
+include ../blocks/sServises/_sServises.pug
+include ../blocks/sFaq/_sFaq.pug
+include ../blocks/Scomfort2/_Scomfort2.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= 'main.jpg'
+
+block title
+	- let  title= 'title'
+	title= title
+block pagecontent
+
+
+	//- +mob-mnu()
+	header.header.header--page
+		+topLine2()
+		//- +top-nav()
+	+headerBlock2()
+	//- +footer()
+      
+
+
+

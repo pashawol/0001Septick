@@ -5,6 +5,12 @@
 	--sPT: #{rem(35)};
 	--sPB: #{rem(50)};
 	margin-bottom: rem(20);
+	&--page{
+
+		&::before{
+			display: none;
+		}
+	}
 	&__title {
 		@extend .h1;
 	}
@@ -189,6 +195,72 @@
 		strong {
 			color: $primary;
 		}
+	}
+	.pic-screen{
+		position: absolute;
+		// bottom: 0;
+		top: 0;
+		left: 30%;
+		width: auto;
+		img{
+			max-width: none;
+		}
+	}
+	&--page{
+		.container{
+			flex-grow: 1;
+			position: relative;
+		}
+		min-height: calc(100vh - 110px);
+		display: flex;
+		flex-direction: column;
+		h1{
+				@include media-breakpoint-up(xxl){
+					font-size: 32px;
+				}
+				max-width: rem(750);
+				line-height: (54 / 32);
+			@include rfs(32px);
+		}
+		.headerBlock__btn{
+			height: rem(106);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: rem(390);
+			font-size: rem(18);
+		}
+	}
+	p.mb-4{
+		font-size: 18px;
+		color: #5A5D62;
+		position: relative;
+		&::after{
+			content: url(../img/arrow-top.svg);
+		}
+		strong{
+			color: currentColor;
+		}
+	}
+	&__small-text{
+		font-weight: 500;
+		display: flex;
+		align-items: center;
+		max-width: rem(500);
+		margin-bottom: rem(44);
+		img{
+			flex: 0 0 auto;
+			margin-right: 15px;
+		}
+	}
+	&__footer{
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+		background: #F2F2F2;
+		padding: rem(30) 0;
 	}
 	@include media-breakpoint-up(xl) {
 	}

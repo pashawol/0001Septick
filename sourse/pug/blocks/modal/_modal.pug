@@ -1,24 +1,25 @@
 
-mixin mf(b='жду звонка')
+mixin mf(b='жду звонка',h)
 	form
 		block
-		.h5.strong Как с вами связаться?
-		+e.row.row
-			+b.LABEL.var-radio.col-auto
-				input(type='radio' name="var-cont" value='Звонок')
-				+e.dot--call(style="--bg:#1CB4DB;")
-					+icon("call")
-				+e.title Звонок
-			+b.LABEL.var-radio.col-auto
-				input(type='radio' name="var-cont" value='WhatsApp')
-				+e.dot--whatsapp(style="--bg:#4AAE20;")
-					+icon("whatsapp")
-				+e.title WhatsApp
-			+b.LABEL.var-radio.col-auto
-				input(type='radio' name="var-cont" value='Telegram')
-				+e.dot--telegram(style="--bg:#0088CC;")
-					+icon("telegram")
-				+e.title Telegram
+		if !h
+			.h5.strong Как с вами связаться?
+			+e.row.row
+				+b.LABEL.var-radio.col-auto
+					input(type='radio' name="var-cont" value='Звонок')
+					+e.dot--call(style="--bg:#1CB4DB;")
+						+icon("call")
+					+e.title Звонок
+				+b.LABEL.var-radio.col-auto
+					input(type='radio' name="var-cont" value='WhatsApp')
+					+e.dot--whatsapp(style="--bg:#4AAE20;")
+						+icon("whatsapp")
+					+e.title WhatsApp
+				+b.LABEL.var-radio.col-auto
+					input(type='radio' name="var-cont" value='Telegram')
+					+e.dot--telegram(style="--bg:#0088CC;")
+						+icon("telegram")
+					+e.title Telegram
 
 		+input('','',"Телефон")(required)  
 		+e.BUTTON.btn.btn(type="submit"  )= b
@@ -77,4 +78,14 @@ mixin modal()
 			+mf2('купить в рассрочку')
 	// #modal-stop
 	
+
+	+b.modal-win(id="modal-4" class=" " style="display: none" )
+		+pic("modalCall4.png",'',0).img-for-bg.d-none.d-md-block
+		+b.form-wrap--md
+			+mf('отправить','fdf')
+				+e.title.text-center Оставьте ваш телефон и&nbsp;мы&nbsp;пришлем ссылку на&nbsp;скачивание
+				br
+				br
+	// #modal-4
+
 	// end modals

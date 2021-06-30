@@ -7,3 +7,4 @@
 7. <https://pashawol.github.io/0001Septick/public/payment.html>
 8. <https://pashawol.github.io/0001Septick/public/about-company.html>
 9. <https://pashawol.github.io/0001Septick/public/work-performed.html>
+10. <https://pashawol.github.io/0001Septick/public/screen.html>
