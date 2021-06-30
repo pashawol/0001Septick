@@ -207,6 +207,8 @@
 		}
 	}
 	&--page{
+		padding-bottom: 0;
+		margin-bottom: 0;
 		.container{
 			flex-grow: 1;
 			position: relative;
@@ -229,6 +231,7 @@
 			justify-content: center;
 			width: rem(390);
 			font-size: rem(18);
+			margin-bottom: rem(40);
 		}
 	}
 	p.mb-4{
@@ -237,6 +240,10 @@
 		position: relative;
 		&::after{
 			content: url(../img/arrow-top.svg);
+				@include media-breakpoint-down(sm) {
+					display: none;
+				}
+
 		}
 		strong{
 			color: currentColor;
@@ -254,7 +261,9 @@
 		}
 	}
 	&__footer{
-		position: fixed;
+		// position: fixed;
+		margin-top: auto;
+		position: relative;
 		left: 0;
 		bottom: 0;
 		width: 100%;

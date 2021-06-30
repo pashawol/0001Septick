@@ -27,6 +27,9 @@
 			}
 		}
 		&--page{
+			@include media-breakpoint-up(md) {
+			background: none !important;
+			}
 			&::before{
 				display: none;
 			}
