@@ -358,10 +358,12 @@
 }
 
 .slideme-animated {
+	position: relative;
+	overflow: hidden;
 	&::after {
 		content: "";
 		width: 24.52px;
-		height: 85.02px;
+		height: 150%;
 		background: #fff;
 		opacity: 0.2;
 		animation-delay: 0.05s;
