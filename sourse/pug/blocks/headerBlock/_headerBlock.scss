@@ -197,6 +197,7 @@
 		}
 	}
 	.pic-screen{
+		@include media-breakpoint-up(md){
 		position: absolute;
 		// bottom: 0;
 		top: 0;
@@ -206,9 +207,13 @@
 			max-width: none;
 		}
 	}
+	}
 	&--page{
 		padding-bottom: 0;
 		margin-bottom: 0;
+		@include media-breakpoint-up(lg){
+			padding-top: rem(80);
+		}
 		.container{
 			flex-grow: 1;
 			position: relative;

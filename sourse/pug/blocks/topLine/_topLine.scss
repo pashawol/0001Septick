@@ -29,6 +29,7 @@
 		&--page{
 			@include media-breakpoint-up(md) {
 			background: none !important;
+			
 			}
 			&::before{
 				display: none;
@@ -95,6 +96,9 @@
 		top: 0;
 	}
 	&__head{
+		.link{  
+			font-weight: 600;
+		}
 		a{
 				border-bottom: 1px dashed;
 				color: $body-color;
